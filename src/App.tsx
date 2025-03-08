@@ -1,6 +1,6 @@
 import Bage from './assets/icons/Bage'
 import Plus from './assets/icons/Plus'
-import Search from './assets/icons/search'
+import Search from './assets/icons/Search'
 import { Button } from './components/button'
 
 function App() {
