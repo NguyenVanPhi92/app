@@ -1,3 +1,3 @@
-export const Button = () => {
-  return <button className='button'>Go to card</button>
+export const Button = ({ name }: { name: string }) => {
+  return <button className='button'>{name}</button>
 }
