@@ -1,0 +1,164 @@
+.concept {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  height: 80vh;
+
+  .select {
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 15px;
+    background-color: #eaedf9;
+    padding: 4px;
+    column-gap: 2px;
+
+    & > span {
+      height: 16px;
+      border: 0.4px solid #aba9a9;
+    }
+
+    &-item {
+      background-color: #fefefe;
+      padding: 12px 10px;
+      border-radius: 14px;
+      width: 150px;
+      span {
+        font-size: 14px;
+        color: #354f79;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .option {
+    padding: 0 12px;
+    color: #354f79;
+    justify-content: space-between;
+    &-item {
+      font-size: 12px;
+      padding: 8px 16px;
+      background-color: #eaf2ff;
+      border-radius: 24px;
+    }
+  }
+
+  .dining {
+    padding: 16px;
+    &-title {
+      margin-bottom: 12px;
+      justify-content: space-between;
+    }
+
+    &-shop {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      &__card {
+        display: flex;
+        align-items: center;
+        background: #aec8ff;
+        border-radius: 20px;
+        row-gap: 10px;
+        img {
+          width: 80px;
+          height: 80px;
+          border-radius: 20px 0 0 20px;
+        }
+
+        &--title {
+          padding: 0 16px;
+
+          p:first-child {
+            font-weight: bold;
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .resting {
+    padding: 16px;
+    &-title {
+      margin-bottom: 12px;
+      justify-content: space-between;
+    }
+
+    &-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #aec8ff;
+        border-radius: 20px;
+        width: 100%;
+        img {
+          width: 100%;
+          height: 120px;
+          border-radius: 20px 20px 0 0px;
+        }
+
+        &--title {
+          padding: 16px;
+
+          p:first-child {
+            font-weight: bold;
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .shopping {
+    padding: 16px;
+    &-title {
+      margin-bottom: 12px;
+      justify-content: space-between;
+    }
+
+    &-card {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      justify-content: space-between;
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        background: #aec8ff;
+        border-radius: 20px;
+
+        .tag {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          padding: 6px 16px;
+          background-color: #354f79;
+          border-radius: 40px;
+          color: white;
+          font-size: 12px;
+        }
+
+        img {
+          width: 100%;
+          height: 120px;
+          border-radius: 20px 20px 0 0px;
+        }
+
+        &--title {
+          padding: 16px;
+
+          p:first-child {
+            font-weight: bold;
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
+  }
+}
