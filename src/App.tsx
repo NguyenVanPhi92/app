@@ -3,12 +3,14 @@ import Products from './components/Products'
 import Cart from './components/Cart'
 import Checkout from './components/CheckOut'
 import Services from './components/Services'
+import Dining from './components/Dining'
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Services />} />
+        <Route path='/' element={<Dining />} />
+        <Route path='/services' element={<Services />} />
         <Route path='/product' element={<Products />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/checkout' element={<Checkout />} />

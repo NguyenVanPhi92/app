@@ -1,0 +1,41 @@
+.concept {
+  &-img {
+    width: 100%;
+    height: 224px;
+  }
+
+  .shop {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+
+    &-card {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #e8e8e8;
+      padding: 10px 0;
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 30px;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding: 20px;
+        .title {
+          line-height: 20px;
+        }
+
+        .tag {
+          width: 60px;
+          padding: 4px 14px;
+          background-color: #cee1fe;
+          border-radius: 40px;
+        }
+      }
+    }
+  }
+}
