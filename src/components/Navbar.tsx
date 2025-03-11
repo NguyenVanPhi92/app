@@ -22,7 +22,7 @@ const Navbar = () => {
       </div>
       <div className='flex navbar-item'>
         <Services />
-        <p>Services</p>
+        <p className='navbar-item_active'>Services</p>
       </div>
       <div className='flex navbar-item'>
         <Account />
