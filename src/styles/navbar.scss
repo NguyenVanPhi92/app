@@ -1,4 +1,6 @@
 .navbar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   justify-content: center;
   column-gap: 20px;
   border-top: 1px solid #cdcdcd;

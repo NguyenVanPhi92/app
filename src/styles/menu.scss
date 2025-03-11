@@ -6,7 +6,7 @@
     gap: 10px;
 
     &-card {
-      background-color: aquamarine;
+      background-color: #f8f9fe;
       border-radius: 30px;
       img {
         width: 100%;
@@ -20,18 +20,18 @@
         align-items: end;
         row-gap: 10px;
         padding: 20px;
-        .title {
+
+        &-title {
           line-height: 20px;
+
+          p:last-child {
+            margin-top: 4px;
+            font-weight: 600;
+          }
         }
 
-        .tag {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 20px;
-          padding: 4px 14px;
-          background-color: #cee1fe;
-          border-radius: 40px;
+        &-plus {
+          cursor: pointer;
         }
       }
     }

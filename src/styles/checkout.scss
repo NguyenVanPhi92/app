@@ -1,0 +1,73 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .progress {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 12px;
+      padding: 16px;
+
+      &__icon {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px;
+        background-color: #b4dbff;
+        border-radius: 100%;
+      }
+      &__icon.yet {
+        color: #8c8c8c;
+        background-color: #f8f9fe;
+      }
+
+      &__icon.active {
+        color: white;
+        background-color: #354f79;
+      }
+    }
+  }
+
+  .title {
+    padding: 24px;
+    h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .credit {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    &-card {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      column-gap: 18px;
+      border: 1px solid #3333;
+      border-radius: 20px;
+      &__icon {
+        padding: 6px;
+        border: 4px solid #3333;
+        border-radius: 100%;
+      }
+
+      &__name {
+        color: #3f3f3f;
+      }
+    }
+  }
+}

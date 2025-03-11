@@ -7,23 +7,33 @@
     justify-content: space-between;
     align-items: center;
     margin: 10px 15px;
-    background-color: #eaedf9;
+    background-color: #f8f9fe;
     padding: 4px;
     column-gap: 2px;
+    border-radius: 16px;
+    margin-bottom: 4px;
 
     & > span {
       height: 16px;
-      border: 0.4px solid #aba9a9;
+      border: 1px solid #d3d3d3;
+    }
+
+    &-item.active {
+      background-color: #fefefe;
+
+      span {
+        color: #354f79;
+      }
     }
 
     &-item {
-      background-color: #fefefe;
       padding: 12px 10px;
       border-radius: 14px;
       width: 150px;
+      text-align: center;
       span {
+        color: #4a4a4a;
         font-size: 14px;
-        color: #354f79;
         font-weight: bold;
       }
     }
@@ -32,7 +42,9 @@
   .option {
     color: #354f79;
     justify-content: space-between;
-    margin: 16px;
+    margin: 26px 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
 
     &-item {
       font-size: 12px;
@@ -44,9 +56,20 @@
 
   .dining {
     padding: 16px;
+
     &-title {
       margin-bottom: 12px;
       justify-content: space-between;
+
+      p {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      a {
+        font-weight: 500;
+        color: #354f79;
+      }
     }
 
     &-shop {
@@ -56,7 +79,7 @@
       &__card {
         display: flex;
         align-items: center;
-        background: #aec8ff;
+        background: #f8f9fe;
         border-radius: 20px;
         row-gap: 10px;
         img {
@@ -82,6 +105,16 @@
     &-title {
       margin-bottom: 12px;
       justify-content: space-between;
+
+      p {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      a {
+        font-weight: 500;
+        color: #354f79;
+      }
     }
 
     &-card {
@@ -91,8 +124,7 @@
       &__item {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        background: #aec8ff;
+        background: #f8f9fe;
         border-radius: 20px;
         width: 100%;
         img {
@@ -104,9 +136,9 @@
         &--title {
           padding: 16px;
 
-          p:first-child {
-            font-weight: bold;
-            margin-bottom: 4px;
+          p:last-child {
+            margin-top: 4px;
+            font-weight: 600;
           }
         }
       }
@@ -118,6 +150,16 @@
     &-title {
       margin-bottom: 12px;
       justify-content: space-between;
+
+      p {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      a {
+        font-weight: 500;
+        color: #354f79;
+      }
     }
 
     &-card {
@@ -131,18 +173,18 @@
         flex-direction: column;
         align-items: center;
         position: relative;
-        background: #aec8ff;
+        background: #f8f9fe;
         border-radius: 20px;
 
         .tag {
           position: absolute;
           right: 10px;
           top: 10px;
-          padding: 6px 16px;
+          padding: 6px 12px;
           background-color: #354f79;
           border-radius: 40px;
           color: white;
-          font-size: 12px;
+          font-size: 10px;
         }
 
         img {

@@ -7,7 +7,7 @@ import '../styles/navbar.scss'
 
 const Navbar = () => {
   return (
-    <div className='navbar flex'>
+    <div className='navbar'>
       <div className='flex navbar-item'>
         <Explore />
         <p>Explore</p>

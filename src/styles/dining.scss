@@ -14,10 +14,12 @@
       align-items: center;
       border-bottom: 1px solid #e8e8e8;
       padding: 10px 0;
+      font-size: 14px;
+
       img {
-        width: 100px;
+        width: 90px;
         height: 100px;
-        border-radius: 30px;
+        border-radius: 14px;
       }
 
       &__content {
@@ -25,15 +27,26 @@
         flex-direction: column;
         row-gap: 10px;
         padding: 20px;
-        .title {
+        &-title {
           line-height: 20px;
+
+          p:first-child {
+            color: #333;
+            font-weight: 600;
+          }
+          p:last-child {
+            color: #71727a;
+          }
         }
 
-        .tag {
-          width: 60px;
-          padding: 4px 14px;
-          background-color: #cee1fe;
+        &-tag {
+          width: 50px;
+          font-weight: 500;
+          padding: 6px 12px;
+          background-color: #eaf2ff;
           border-radius: 40px;
+          color: #354f79;
+          font-size: 12px;
         }
       }
     }

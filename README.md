@@ -1,6 +1,7 @@
 https://app-v1-mocha.vercel.app/
 Tech: React Vite SCSS SWipper
 Screen width: 540px
+Done 2 Route Dining & Resting
 
 Screen done:
 1 Products

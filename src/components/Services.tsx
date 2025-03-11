@@ -5,6 +5,8 @@ import Navbar from './Navbar'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
+import { Link } from 'react-router'
+import Image from '../contans/data'
 
 const Services = () => {
   return (
@@ -14,14 +16,14 @@ const Services = () => {
           <LeftArrow />
         </div>
         <p>Airport Services</p>
-        <div className=''>
+        <div className='icon-search'>
           <Search />
         </div>
       </header>
 
       <div className='concept'>
         <div className='select flex'>
-          <div className='select-item'>
+          <div className='select-item active'>
             <span>All</span>
           </div>
           <span></span>
@@ -48,16 +50,13 @@ const Services = () => {
         <div className='dining'>
           <div className='dining-title flex'>
             <p>DINING</p>
-            <p>See more</p>
+            <Link to='/dining'>See more</Link>
           </div>
 
           <div className='dining-shop'>
             {Array.from({ length: 4 }, (_, i) => (
               <div className='dining-shop__card' key={i}>
-                <img
-                  src='https://plus.unsplash.com/premium_photo-1740992237716-2bb9f560cc6b?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8'
-                  alt='img'
-                />
+                <img src={Image} alt='img' />
                 <div className='dining-shop__card--title'>
                   <p>Shop</p>
                   <p>Location - Operations Hour</p>
@@ -69,8 +68,8 @@ const Services = () => {
 
         <div className='resting'>
           <div className='resting-title flex'>
-            <p>RESTING</p>
-            <p>See more</p>
+            <p>LOUNGE & REST</p>
+            <Link to='/resting'>See more</Link>
           </div>
 
           <Swiper
@@ -86,13 +85,10 @@ const Services = () => {
           >
             {Array.from({ length: 8 }, (_, i) => (
               <SwiperSlide className='resting-card__item' key={i}>
-                <img
-                  src='https://plus.unsplash.com/premium_photo-1740992237716-2bb9f560cc6b?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8'
-                  alt='img'
-                />
+                <img src={Image} alt='img' />
                 <div className='resting-card__item--title'>
-                  <p>Shop</p>
-                  <p>Location - Operations Hour</p>
+                  <p>Lounge</p>
+                  <p>$ 12.00</p>
                 </div>
               </SwiperSlide>
             ))}
@@ -102,17 +98,14 @@ const Services = () => {
         <div className='shopping'>
           <div className='shopping-title flex'>
             <p>SHOPPING</p>
-            <p>See more</p>
+            <Link to='/shopping'>See more</Link>
           </div>
 
           <div className='shopping-card'>
             {Array.from({ length: 4 }, (_, i) => (
               <div className='shopping-card__item' key={i}>
                 <span className='tag'>TAG</span>
-                <img
-                  src='https://plus.unsplash.com/premium_photo-1740992237716-2bb9f560cc6b?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8'
-                  alt='img'
-                />
+                <img src={Image} alt='img' />
                 <div className='shopping-card__item--title'>
                   <p>Shop</p>
                   <p>Location - Operations Hour</p>

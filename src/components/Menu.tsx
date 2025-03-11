@@ -1,15 +1,18 @@
+import { Link } from 'react-router'
 import Bage from '../assets/icons/Bage'
 import LeftArrow from '../assets/icons/LeftArrow'
 import '../styles/menu.scss'
 import { Button } from './button'
+import Image from '../contans/data'
+import Plus from '../assets/icons/Plus'
 
 const Menu = () => {
   return (
     <div className='main'>
       <header>
-        <div className=''>
+        <Link to='/store' className=''>
           <LeftArrow />
-        </div>
+        </Link>
         <p>Burger King Menu</p>
         <div className='bage'>
           <Bage />
@@ -21,23 +24,24 @@ const Menu = () => {
         <div className='menu'>
           {Array.from({ length: 6 }, (_, i) => (
             <div className='menu-card' key={i}>
-              <img
-                src='https://plus.unsplash.com/premium_photo-1740992237716-2bb9f560cc6b?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8'
-                alt='img'
-              />
+              <img src={Image} alt='img' />
               <div className='menu-card__content'>
-                <div className='title'>
+                <div className='menu-card__content-title'>
                   <p>Dish Name</p>
                   <p>$ 5.00</p>
                 </div>
-                <p className='tag'>+</p>
+                <p className='menu-card__content-plus'>
+                  <Plus />
+                </p>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      <Button name='Go to card' />
+      <Link to='/cart'>
+        <Button name='Go to card' />
+      </Link>
     </div>
   )
 }
