@@ -15,14 +15,14 @@ const Services = () => {
         <div className=''>
           <LeftArrow />
         </div>
-        <p>Airport Services</p>
+        <p className=''>Airport Services</p>
         <div className='icon-search'>
           <Search />
         </div>
       </header>
 
       <div className='concept'>
-        <div className='select flex'>
+        <div className='flex select'>
           <div className='select-item active'>
             <span>All</span>
           </div>
@@ -40,7 +40,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className='option flex'>
+        <div className='flex option'>
           <div className='option-item'>TERMINAL 1</div>
           <div className='option-item'>TERMINAL 2</div>
           <div className='option-item'>TERMINAL 3</div>
@@ -48,7 +48,7 @@ const Services = () => {
         </div>
 
         <div className='dining'>
-          <div className='dining-title flex'>
+          <div className='flex dining-title'>
             <p>DINING</p>
             <Link to='/dining'>See more</Link>
           </div>
@@ -67,7 +67,7 @@ const Services = () => {
         </div>
 
         <div className='resting'>
-          <div className='resting-title flex'>
+          <div className='flex resting-title'>
             <p>LOUNGE & REST</p>
             <Link to='/resting'>See more</Link>
           </div>
@@ -96,7 +96,7 @@ const Services = () => {
         </div>
 
         <div className='shopping'>
-          <div className='shopping-title flex'>
+          <div className='flex shopping-title'>
             <p>SHOPPING</p>
             <Link to='/shopping'>See more</Link>
           </div>
