@@ -32,6 +32,12 @@ button {
   display: flex;
 }
 
+.concept {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  height: 82vh;
+}
+
 .main {
   background-color: #ffffff;
   height: 100vh;
@@ -94,5 +100,27 @@ header {
     p:last-child {
       font-weight: bold;
     }
+  }
+}
+
+// React Select Custom
+.css-1u9des2-indicatorSeparator {
+  display: none;
+}
+
+.css-1wy0on6 {
+  svg {
+    margin-right: 4px;
+    color: #a8a8a8;
+  }
+}
+
+.custom-select {
+  .css-13cymwt-control {
+    border-radius: 12px;
+  }
+
+  .css-1dimb5e-singleValue {
+    color: #a8a8a8;
   }
 }

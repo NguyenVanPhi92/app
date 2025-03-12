@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 import LeftArrow from '../assets/icons/LeftArrow'
-import { Button } from './button'
+import { Button } from '../components/button'
 import '../styles/cart.scss'
 import Image from '../contans/data'
 

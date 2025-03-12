@@ -2,7 +2,7 @@ import { Link } from 'react-router'
 import LeftArrow from '../assets/icons/LeftArrow'
 import Sticky from '../assets/icons/Sticky'
 import '../styles/checkout.scss'
-import { Button } from './button'
+import { Button } from '../components/button'
 const Checkout = () => {
   return (
     <div className='main flex flex-col justify-between'>

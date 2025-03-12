@@ -2,7 +2,7 @@ import { Link } from 'react-router'
 import Bage from '../assets/icons/Bage'
 import LeftArrow from '../assets/icons/LeftArrow'
 import '../styles/menu.scss'
-import { Button } from './button'
+import { Button } from '../components/button'
 import Image from '../contans/data'
 import Plus from '../assets/icons/Plus'
 

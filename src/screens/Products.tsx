@@ -1,7 +1,7 @@
 import Bage from '../assets/icons/Bage'
 import Plus from '../assets/icons/Plus'
 import Search from '../assets/icons/Search'
-import { Button } from './button'
+import { Button } from '../components/button'
 import Navbar from './Navbar'
 
 const Products = () => {

@@ -1,5 +1,5 @@
 import '../styles/cart.scss'
-import { Button } from './button'
+import { Button } from '../components/button'
 
 const Booking = () => {
   return (
