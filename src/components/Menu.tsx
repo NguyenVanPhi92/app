@@ -8,19 +8,19 @@ import Plus from '../assets/icons/Plus'
 
 const Menu = () => {
   return (
-    <div className='main flex flex-col justify-between'>
+    <div className='flex flex-col justify-between main'>
       <div>
         <header>
           <Link to='/store' className=''>
             <LeftArrow />
           </Link>
           <p>Burger King Menu</p>
-          <div className='relative'>
+          <Link to={'/cart'} className='relative'>
             <Bage />
             <span className='py-[2px] top-[10px] right-[-2px] absolute px-[5px] text-[8px] bg-[#354f79] rounded-full text-white'>
               9
             </span>
-          </div>
+          </Link>
         </header>
 
         <div className='concept'>
