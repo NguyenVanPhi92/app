@@ -3,9 +3,9 @@ import Search from '../assets/icons/Search'
 import '../styles/services.scss'
 import Navbar from './Navbar'
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Link } from 'react-router'
+import { Autoplay } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import Image from '../contans/data'
 
 const Services = () => {
@@ -79,8 +79,7 @@ const Services = () => {
             autoplay={{
               delay: 1500
             }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
+            modules={[Autoplay]}
             className='resting-card'
           >
             {Array.from({ length: 8 }, (_, i) => (

@@ -14,7 +14,7 @@ const Store = () => {
             <p className='text-green-600'>Open</p>
           </div>
 
-          <div>
+          <div className='text-sm'>
             <p className='flex gap-x-4'>
               <span>i</span>
               <span>Location</span>
@@ -26,7 +26,7 @@ const Store = () => {
             </p>
           </div>
 
-          <div className='flex gap-x-4 justify-end'>
+          <div className='flex gap-x-4 justify-end text-sm'>
             <p className='flex gap-x-4'>
               <span>i</span>
               <span>Reserve</span>
@@ -41,7 +41,7 @@ const Store = () => {
 
         <div className='p-4'>
           <h3 className='font-bold'>About</h3>
-          <p className='mt-5'>
+          <p className='mt-5 text-[12px]'>
             Description Description Description Description Description Description Description Description Description
             Description Description Description
           </p>

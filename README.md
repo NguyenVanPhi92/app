@@ -1,9 +1,10 @@
 https://app-v1-mocha.vercel.app/
 Tech: React Vite SCSS Tailwind Zustand Swipper React Select
+
 Screen width: 430px
 Làm trước Screen 1.2.4
-Done 2 Route Dining & Resting
-Fz main 12/14
+Done 2 Route Service
+Fz main 10/12/14
 
 Screen done:
 1 Products

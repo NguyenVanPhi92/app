@@ -38,7 +38,9 @@ const Dining = () => {
                   <p>Shop</p>
                   <p>Location - Operations Hour</p>
                 </div>
-                <p className='shop-card__content-tag'>TAG</p>
+                <p className='p-1 flex items-center justify-center font-[600] text-[#354f79] bg-[#eaf2ff] w-[40px] rounded-full text-[10px]'>
+                  TAG
+                </p>
               </div>
             </Link>
           ))}
