@@ -5,7 +5,7 @@ import '../styles/checkout.scss'
 import { Button } from './button'
 const Checkout = () => {
   return (
-    <div className='main'>
+    <div className='main flex flex-col justify-between'>
       <div className=''>
         <header>
           <Link to='/cart' className=''>
@@ -15,8 +15,8 @@ const Checkout = () => {
           <div className=''></div>
         </header>
 
-        <div className='progress'>
-          <div className='progress-item'>
+        <div className='progress text-sm'>
+          <div className='progress-item '>
             <div className='progress-item__icon'>
               <Sticky />
             </div>
@@ -38,9 +38,9 @@ const Checkout = () => {
           </div>
         </div>
 
-        <div className='title'>
-          <h4>Choose a payment method</h4>
-          <p>You won't be charged until you review the order on the next page</p>
+        <div className='text-left p-4'>
+          <h4 className='font-bold text-xl mb-2'>Choose a payment method</h4>
+          <p className='text-[#6f6f6f] text-sm'>You won't be charged until you review the order on the next page</p>
         </div>
 
         <div className='credit'>
@@ -59,9 +59,7 @@ const Checkout = () => {
         </div>
       </div>
 
-      <Link to='/qr'>
-        <Button name='Next' />
-      </Link>
+      <Button name='Next' path='qr' />
     </div>
   )
 }

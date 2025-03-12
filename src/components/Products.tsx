@@ -1,4 +1,3 @@
-import { Link } from 'react-router'
 import Bage from '../assets/icons/Bage'
 import Plus from '../assets/icons/Plus'
 import Search from '../assets/icons/Search'
@@ -41,9 +40,7 @@ const Products = () => {
           ))}
         </main>
 
-        <Link to='/cart'>
-          <Button name='Go to cart' />
-        </Link>
+        <Button name='Go to cart' path='cart' />
       </div>
 
       <Navbar />

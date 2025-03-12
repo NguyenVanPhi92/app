@@ -1,20 +1,9 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
   .progress {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
     &-item {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      row-gap: 12px;
-      padding: 16px;
-
       &__icon {
         width: 30px;
         height: 30px;
@@ -34,14 +23,6 @@
         color: white;
         background-color: #354f79;
       }
-    }
-  }
-
-  .title {
-    padding: 24px;
-    h4 {
-      font-size: 20px;
-      margin-bottom: 10px;
     }
   }
 

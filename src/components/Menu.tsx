@@ -39,9 +39,7 @@ const Menu = () => {
         </div>
       </div>
 
-      <Link to='/cart'>
-        <Button name='Go to card' />
-      </Link>
+      <Button name='Go to card' path='cart' />
     </div>
   )
 }

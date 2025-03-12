@@ -5,7 +5,7 @@ import Sticky from '../assets/icons/Sticky'
 import '../styles/qr.scss'
 const QrPage = () => {
   return (
-    <div className='main'>
+    <div className='main flex flex-col justify-between'>
       <div className=''>
         <header>
           <Link to='/checkout' className=''>
@@ -15,7 +15,7 @@ const QrPage = () => {
           <div className=''></div>
         </header>
 
-        <div className='progress'>
+        <div className='progress text-sm'>
           <div className='progress-item'>
             <div className='progress-item__icon'>
               <Sticky />
@@ -40,11 +40,13 @@ const QrPage = () => {
           </div>
         </div>
 
-        <div className='title'>
-          <h4>Come to the court and scan QR code to pick up your order!</h4>
+        <div className='my-10'>
+          <h4 className='font-bold text-[18px] text-center w-[80%] m-auto'>
+            Come to the court and scan QR code to pick up your order!
+          </h4>
         </div>
 
-        <div className='img-qr'>
+        <div className='my-10'>
           <QR />
         </div>
       </div>

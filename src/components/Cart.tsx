@@ -39,9 +39,7 @@ const Cart = () => {
         <p className='total-title'>Total</p>
         <p className='total-price'>$20.00</p>
       </div>
-      <Link to='/checkout'>
-        <Button name='checkout' />
-      </Link>
+      <Button name='Checkout' path='checkout' />
     </div>
   )
 }
