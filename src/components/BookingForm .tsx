@@ -11,6 +11,16 @@ const BookingForm = () => {
   const [hours, setHours] = useState(hoursOptions[0])
   const [rooms, setRooms] = useState(roomOptions[0])
 
+  const handleChangeTime = (e: any) => {
+    setCheckInTime(e.value)
+  }
+  const handleChangeHr = (e: any) => {
+    setHours(e.value)
+  }
+  const handleChangeRoom = (e: any) => {
+    setRooms(e.value)
+  }
+
   return (
     <div className='px-4'>
       {/* Date Picker */}
@@ -33,7 +43,7 @@ const BookingForm = () => {
         <Select
           options={timeOptions}
           value={checkInTime}
-          onChange={setCheckInTime}
+          onChange={(e) => handleChangeTime(e)}
           className='mt-1 text-[12px] custom-select '
           components={{ DropdownIndicator: () => <ChevronDown className='text-gray-500' size={20} /> }}
         />
@@ -45,7 +55,7 @@ const BookingForm = () => {
         <Select
           options={hoursOptions}
           value={hours}
-          onChange={setHours}
+          onChange={handleChangeHr}
           className='mt-1 text-[12px] custom-select '
           components={{ DropdownIndicator: () => <ChevronDown className='text-gray-500' size={20} /> }}
         />
@@ -57,7 +67,7 @@ const BookingForm = () => {
         <Select
           options={roomOptions}
           value={rooms}
-          onChange={setRooms}
+          onChange={handleChangeRoom}
           className='mt-1 text-[12px] custom-select '
           components={{ DropdownIndicator: () => <ChevronDown className='text-gray-500' size={20} /> }}
         />

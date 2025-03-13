@@ -3,7 +3,6 @@ import Date from '../assets/icons/Date'
 import Location from '../assets/icons/Location'
 import Menu from '../assets/icons/Menu'
 import Image from '../contans/data'
-import '../styles/cart.scss'
 import { Button } from '../components/button'
 
 const Store = () => {

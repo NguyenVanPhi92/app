@@ -10,13 +10,13 @@ import { LoginBody, LoginBodyType } from '../../schema/auth.schema'
 const Login = () => {
   // useForm
   const {
-    control,
-    handleSubmit,
-    formState: { isValid }
+    control
+    // handleSubmit,
+    // formState: { isValid }
   } = useForm<LoginBodyType>({ resolver: zodResolver(LoginBody), defaultValues: { email: '', password: '' } })
 
   // handle event
-  const handleLogin = (data: LoginBodyType) => console.log('data form: ', data)
+  // const handleLogin = (data: LoginBodyType) => console.log('data form: ', data)
 
   return (
     <div className='main'>

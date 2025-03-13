@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import OTPInput from 'react-otp-input'
-import { Button } from '../../components/button'
 import { Link } from 'react-router'
+import { Button } from '../../components/button'
 
 const OTP = () => {
   const [code, setCode] = useState('')
 
-  const handleChange = (code: any) => setCode(code)
+  // const handleChange = (code: any) => setCode(code)
 
   return (
     <div className='flex flex-col justify-center gap-10 main'>

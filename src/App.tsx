@@ -16,12 +16,16 @@ import Home from './screens/Home'
 import Login from './screens/auth/Login'
 import Register from './screens/auth/Register'
 import OTP from './screens/auth/OTP'
+import SelectPage from './screens/SelectPage'
+import Flight from './screens/Flight'
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<SelectPage />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/flight' element={<Flight />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/code' element={<OTP />} />

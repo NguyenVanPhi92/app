@@ -1,23 +1,21 @@
-import '../styles/cart.scss'
-import { Button } from '../components/button'
-import LeftArrow from '../assets/icons/LeftArrow'
-import { Link } from 'react-router'
-import InputField from '../components/input/InputField'
-import { PasswordField } from '../components/input/PasswordField'
-import { LoginBody, LoginBodyType } from '../schema/auth.schema'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
+import { Link } from 'react-router'
+import LeftArrow from '../assets/icons/LeftArrow'
+import { Button } from '../components/button'
+import InputField from '../components/input/InputField'
+import { LoginBody, LoginBodyType } from '../schema/auth.schema'
 
 const Booking = () => {
   // useForm
   const {
-    control,
-    handleSubmit,
-    formState: { isValid }
+    control
+    // handleSubmit,
+    // formState: { isValid }
   } = useForm<LoginBodyType>({ resolver: zodResolver(LoginBody), defaultValues: { email: '', password: '' } })
 
   // handle event
-  const handleLogin = (data: LoginBodyType) => console.log('data form: ', data)
+  // const handleLogin = (data: LoginBodyType) => console.log('data form: ', data)
 
   return (
     <div className='flex flex-col justify-between main'>
