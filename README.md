@@ -3,7 +3,7 @@ Tech: React Vite SCSS Tailwind Zustand Swipper React Select React Icon React Dat
 
 Screen width: 430px
 Làm trước Screen 1.2.4
-Done 2 Route Service
+Done 2 Route Dining/Resting/Shopping
 Fz main 10/12/14
 
 Screen done:

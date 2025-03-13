@@ -8,7 +8,7 @@ import '../styles/cart.scss'
 const SleepZone = () => {
   return (
     <div className='flex flex-col justify-between main'>
-      <div className='h-[88vh] overflow-y-scroll scroll-smooth ' style={{ scrollbarWidth: 'thin' }}>
+      <div className='h-[88vh] overflow-y-scroll scroll-smooth' style={{ scrollbarWidth: 'thin' }}>
         <img src={Image} alt='img' className='w-full' />
 
         <div className='p-4'>

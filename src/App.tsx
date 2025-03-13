@@ -10,17 +10,29 @@ import Store from './screens/Store'
 import Resting from './screens/Resting'
 import SleepZone from './screens/SleepZone'
 import Booking from './screens/Booking'
+import Shopping from './screens/Shopping'
+import ShoppingStore from './screens/ShoppingStore'
+import Home from './screens/Home'
+import Login from './screens/auth/Login'
+import Register from './screens/auth/Register'
+import OTP from './screens/auth/OTP'
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Services />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/code' element={<OTP />} />
+        <Route path='/service' element={<Services />} />
         <Route path='/qr' element={<QrPage />} />
         <Route path='/resting' element={<Resting />} />
         <Route path='/booking' element={<Booking />} />
+        <Route path='/shopping' element={<Shopping />} />
         <Route path='/sleepzone' element={<SleepZone />} />
         <Route path='/store' element={<Store />} />
+        <Route path='/shoppingstore' element={<ShoppingStore />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/menu' element={<Menu />} />
         <Route path='/dining' element={<Dining />} />
