@@ -27,7 +27,7 @@ const Register = () => {
         </div>
 
         <div className='my-4 text-[14px]'>
-          <p>I've read and agree with the Terms and Conditions and the Privacy Policy</p>
+          <p>I've read and agree with the Terms and Conditions and the Privacy Policy.</p>
         </div>
 
         <form action='' className='py-2'>
