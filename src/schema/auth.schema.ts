@@ -4,12 +4,12 @@ export const LoginBody = z
   .object({
     email: z
       .string()
-      .nonempty('email is required') // ✅ Check không để trống
+      .nonempty('email is required')
       .min(1, { message: 'email is required' })
       .email({ message: 'invalid email' }),
     password: z
       .string()
-      .nonempty('Password is required') // ✅ Check không để trống
+      .nonempty('Password is required')
       .min(6, 'Minimum password length is 6 characters')
       .max(60, 'Maximum password length is 60 characters')
   })
