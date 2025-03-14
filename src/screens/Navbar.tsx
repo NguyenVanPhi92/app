@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import Account from '../assets/icons/navs/Account'
 import Explore from '../assets/icons/navs/Explore'
 import Flight from '../assets/icons/navs/Flight'
@@ -8,22 +9,22 @@ import '../styles/navbar.scss'
 const Navbar = () => {
   return (
     <div className='navbar'>
-      <div className='flex navbar-item'>
+      <Link to='/home' className='flex navbar-item'>
         <Explore />
         <p>Explore</p>
-      </div>
-      <div className='flex navbar-item'>
+      </Link>
+      <Link to={'/flight'} className='flex navbar-item'>
         <Flight />
         <p>Flight</p>
-      </div>
+      </Link>
       <div className='flex navbar-item'>
         <Scan />
         <p>Scan QR</p>
       </div>
-      <div className='flex navbar-item'>
+      <Link to='/service' className='flex navbar-item'>
         <Services />
         <p className='navbar-item_active'>Services</p>
-      </div>
+      </Link>
       <div className='flex navbar-item'>
         <Account />
         <p>Account</p>
