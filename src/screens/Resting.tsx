@@ -2,7 +2,6 @@ import { Link } from 'react-router'
 import LeftArrow from '../assets/icons/LeftArrow'
 import Search from '../assets/icons/Search'
 import Image from '../contans/data'
-// import '../styles/Resting.scss'
 import Navbar from './Navbar'
 
 const Resting = () => {

@@ -3,7 +3,6 @@ import Location from '../assets/icons/Location'
 import BookingForm from '../components/BookingForm '
 import { Button } from '../components/button'
 import Image from '../contans/data'
-import '../styles/cart.scss'
 
 const SleepZone = () => {
   return (

@@ -2,7 +2,6 @@ import LeftArrow from '../assets/icons/LeftArrow'
 import Search from '../assets/icons/Search'
 import '../styles/services.scss'
 import Navbar from './Navbar'
-// Import Swiper React components
 import { Link } from 'react-router'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'

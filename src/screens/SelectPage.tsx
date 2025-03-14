@@ -53,7 +53,7 @@ const SelectPage = () => {
         </div>
       </div>
 
-      <Button name='order' path='home' />
+      <Button name='Start' path='home' />
     </div>
   )
 }
