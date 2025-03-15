@@ -9,8 +9,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 const Three = () => {
   return (
-    <div className='flex flex-col justify-between main'>
-      <div className='p-4'>
+    <div className='flex flex-col justify-between p-4 main'>
+      <div className=''>
         <div className='flex justify-between mb-8'>
           <Goback />
           <p className='font-[600]'>Burger King Menu</p>
@@ -46,7 +46,7 @@ const Three = () => {
                 <div className='bg-[#f8f9fe] rounded-2xl'>
                   <div className='relative'>
                     <img src={Image} alt='' className='w-full rounded-tl-2xl rounded-tr-2xl' />
-                    <p className='px-2 py-1 absolute right-2 text-[12px] top-2 rounded-full bg-[#354f79] text-white'>
+                    <p className='px-3 py-1 absolute right-2 text-[12px] top-2 rounded-full bg-[#354f79] text-white'>
                       10/2
                     </p>
                   </div>
@@ -56,7 +56,7 @@ const Three = () => {
                       <p className='font-bold text-[16px]'>Event name</p>
                       <p className='text-[16px] text-[#71727A]'>Detailed address</p>
                     </div>
-                    <div className='border-2 py-2 border-[#354f79] rounded-2xl flex justify-center items-center gap-x-2 text-[#354f79] '>
+                    <div className='border-[1.4px] py-1 border-[#354f79] rounded-xl flex justify-center items-center gap-x-2 text-[#354f79] '>
                       <GoHeart />
                       <span className='font-bold'>Interest</span>
                     </div>
@@ -89,7 +89,7 @@ const Three = () => {
                 <div className='bg-[#f8f9fe] rounded-2xl'>
                   <div className='relative'>
                     <img src={Image} alt='' className='w-full rounded-tl-2xl rounded-tr-2xl' />
-                    <p className='px-2 py-1 absolute right-2 text-[12px] top-2 rounded-full bg-[#354f79] text-white'>
+                    <p className='px-3 py-1 absolute right-2 text-[12px] top-2 rounded-full bg-[#354f79] text-white'>
                       10/2
                     </p>
                   </div>

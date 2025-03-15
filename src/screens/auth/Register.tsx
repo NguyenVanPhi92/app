@@ -44,7 +44,7 @@ const Register = () => {
             <PasswordField control={control} name='password' placeholder='re-enter password' />
           </div>
           <div className=''>
-            <Button name='Send OPT' path='code' />
+            <Button name='Submit' path='code' />
           </div>
         </form>
       </div>

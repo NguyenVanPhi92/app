@@ -13,7 +13,7 @@ const Navbar = () => {
         <Explore />
         <p>Explore</p>
       </Link>
-      <Link to={'/flight'} className='flex navbar-item'>
+      <Link to='/flight' className='flex navbar-item'>
         <Flight />
         <p>Flight</p>
       </Link>

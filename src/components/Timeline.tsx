@@ -1,16 +1,22 @@
 import { useState } from 'react'
+import Image from '../constants/data'
 
 const TimelineItem = ({ step, time, title, address, isOpen, onClick }) => (
-  <div className='flex items-start gap-6'>
-    <p className='w-12 text-gray-500'>{time}</p>
+  <div className='flex items-start gap-4'>
+    <p className='w-12 text-[14px] text-gray-500 mt-4'>{time}</p>
     <div className='flex flex-col items-center'>
-      <div className='flex items-center justify-center w-10 h-10 text-white bg-gray-300 rounded-full'>{step}</div>
-      {step !== 4 && <div className='w-[2px] bg-gray-300 h-16 my-2'></div>}
+      <div className='flex items-center justify-center w-5 h-5 mt-4 mb-2 text-white bg-gray-300 rounded-full'>
+        {step}
+      </div>
+      {step !== 4 && <div className='w-[2px] bg-gray-300 h-10'></div>}
     </div>
-    <div className='w-full p-4 bg-blue-100 rounded-lg cursor-pointer' onClick={onClick}>
-      <h3 className='font-bold'>{title}</h3>
-      <p>{address}</p>
-      {isOpen && <p className='mt-2 text-sm text-gray-600'>Chi tiết mở rộng...</p>}
+    <div className='flex rounded-lg cursor-pointer bg-[#f8f9fe] w-full' onClick={onClick}>
+      <img src={Image} alt='' className='w-20 h-16 rounded-tl-xl rounded-es-xl' />
+
+      <div className='px-4 py-2'>
+        <p className='font-bold text-[14px]'>Destinations</p>
+        <p className='text-[12px]'>Destinations</p>
+      </div>
     </div>
   </div>
 )
@@ -23,7 +29,7 @@ const Timeline = () => {
   }
 
   return (
-    <div className='space-y-6'>
+    <div className=''>
       {[1, 2, 3, 4].map((step) => (
         <TimelineItem
           key={step}

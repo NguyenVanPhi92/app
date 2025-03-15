@@ -18,7 +18,7 @@ const Search = () => {
         />
       </mask>
       <g mask='url(#mask0_3281_8211)'>
-        <rect x='0.964844' y='0.413208' width='20' height='20' fill='#2F3036' />
+        <rect x='0.964844' y='0.413208' width='20' height='20' fill='#354F79' />
       </g>
     </svg>
   )

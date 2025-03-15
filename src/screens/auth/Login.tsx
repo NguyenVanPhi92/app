@@ -6,6 +6,9 @@ import InputField from '../../components/input/InputField'
 import { PasswordField } from '../../components/input/PasswordField'
 import Image from '../../constants/data'
 import { LoginBody, LoginBodyType } from '../../schema/auth.schema'
+import Google from '../../assets/icons/Google'
+import Apple from '../../assets/icons/Apple'
+import Facebook from '../../assets/icons/Facebook'
 
 const Login = () => {
   // useForm
@@ -47,7 +50,15 @@ const Login = () => {
         </form>
 
         <div className='flex justify-center mt-8'>
-          <p>Or continue with</p>
+          <div className='text-center '>
+            <p className='mb-6'>Or continue with</p>
+
+            <div className='flex gap-x-6'>
+              <Google />
+              <Apple />
+              <Facebook />
+            </div>
+          </div>
         </div>
       </div>
     </div>

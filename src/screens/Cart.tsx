@@ -39,7 +39,9 @@ const Cart = () => {
         </div>
       </div>
 
-      <Button name='Checkout' path='checkout' />
+      <div className='p-4'>
+        <Button name='Checkout' path='checkout' />
+      </div>
     </div>
   )
 }

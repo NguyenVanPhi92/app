@@ -9,13 +9,14 @@ const OTP = () => {
   // const handleChange = (code: any) => setCode(code)
 
   return (
-    <div className='flex flex-col justify-center gap-10 main'>
-      <div className='w-[260px] mx-auto'>
-        <h1 className='mb-2 text-xl font-bold'>Enter confirmation code</h1>
-        <p className='text-[14px] text-[#71727A] text-center'>A 4-digit code was sent to lucasscott3@email.com</p>
-      </div>
-      <div className=''>
-        <div className='flex justify-center'>
+    <div className='flex flex-col justify-between p-4 main'>
+      <div className='mt-56'>
+        <div className='w-[260px] mx-auto'>
+          <h1 className='mb-2 text-xl font-bold'>Enter confirmation code</h1>
+          <p className='text-[14px] text-[#71727A] text-center'>A 4-digit code was sent to lucasscott3@email.com</p>
+        </div>
+
+        <div className='flex justify-center mt-10'>
           <OTPInput
             value={code}
             onChange={setCode}
@@ -36,15 +37,15 @@ const OTP = () => {
             }}
           />
         </div>
+      </div>
 
-        <div className='mt-40 text-center'>
-          <p className='mb-2'>
-            <Link to='/' className='text-[14px] text-[#354F79] font-bold'>
-              Resend code
-            </Link>
-          </p>
-          <Button name='Continue' path='services' />
-        </div>
+      <div className='text-center'>
+        <p className='mb-2'>
+          <Link to='/' className='text-[14px] text-[#354F79] font-bold'>
+            Resend code
+          </Link>
+        </p>
+        <Button name='Continue' path='services' />
       </div>
     </div>
   )

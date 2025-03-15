@@ -4,7 +4,7 @@ import Goback from '../components/Goback'
 import '../styles/checkout.scss'
 const Checkout = () => {
   return (
-    <div className='flex flex-col justify-between main'>
+    <div className='flex flex-col justify-between p-4 main'>
       <div className=''>
         <header>
           <Goback />

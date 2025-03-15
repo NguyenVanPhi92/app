@@ -53,13 +53,13 @@ const Services = () => {
 
             <div className='dining-shop'>
               {Array.from({ length: 4 }, (_, i) => (
-                <div className='dining-shop__card' key={i}>
+                <Link to='/dining' className='dining-shop__card' key={i}>
                   <img src={Image} alt='img' />
                   <div className='dining-shop__card--title'>
                     <p>Shop</p>
                     <p>Location - Operations Hour</p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -82,11 +82,13 @@ const Services = () => {
             >
               {Array.from({ length: 8 }, (_, i) => (
                 <SwiperSlide className='resting-card__item' key={i}>
-                  <img src={Image} alt='img' />
-                  <div className='resting-card__item--title'>
-                    <p>Lounge</p>
-                    <p>$ 12.00</p>
-                  </div>
+                  <Link to='/resting'>
+                    <img src={Image} alt='img' />
+                    <div className='resting-card__item--title'>
+                      <p>Lounge</p>
+                      <p>$ 12.00</p>
+                    </div>
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -100,20 +102,22 @@ const Services = () => {
 
             <div className='shopping-card'>
               {Array.from({ length: 4 }, (_, i) => (
-                <div className='shopping-card__item' key={i}>
+                <Link to='/shopping' className='shopping-card__item' key={i}>
                   <span className='tag'>TAG</span>
                   <img src={Image} alt='img' />
                   <div className='shopping-card__item--title'>
                     <p>Shop</p>
                     <p>Location - Operations Hour</p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
         </div>
       </div>
-      <Navbar />
+      <div className='mb-2'>
+        <Navbar />
+      </div>
     </div>
   )
 }

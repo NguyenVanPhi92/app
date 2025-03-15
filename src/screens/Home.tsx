@@ -13,31 +13,31 @@ import Navbar from './Navbar'
 const Home = () => {
   return (
     <div className='flex flex-col justify-between main'>
-      <div className='h-[90vh] overflow-y-scroll scroll-smooth'>
-        <div className='relative'>
-          <img src={Image} alt='img' className='w-full mb-6 rounded-es-3xl rounded-ee-3xl' />
-          <div className='absolute bottom-2 left-4'>
-            <h2 className='text-xl font-bold'>
-              Welcome to <br /> Tan Son Nhat Airport!
-            </h2>
-            <Link to='/register'>Sign up </Link> or <Link to='/login'>Login</Link>
-          </div>
+      <div className='relative'>
+        <img src={Image} alt='img' className='w-full mb-6 rounded-es-3xl rounded-ee-3xl' />
+        <div className='absolute bottom-10 left-4'>
+          <h2 className='text-xl font-bold'>
+            Welcome to <br /> Tan Son Nhat Airport!
+          </h2>
+          <Link to='/register'>Sign up </Link> or <Link to='/login'>Login</Link>
         </div>
+      </div>
 
+      <div className='h-[90vh] overflow-y-scroll scroll-smooth p-4'>
         {/* Icons */}
-        <div className='grid grid-cols-4 gap-2 p-4 text-center'>
-          <div className='cursor-pointer'>
+        <div className='grid grid-cols-4 gap-2 mb-6 text-center'>
+          <Link to='/travel'>
             <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
               <Travel />
             </div>
             <p className='text-[12px] text-[#2F3036] mt-1'>Smart Travel</p>
-          </div>
-          <div className='cursor-pointer'>
+          </Link>
+          <Link to='/dining'>
             <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
               <DiningIcon />
             </div>
             <p className='text-[12px] text-[#2F3036] mt-1'>Dining</p>
-          </div>
+          </Link>
           <div className='cursor-pointer'>
             <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
               <Ride />
@@ -75,7 +75,7 @@ const Home = () => {
         </div>
 
         {/* News */}
-        <div className='p-4'>
+        <div className='mb-6'>
           <h2 className='mb-2 font-bold'>WHAT'S NEW?</h2>
           <div className='grid grid-cols-2 gap-4 '>
             <div className='relative'>
@@ -103,7 +103,7 @@ const Home = () => {
         </div>
 
         {/* Expolore */}
-        <div className='p-4'>
+        <div className=''>
           <h3 className='mb-2 font-bold'>EXPLORE HO CHI MINH CITY</h3>
           <div className='bg-[#f8f9fe] mb-4 rounded-xl'>
             <div className='relative'>
@@ -141,7 +141,9 @@ const Home = () => {
         </div>
       </div>
 
-      <Navbar />
+      <div className='mb-2'>
+        <Navbar />
+      </div>
     </div>
   )
 }

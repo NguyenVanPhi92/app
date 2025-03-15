@@ -19,6 +19,7 @@ Done 3 Route 1-2-4 Còn Route 3
 Done 19 page con 8 page
 Còn Route 3, chưa cày Zustand
 Đang làm route 3
+Còn Checkout chưa xong
 
 Tính năng:
 add to card

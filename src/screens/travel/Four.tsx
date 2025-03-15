@@ -6,19 +6,19 @@ import Image from '../../constants/data'
 
 const Four = () => {
   return (
-    <div className='flex flex-col justify-between main'>
+    <div className='flex flex-col justify-between p-4 main'>
       {/* Nav Head */}
-      <div className='flex justify-between p-4'>
+      <div className='flex justify-between mb-3'>
         <Goback />
         <p className='font-[600]'>Smart Travel</p>
         <Search />
       </div>
 
-      <div className='p-4 h-[90vh] overflow-y-scroll scroll-smooth'>
+      <div className='h-[90vh] overflow-y-scroll scroll-smooth'>
         {/* Filter */}
         <div className='grid text-[14px] grid-cols-3 text-center mb-4 gap-x-1 items-center justify-between p-1 bg-[#eaf2ff] rounded-2xl'>
           <p className='font-[700] text-[#71727A]'>All</p>
-          <p className='w-full py-2 font-[700] text-[#354f79] bg-white rounded-2xl'>Festival</p>
+          <p className='w-full py-1 font-[700] text-[#354f79] bg-white rounded-xl'>Festival</p>
           <p className='font-[700] text-[#71727A]'>Destination</p>
         </div>
         <div className='flex mb-8 gap-x-1'>
@@ -29,11 +29,11 @@ const Four = () => {
         </div>
 
         {/* CARD */}
-        <div>
+        <div className='mb-6'>
           <div className='bg-[#f8f9fe] rounded-2xl mb-6'>
             <div className='relative'>
               <img src={Image} alt='' className='object-cover w-full h-36 rounded-tl-2xl rounded-tr-2xl' />
-              <p className='px-2 py-1 absolute right-2 text-[12px] top-2 rounded-full bg-[#354f79] text-white'>10/2</p>
+              <p className='px-3 py-1 absolute right-2 text-[12px] top-2 rounded-full bg-[#354f79] text-white'>10/2</p>
             </div>
 
             <div className='p-4'>
@@ -54,7 +54,7 @@ const Four = () => {
           <div className='bg-[#f8f9fe] rounded-2xl'>
             <div className='relative'>
               <img src={Image} alt='' className='object-cover w-full h-36 rounded-tl-2xl rounded-tr-2xl' />
-              <p className='px-2 py-1 absolute right-2 text-[12px] top-2 rounded-full bg-[#354f79] text-white'>10/2</p>
+              <p className='px-3 py-1 absolute right-2 text-[12px] top-2 rounded-full bg-[#354f79] text-white'>10/2</p>
             </div>
 
             <div className='p-4'>

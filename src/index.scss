@@ -116,7 +116,17 @@ header {
 
 .custom-select {
   .css-13cymwt-control {
-    border-radius: 12px;
+    padding: 7px 0;
+    border-radius: 16px;
+    border-color: #c5c6cc;
+
+    &:hover {
+      border-color: #c5c6cc;
+    }
+
+    &:focus {
+      border-color: red;
+    }
   }
 
   .css-1dimb5e-singleValue {

@@ -8,50 +8,53 @@ import { Button } from '../components/button'
 const Store = () => {
   return (
     <div className='flex flex-col justify-between main'>
-      <div>
+      <div className=''>
         <img src={Image} alt='img' className='w-full' />
-
-        <div className='p-4 border-b-[1px] border-red-50'>
-          <div className='flex items-center mb-4 gap-x-4'>
-            <p className='font-bold'>Store Name</p>
-            <p className='text-green-600'>Open</p>
-          </div>
-
-          <div className='flex flex-col items-start text-sm gap-y-1'>
-            <div className='flex items-center -ml-[2px] gap-x-4'>
-              <Location />
-              <p>Location</p>
-            </div>
-
-            <div className='flex items-center gap-x-4'>
-              <Clock />
-              <p>Operations Hours</p>
-            </div>
-          </div>
-
-          <div className='flex justify-end text-sm gap-x-4'>
-            <div className='flex items-center cursor-pointer gap-x-1'>
-              <Date />
-              <p>Reserve</p>
-            </div>
-
-            <div className='flex items-center cursor-pointer gap-x-1'>
-              <Menu />
-              <p>View Menu</p>
-            </div>
-          </div>
-        </div>
-
         <div className='p-4'>
-          <h3 className='font-bold'>About</h3>
-          <p className='mt-5 text-[12px]'>
-            Description Description Description Description Description Description Description Description Description
-            Description Description Description
-          </p>
+          <div className=' border-b-[1px] mb-4 pb-4 border-[#797979]'>
+            <div className='flex items-center mb-4 gap-x-4'>
+              <p className='font-bold'>Store Name</p>
+              <p className='text-green-600'>Open</p>
+            </div>
+
+            <div className='flex flex-col items-start text-sm gap-y-1'>
+              <div className='flex items-center -ml-[2px] gap-x-4'>
+                <Location />
+                <p className=''>Location</p>
+              </div>
+
+              <div className='flex items-center gap-x-4'>
+                <Clock />
+                <p>Operations Hours</p>
+              </div>
+            </div>
+
+            <div className='flex justify-end text-sm gap-x-4'>
+              <div className='flex items-center cursor-pointer gap-x-1'>
+                <Date />
+                <p className='text-[#354f79] font-[500]'>Reserve</p>
+              </div>
+
+              <div className='flex items-center cursor-pointer gap-x-1'>
+                <Menu />
+                <p className='text-[#354f79] font-[500]'>View Menu</p>
+              </div>
+            </div>
+          </div>
+
+          <div className=''>
+            <h3 className='font-bold'>About</h3>
+            <p className='mt-5 text-[12px]'>
+              Description Description Description Description Description Description Description Description
+              Description Description Description Description
+            </p>
+          </div>
         </div>
       </div>
 
-      <Button name='order' path='menu' />
+      <div className='p-4'>
+        <Button name='order' path='menu' />
+      </div>
     </div>
   )
 }

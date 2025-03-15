@@ -7,8 +7,8 @@ import Navbar from './Navbar'
 
 const Dining = () => {
   return (
-    <div className='main'>
-      <header>
+    <div className='flex flex-col justify-between main'>
+      <header className='px-6'>
         <Goback />
         <p>Dining</p>
         <div className=''>
@@ -45,7 +45,9 @@ const Dining = () => {
         </div>
       </div>
 
-      <Navbar />
+      <div className='mb-2'>
+        <Navbar />
+      </div>
     </div>
   )
 }

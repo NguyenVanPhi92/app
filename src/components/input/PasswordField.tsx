@@ -47,8 +47,8 @@ export const PasswordField = ({
           ref={ref}
           value={value}
           className={`w-full bg-transparent ${
-            error?.message ? 'border-[#ff3d3d] focus:border-[#ff3d3d]' : 'border-slate-200 focus:border-slate-400'
-          } placeholder:text-slate-400 text-slate-700 text-sm border  rounded-md px-3 py-2 transition duration-300 ease focus:outline-none  hover:border-slate-300`}
+            error?.message ? 'border-[#ff3d3d] focus:border-[#ff3d3d]' : 'border-[#C5C6CC] focus:border-slate-400'
+          } placeholder:text-slate-400 text-slate-700 text-sm border  rounded-xl px-3 py-3 transition duration-300 ease focus:outline-none  hover:border-slate-300`}
           id={name}
           type={showPassword ? 'text' : 'password'}
           {...attributes}

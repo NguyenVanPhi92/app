@@ -1,12 +1,12 @@
 import { ChevronDown } from 'lucide-react'
 import Select from 'react-select'
 import { Button } from '../components/button'
-import { hoursOptions, roomOptions, timeOptions } from '../constants/data'
+import { hoursOptions, roomOptions, timeOptions, TravelSelect } from '../constants/data'
 
 const SelectPage = () => {
   return (
-    <div className='flex flex-col justify-between main'>
-      <div className='p-4 '>
+    <div className='flex flex-col justify-between p-4 main '>
+      <div className=''>
         <div>
           <h1 className='text-[22px] mb-2 font-bold'>
             Personalize your <span>WITH</span> <p>experience</p>
@@ -19,8 +19,8 @@ const SelectPage = () => {
           <div className='mb-4'>
             <label className='block text-[14px] font-semibold '>You are in</label>
             <Select
-              options={timeOptions}
-              //   value={checkInTime}
+              options={TravelSelect}
+              // value={checkInTime}
               //   onChange={setCheckInTime}
               className='mt-1 text-[12px] custom-select '
               components={{ DropdownIndicator: () => <ChevronDown className='text-gray-500' size={20} /> }}

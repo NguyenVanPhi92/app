@@ -9,11 +9,11 @@ import '../styles/menu.scss'
 const Menu = () => {
   return (
     <div className='flex flex-col justify-between main'>
-      <div>
-        <header>
+      <div className='h-[90vh] overflow-y-scroll scroll-smooth'>
+        <header className='mb-6'>
           <Goback />
           <p>Burger King Menu</p>
-          <Link to={'/cart'} className='relative'>
+          <Link to='/cart' className='relative'>
             <Bage />
             <span className='py-[2px] top-[10px] right-[-2px] absolute px-[5px] text-[8px] bg-[#354f79] rounded-full text-white'>
               9
@@ -21,7 +21,7 @@ const Menu = () => {
           </Link>
         </header>
 
-        <div className='concept'>
+        <div className='concept '>
           <div className='menu'>
             {Array.from({ length: 6 }, (_, i) => (
               <div className='menu-card' key={i}>
@@ -41,7 +41,9 @@ const Menu = () => {
         </div>
       </div>
 
-      <Button name='Go to card' path='cart' />
+      <div className='p-4'>
+        <Button name='Go to card' path='cart' />
+      </div>
     </div>
   )
 }
