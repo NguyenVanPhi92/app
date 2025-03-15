@@ -1,16 +1,14 @@
 import { Link } from 'react-router'
-import LeftArrow from '../assets/icons/LeftArrow'
 import Search from '../assets/icons/Search'
-import Image from '../contans/data'
+import Goback from '../components/Goback'
+import Image from '../constants/data'
 import Navbar from './Navbar'
 
 const Shopping = () => {
   return (
     <div className='main'>
       <header>
-        <Link to='/services' className=''>
-          <LeftArrow />
-        </Link>
+        <Goback />
         <p>Shopping</p>
         <div className=''>
           <Search />

@@ -1,17 +1,14 @@
-import { Link } from 'react-router'
-import LeftArrow from '../assets/icons/LeftArrow'
 import { Button } from '../components/button'
+import Goback from '../components/Goback'
+import Image from '../constants/data'
 import '../styles/cart.scss'
-import Image from '../contans/data'
 
 const Cart = () => {
   return (
-    <div className='main flex justify-between flex-col'>
+    <div className='flex flex-col justify-between main'>
       <div>
         <header>
-          <Link to='/menu' className=''>
-            <LeftArrow />
-          </Link>
+          <Goback />
           <p>Your Cart</p>
           <div className=''></div>
         </header>
@@ -25,7 +22,7 @@ const Cart = () => {
                   <p className='text-[10px]'>Dish Description</p>
                 </div>
                 <div className='flex justify-between'>
-                  <div className='flex gap-x-4 items-center'>
+                  <div className='flex items-center gap-x-4'>
                     <p className='px-[6px] rounded-full text-white bg-[#354f79]'>-</p>
                     <span>1</span>
                     <p className='px-[6px] rounded-full text-white bg-[#354f79]'>+</p>

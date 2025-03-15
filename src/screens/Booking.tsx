@@ -1,12 +1,13 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router'
-import LeftArrow from '../assets/icons/LeftArrow'
+import { useNavigate } from 'react-router'
 import { Button } from '../components/button'
+import Goback from '../components/Goback'
 import InputField from '../components/input/InputField'
 import { LoginBody, LoginBodyType } from '../schema/auth.schema'
 
 const Booking = () => {
+  const navigate = useNavigate()
   // useForm
   const {
     control
@@ -21,9 +22,7 @@ const Booking = () => {
     <div className='flex flex-col justify-between main'>
       <div>
         <header>
-          <Link to='/services' className=''>
-            <LeftArrow />
-          </Link>
+          <Goback />
           <p>Booking Sleep Zone</p>
           <div className=''></div>
         </header>

@@ -6,7 +6,6 @@ import More from '../assets/icons/home/More'
 
 const Dialog = () => {
   const [isOpen, setIsOpen] = useState(false)
-
   const openDialog = () => setIsOpen(true)
   const closeDialog = () => setIsOpen(false)
 

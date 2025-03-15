@@ -41,7 +41,6 @@ button {
 .main {
   background-color: #ffffff;
   height: 100vh;
-  padding: 20px 0;
   width: 430px;
   margin: 0 auto;
 }
@@ -123,4 +122,8 @@ header {
   .css-1dimb5e-singleValue {
     color: #a8a8a8;
   }
+}
+.swiper-wrapper {
+  // width: 100%;
+  // max-width: 100%;
 }

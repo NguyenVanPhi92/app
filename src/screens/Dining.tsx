@@ -1,7 +1,7 @@
 import { Link } from 'react-router'
-import LeftArrow from '../assets/icons/LeftArrow'
 import Search from '../assets/icons/Search'
-import Image from '../contans/data'
+import Goback from '../components/Goback'
+import Image from '../constants/data'
 import '../styles/dining.scss'
 import Navbar from './Navbar'
 
@@ -9,9 +9,7 @@ const Dining = () => {
   return (
     <div className='main'>
       <header>
-        <Link to='/services' className=''>
-          <LeftArrow />
-        </Link>
+        <Goback />
         <p>Dining</p>
         <div className=''>
           <Search />
@@ -21,7 +19,7 @@ const Dining = () => {
       <div className='concept'>
         <img src={Image} alt='img' className='concept-img' />
 
-        <div className='option flex'>
+        <div className='flex option'>
           <div className='option-item'>TERMINAL 1</div>
           <div className='option-item'>TERMINAL 2</div>
           <div className='option-item'>TERMINAL 3</div>

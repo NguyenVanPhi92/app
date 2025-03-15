@@ -21,7 +21,7 @@ const Navbar = () => {
         <Scan />
         <p>Scan QR</p>
       </div>
-      <Link to='/service' className='flex navbar-item'>
+      <Link to='/services' className='flex navbar-item'>
         <Services />
         <p className='navbar-item_active'>Services</p>
       </Link>

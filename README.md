@@ -1,23 +1,24 @@
 https://app-v1-mocha.vercel.app/
-Tech: React Vite SCSS Tailwind Zustand Swipper React Select React Icon React Datepicker
+Tech:
 
-Screen width: 430px
-Làm trước Screen 1.2.4
-Done 2 Route Dining/Resting/Shopping
-Fz main 10/12/14
+1. React
+2. Vite
+3. SCSS
+4. Tailwind
+5. Zustand
+6. Swipper
+7. React Select
+8. React Icon
+9. React Datepicker
 
+`Screen width`: 430px
+`Text size`: main 10/12/14
+`Time Works`: cn/3h t2/2h t3/6h t4/6h t5/4h t6/8h
+
+Done 3 Route 1-2-4 Còn Route 3
 Done 19 page con 8 page
 Còn Route 3, chưa cày Zustand
-Time Works: cn: 3h t2: 2h t3: 6h t4: 6h t5: 4h t6
-
-Screen done:
-1 Products
-2 Services
-3 Navbar bottom
-4 Header
-5 Cart
-6 Payment
-7 Checkout
+Đang làm route 3
 
 Tính năng:
 add to card

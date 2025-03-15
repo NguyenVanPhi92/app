@@ -1,21 +1,18 @@
-import { Link } from 'react-router'
-import LeftArrow from '../assets/icons/LeftArrow'
 import Sticky from '../assets/icons/Sticky'
-import '../styles/checkout.scss'
 import { Button } from '../components/button'
+import Goback from '../components/Goback'
+import '../styles/checkout.scss'
 const Checkout = () => {
   return (
-    <div className='main flex flex-col justify-between'>
+    <div className='flex flex-col justify-between main'>
       <div className=''>
         <header>
-          <Link to='/cart' className=''>
-            <LeftArrow />
-          </Link>
+          <Goback />
           <p>Checkout</p>
           <div className=''></div>
         </header>
 
-        <div className='progress text-sm'>
+        <div className='text-sm progress'>
           <div className='progress-item '>
             <div className='progress-item__icon'>
               <Sticky />
@@ -38,8 +35,8 @@ const Checkout = () => {
           </div>
         </div>
 
-        <div className='text-left p-4'>
-          <h4 className='font-bold text-xl mb-2'>Choose a payment method</h4>
+        <div className='p-4 text-left'>
+          <h4 className='mb-2 text-xl font-bold'>Choose a payment method</h4>
           <p className='text-[#6f6f6f] text-sm'>You won't be charged until you review the order on the next page</p>
         </div>
 

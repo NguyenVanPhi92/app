@@ -1,19 +1,17 @@
 import { Link } from 'react-router'
 import Bage from '../assets/icons/Bage'
-import LeftArrow from '../assets/icons/LeftArrow'
-import '../styles/menu.scss'
-import { Button } from '../components/button'
-import Image from '../contans/data'
 import Plus from '../assets/icons/Plus'
+import { Button } from '../components/button'
+import Goback from '../components/Goback'
+import Image from '../constants/data'
+import '../styles/menu.scss'
 
 const Menu = () => {
   return (
     <div className='flex flex-col justify-between main'>
       <div>
         <header>
-          <Link to='/store' className=''>
-            <LeftArrow />
-          </Link>
+          <Goback />
           <p>Burger King Menu</p>
           <Link to={'/cart'} className='relative'>
             <Bage />

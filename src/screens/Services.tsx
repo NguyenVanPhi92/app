@@ -1,20 +1,18 @@
-import LeftArrow from '../assets/icons/LeftArrow'
-import Search from '../assets/icons/Search'
-import '../styles/services.scss'
-import Navbar from './Navbar'
 import { Link } from 'react-router'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import Image from '../contans/data'
+import Search from '../assets/icons/Search'
+import Goback from '../components/Goback'
+import Image from '../constants/data'
+import '../styles/services.scss'
+import Navbar from './Navbar'
 
 const Services = () => {
   return (
     <div className='flex flex-col justify-between main'>
       <div>
         <header>
-          <div className=''>
-            <LeftArrow />
-          </div>
+          <Goback />
           <p className=''>Airport Services</p>
           <div className='icon-search'>
             <Search />

@@ -7,7 +7,7 @@ import Map from '../assets/icons/home/Map'
 import Ride from '../assets/icons/home/Ride'
 import Travel from '../assets/icons/home/Travel'
 import Dialog from '../components/Drawer'
-import Image from '../contans/data'
+import Image from '../constants/data'
 import Navbar from './Navbar'
 
 const Home = () => {

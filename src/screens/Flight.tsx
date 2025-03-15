@@ -1,16 +1,13 @@
-import { Link } from 'react-router'
-import LeftArrow from '../assets/icons/LeftArrow'
 import { Button } from '../components/button'
-import Image from '../contans/data'
+import Goback from '../components/Goback'
+import Image from '../constants/data'
 
 const Flight = () => {
   return (
     <div className='main'>
       <div>
         <header>
-          <Link to='/services' className=''>
-            <LeftArrow />
-          </Link>
+          <Goback />
           <p>Flight Tracking</p>
           <div className=''></div>
         </header>

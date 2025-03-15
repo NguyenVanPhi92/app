@@ -18,6 +18,13 @@ import Register from './screens/auth/Register'
 import OTP from './screens/auth/OTP'
 import SelectPage from './screens/SelectPage'
 import Flight from './screens/Flight'
+import Feedback from './screens/rating/feedback'
+import FeedbackDetail from './screens/rating/FeedBackDetail'
+import One from './screens/travel/one'
+import Two from './screens/travel/Two'
+import Three from './screens/travel/Three'
+import Four from './screens/travel/Four'
+import Five from './screens/travel/Five'
 
 function App() {
   return (
@@ -25,23 +32,36 @@ function App() {
       <Routes>
         <Route path='/' element={<SelectPage />} />
         <Route path='/home' element={<Home />} />
-        <Route path='/flight' element={<Flight />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/code' element={<OTP />} />
-        <Route path='/service' element={<Services />} />
-        <Route path='/qr' element={<QrPage />} />
-        <Route path='/resting' element={<Resting />} />
-        <Route path='/booking' element={<Booking />} />
-        <Route path='/shopping' element={<Shopping />} />
-        <Route path='/sleepzone' element={<SleepZone />} />
-        <Route path='/store' element={<Store />} />
-        <Route path='/shoppingstore' element={<ShoppingStore />} />
-        <Route path='/cart' element={<Cart />} />
-        <Route path='/menu' element={<Menu />} />
+
+        <Route path='/one' element={<One />} />
+        <Route path='/two' element={<Two />} />
+        <Route path='/three' element={<Three />} />
+        <Route path='/four' element={<Four />} />
+        <Route path='/five' element={<Five />} />
+
+        <Route path='/services' element={<Services />} />
+        <Route path='/flight' element={<Flight />} />
         <Route path='/dining' element={<Dining />} />
+
+        <Route path='/resting' element={<Resting />} />
+        <Route path='/sleepzone' element={<SleepZone />} />
+        <Route path='/booking' element={<Booking />} />
+
         <Route path='/product' element={<Products />} />
+        <Route path='/menu' element={<Menu />} />
+        <Route path='/shopping' element={<Shopping />} />
+        <Route path='/shoppingstore' element={<ShoppingStore />} />
+
+        <Route path='/store' element={<Store />} />
+        <Route path='/qr' element={<QrPage />} />
+        <Route path='/cart' element={<Cart />} />
         <Route path='/checkout' element={<Checkout />} />
+
+        <Route path='/feedback' element={<Feedback />} />
+        <Route path='/feedbackdetail' element={<FeedbackDetail />} />
       </Routes>
     </>
   )

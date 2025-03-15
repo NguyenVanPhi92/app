@@ -43,7 +43,7 @@ const OTP = () => {
               Resend code
             </Link>
           </p>
-          <Button name='Continue' path='service' />
+          <Button name='Continue' path='services' />
         </div>
       </div>
     </div>

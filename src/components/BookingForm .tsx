@@ -3,7 +3,7 @@ import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import Select from 'react-select'
 import { Calendar, ChevronDown } from 'lucide-react'
-import { hoursOptions, roomOptions, timeOptions } from '../contans/data'
+import { hoursOptions, roomOptions, timeOptions } from '../constants/data'
 
 const BookingForm = () => {
   const [date, setDate] = useState<Date | null>(null)

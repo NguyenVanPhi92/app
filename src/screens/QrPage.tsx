@@ -1,21 +1,19 @@
 import { Link } from 'react-router'
-import LeftArrow from '../assets/icons/LeftArrow'
 import QR from '../assets/icons/QR'
 import Sticky from '../assets/icons/Sticky'
+import Goback from '../components/Goback'
 import '../styles/qr.scss'
 const QrPage = () => {
   return (
-    <div className='main flex flex-col justify-between'>
+    <div className='flex flex-col justify-between main'>
       <div className=''>
         <header>
-          <Link to='/checkout' className=''>
-            <LeftArrow />
-          </Link>
+          <Goback />
           <p>Checkout</p>
           <div className=''></div>
         </header>
 
-        <div className='progress text-sm'>
+        <div className='text-sm progress'>
           <div className='progress-item'>
             <div className='progress-item__icon'>
               <Sticky />

@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 import { Button } from '../../components/button'
 import InputField from '../../components/input/InputField'
 import { PasswordField } from '../../components/input/PasswordField'
-import Image from '../../contans/data'
+import Image from '../../constants/data'
 import { LoginBody, LoginBodyType } from '../../schema/auth.schema'
 
 const Login = () => {
