@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Image from '../constants/data'
 
-const TimelineItem = ({ step, time, title, address, isOpen, onClick }) => (
+const TimelineItem = ({ step, time, onClick }: any) => (
   <div className='flex items-start gap-4'>
     <p className='w-12 text-[14px] text-gray-500 mt-4'>{time}</p>
     <div className='flex flex-col items-center'>
@@ -24,7 +24,7 @@ const TimelineItem = ({ step, time, title, address, isOpen, onClick }) => (
 const Timeline = () => {
   const [openStep, setOpenStep] = useState(null)
 
-  const toggleStep = (step) => {
+  const toggleStep = (step: any) => {
     setOpenStep(openStep === step ? null : step)
   }
 

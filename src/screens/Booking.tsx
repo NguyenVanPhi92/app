@@ -1,13 +1,11 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { useNavigate } from 'react-router'
 import { Button } from '../components/button'
 import Goback from '../components/Goback'
 import InputField from '../components/input/InputField'
 import { LoginBody, LoginBodyType } from '../schema/auth.schema'
 
 const Booking = () => {
-  const navigate = useNavigate()
   // useForm
   const {
     control

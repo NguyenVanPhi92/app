@@ -18,13 +18,13 @@ import Register from './screens/auth/Register'
 import OTP from './screens/auth/OTP'
 import SelectPage from './screens/SelectPage'
 import Flight from './screens/Flight'
-import Feedback from './screens/rating/feedback'
 import FeedbackDetail from './screens/rating/FeedBackDetail'
-import One from './screens/travel/one'
 import Two from './screens/travel/Two'
 import Three from './screens/travel/Three'
 import Four from './screens/travel/Four'
 import Five from './screens/travel/Five'
+import One from './screens/travel/One'
+import Feedback from './screens/rating/FeedBack'
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import { ChevronDown } from 'lucide-react'
 import Select from 'react-select'
 import { Button } from '../components/button'
-import { hoursOptions, roomOptions, timeOptions, TravelSelect } from '../constants/data'
+import { hoursOptions, roomOptions, TravelSelect } from '../constants/data'
 
 const SelectPage = () => {
   return (
