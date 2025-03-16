@@ -15,7 +15,8 @@ Tech:
 `Text size`: main 10/12/14
 `Time Works`: cn/3h t2/2h t3/6h t4/6h t5/4h t6/8h
 
-Done Route 4
+Done Route 1-4
+Done config Zustand
 
 Done 19 page con 8 page
 Còn Route 3, chưa cày Zustand

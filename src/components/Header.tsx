@@ -8,7 +8,7 @@ interface HeaderProps {
 
 const Header = ({ title, icon }: HeaderProps) => {
   return (
-    <div className='flex justify-between p-4'>
+    <div className='flex justify-between p-2'>
       <Goback />
       <p className='font-bold'>{title}</p>
       <div className=''>{icon && <Search />}</div>
