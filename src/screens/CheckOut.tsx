@@ -1,12 +1,11 @@
-import { FaAngleDown, FaCheck, FaChevronDown, FaPlus } from 'react-icons/fa'
+import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { FaCheck, FaPlus } from 'react-icons/fa'
 import RadioFill from '../assets/icons/RadioFill'
 import RadioOutline from '../assets/icons/RadioOutline'
 import Sticky from '../assets/icons/Sticky'
 import { Button } from '../components/button'
 import Header from '../components/Header'
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import Timeline from '../components/Timeline'
 const Checkout = () => {
   const [isOpen, setIsOpen] = useState(false)
 
