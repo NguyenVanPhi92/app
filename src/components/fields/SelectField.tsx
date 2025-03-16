@@ -1,4 +1,3 @@
-import { CSSProperties } from 'react'
 import { FaSortDown } from 'react-icons/fa'
 import Select from 'react-select'
 

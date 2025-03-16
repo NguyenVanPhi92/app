@@ -1,5 +1,4 @@
 import { Button } from '../components/button'
-import Goback from '../components/Goback'
 import Header from '../components/Header'
 import Image from '../constants/data'
 

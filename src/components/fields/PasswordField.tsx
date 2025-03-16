@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Control, useController } from 'react-hook-form'
 import { IoIosEyeOff, IoMdEye } from 'react-icons/io'
-import { RiEyeCloseLine, RiEyeFill } from 'react-icons/ri'
 
 type PasswordFieldProps = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, any> & {
   control: Control<any>

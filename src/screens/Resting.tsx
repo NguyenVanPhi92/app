@@ -1,9 +1,7 @@
 import { Link } from 'react-router'
-import Search from '../assets/icons/Search'
-import Goback from '../components/Goback'
+import Header from '../components/Header'
 import Image from '../constants/data'
 import Navbar from './Navbar'
-import Header from '../components/Header'
 
 const Resting = () => {
   return (

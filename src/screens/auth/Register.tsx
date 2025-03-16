@@ -3,7 +3,6 @@ import { useForm } from 'react-hook-form'
 import { Button } from '../../components/button'
 import InputField from '../../components/fields/InputField'
 import { PasswordField } from '../../components/fields/PasswordField'
-import Image from '../../constants/data'
 import { LoginBody, LoginBodyType } from '../../schema/auth.schema'
 
 const Register = () => {

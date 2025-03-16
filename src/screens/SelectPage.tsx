@@ -1,10 +1,8 @@
-import { FaSortDown } from 'react-icons/fa'
-import Select from 'react-select'
+import { useState } from 'react'
 import { Button } from '../components/button'
+import SelectField from '../components/fields/SelectField'
 import { SelectLanguage, SelectMoney, SelectTerminal } from '../constants/data'
 import { useStoreAction } from '../store/zustand'
-import { useState } from 'react'
-import SelectField from '../components/fields/SelectField'
 
 const SelectPage = () => {
   const home = useStoreAction((state) => state.home)
