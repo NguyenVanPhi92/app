@@ -2,7 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { Button } from '../components/button'
 import Header from '../components/Header'
-import InputField from '../components/input/InputField'
+import InputField from '../components/fields/InputField'
 import { LoginBody, LoginBodyType } from '../schema/auth.schema'
 
 const Booking = () => {
@@ -21,7 +21,7 @@ const Booking = () => {
       <Header title='Booking Sleep Zone' />
 
       <div>
-        <div className='flex flex-col justify-between concept'>
+        <div className='flex flex-col justify-between scroll'>
           <div>
             <div className='mb-4'>
               <h4 className='mb-1 font-bold text-[16px]'>Input your info to complete booking</h4>

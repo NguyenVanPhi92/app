@@ -1,8 +1,8 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { Button } from '../../components/button'
-import InputField from '../../components/input/InputField'
-import { PasswordField } from '../../components/input/PasswordField'
+import InputField from '../../components/fields/InputField'
+import { PasswordField } from '../../components/fields/PasswordField'
 import Image from '../../constants/data'
 import { LoginBody, LoginBodyType } from '../../schema/auth.schema'
 
@@ -18,16 +18,20 @@ const Register = () => {
   // const handleLogin = (data: LoginBodyType) => console.log('data form: ', data)
 
   return (
-    <div className='main'>
-      <img src={Image} alt='img' className='w-full mb-6 rounded-es-3xl rounded-ee-3xl' />
-      <div className='p-4'>
-        <div>
+    <div className='flex flex-col justify-between p-4 main'>
+      {/* <img src={Image} al   t='img' className='w-full mb-6 rounded-es-3xl rounded-ee-3xl' /> */}
+      <div className=''>
+        <div className='mt-20'>
           <h1 className='text-xl font-bold'>Sign up!</h1>
           <p className='text-[14px]'>Create an account to get started </p>
         </div>
 
-        <div className='my-4 text-[14px]'>
-          <p>I've read and agree with the Terms and Conditions and the Privacy Policy.</p>
+        <div className='my-4 text-[14px] flex gap-x-3 items-center'>
+          <input type='checkbox' className='w-6 h-6' />
+          <p className='text-[12px] text-[#71727A]'>
+            I've read and agree with the <span className='text-[#354f79] font-[600]'>Terms and Conditions</span> and the
+            <span className='text-[#354f79] font-[600]'> Privacy Policy</span>.
+          </p>
         </div>
 
         <form action='' className='py-2'>
@@ -43,10 +47,10 @@ const Register = () => {
           <div className='mb-4'>
             <PasswordField control={control} name='password' placeholder='re-enter password' />
           </div>
-          <div className=''>
-            <Button name='Submit' path='code' />
-          </div>
         </form>
+      </div>
+      <div className=''>
+        <Button name='Submit' path='code' />
       </div>
     </div>
   )

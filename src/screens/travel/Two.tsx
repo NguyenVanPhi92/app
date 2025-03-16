@@ -4,7 +4,7 @@ import { Button } from '../../components/button'
 const Two = () => {
   return (
     <div className='flex flex-col justify-between p-4 main'>
-      <div className='h-[90vh] overflow-y-scroll scroll-smooth'>
+      <div className='scroll'>
         <div className='relative bg-[#e8e9f1] h-2 w-[100%] mt-4 mx-auto rounded-full mb-8'>
           <p className='absolute bg-[#354f79] transition duration-300 h-2 rounded-full w-[80%] top-0 left-0'></p>
         </div>

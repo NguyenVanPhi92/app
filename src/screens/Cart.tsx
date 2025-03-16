@@ -5,7 +5,7 @@ import '../styles/cart.scss'
 
 const Cart = () => {
   return (
-    <div className='flex flex-col justify-between main'>
+    <div className='flex flex-col justify-between p-4 main'>
       <div>
         <Header title='Your Cart' icon />
 
@@ -30,14 +30,13 @@ const Cart = () => {
             </div>
           ))}
         </main>
-        <div className='flex justify-between px-4'>
+        <div className='flex justify-between mx-2'>
           <p className=''>Total</p>
           <p className='font-bold'>$20.00</p>
         </div>
       </div>
-      <div className='p-4'>
-        <Button name='Checkout' path='checkout' />
-      </div>
+
+      <Button name='Checkout' path='checkout' />
     </div>
   )
 }

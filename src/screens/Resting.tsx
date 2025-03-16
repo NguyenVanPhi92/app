@@ -11,8 +11,8 @@ const Resting = () => {
       <div>
         <Header title='Resting' icon />
 
-        <div className='concept'>
-          <img src={Image} alt='img' className='concept-img' />
+        <div className='scroll'>
+          <img src={Image} alt='img' className='scroll-img' />
 
           <div className='flex option'>
             <div className='option-item'>TERMINAL 1</div>

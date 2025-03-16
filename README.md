@@ -17,6 +17,14 @@ Tech:
 
 Done Route 1-4
 Done config Zustand
+TRANSLATE SCSS TO TAILWIND
+CÁC PAGE CẦN CHUYỂN SANG TAILWIND
+
+1. Serverces
+2. Dining
+3. Cart
+4. Menu
+5. Navbar
 
 Done 19 page con 8 page
 Còn Route 3, chưa cày Zustand

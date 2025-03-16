@@ -32,10 +32,10 @@ button {
   display: flex;
 }
 
-.concept {
+.scroll {
   overflow-y: scroll;
   scrollbar-width: thin;
-  height: 82vh;
+  height: 90vh;
 }
 
 .main {
@@ -114,26 +114,11 @@ header {
   }
 }
 
-.custom-select {
-  .css-13cymwt-control {
-    padding: 7px 0;
-    border-radius: 16px;
-    border-color: #c5c6cc;
-
-    &:hover {
-      border-color: #c5c6cc;
-    }
-
-    &:focus {
-      border-color: red;
-    }
-  }
-
-  .css-1dimb5e-singleValue {
-    color: #a8a8a8;
-  }
-}
 .swiper-wrapper {
   // width: 100%;
   // max-width: 100%;
+}
+
+.react-datepicker__input-container {
+  width: 390px !important;
 }

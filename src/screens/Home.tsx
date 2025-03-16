@@ -27,7 +27,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='h-[90vh] overflow-y-scroll scroll-smooth p-4'>
+      <div className='p-4 scroll'>
         {/* Icons */}
         <div className='grid grid-cols-4 gap-2 mb-6 text-center'>
           {Number(home.country) === 1 ? (

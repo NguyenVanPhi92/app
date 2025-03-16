@@ -1,8 +1,6 @@
 import { Link } from 'react-router'
 import QR from '../assets/icons/QR'
 import Sticky from '../assets/icons/Sticky'
-import Goback from '../components/Goback'
-import '../styles/qr.scss'
 import Header from '../components/Header'
 const QrPage = () => {
   return (
@@ -10,28 +8,30 @@ const QrPage = () => {
       <div className=''>
         <Header title='Checkout' />
 
-        <div className='text-sm progress'>
-          <div className='progress-item'>
-            <div className='progress-item__icon'>
+        <div className='flex justify-between my-6 text-sm'>
+          <div className='flex flex-col items-center justify-center gap-y-2'>
+            <div className='bg-[#b4dbff] rounded-full w-[36px] h-[36px] flex justify-center items-center font-bold p-2'>
               <Sticky />
             </div>
-            <div className='progress-item__name'>Your Cart</div>
+            <p className=''>Your Cart</p>
           </div>
-          <div className='progress-item'>
-            <div className='progress-item__icon'>
+          <div className='flex flex-col items-center justify-center gap-y-2'>
+            <div className='bg-[#b4dbff] rounded-full w-[36px] h-[36px] flex justify-center items-center font-bold p-2'>
               <Sticky />
             </div>
-            <div className='progress-item__name'>Checkout</div>
+            <p className=''>Checkout</p>
           </div>
-          <div className='progress-item'>
-            <div className='progress-item__icon'>
+          <div className='flex flex-col items-center justify-center gap-y-2'>
+            <div className='bg-[#b4dbff] rounded-full w-[36px] h-[36px] flex justify-center items-center font-bold p-2'>
               <Sticky />
             </div>
-            <div className='progress-item__name'>Payment</div>
+            <p className=''>Payment</p>
           </div>
-          <div className='progress-item'>
-            <div className='progress-item__icon active'>4</div>
-            <div className='progress-item__name'>Pickup</div>
+          <div className='flex flex-col items-center justify-center gap-y-2'>
+            <div className='bg-[#354f79] rounded-full w-[36px] flex justify-center items-center font-bold py-2 text-white'>
+              4
+            </div>
+            <p className='font-bold'>Pick Up</p>
           </div>
         </div>
 
@@ -45,7 +45,7 @@ const QrPage = () => {
           <QR />
         </div>
       </div>
-      <div className='m-4'>
+      <div className='m-4 mb-0'>
         <Link
           to='/checkout'
           className='border-2 border-[#354f79] flex items-center justify-center p-3 rounded-xl gap-x-2'

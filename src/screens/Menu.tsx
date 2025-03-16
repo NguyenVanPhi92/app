@@ -9,7 +9,7 @@ import '../styles/menu.scss'
 const Menu = () => {
   return (
     <div className='flex flex-col justify-between main'>
-      <div className='h-[90vh] overflow-y-scroll scroll-smooth'>
+      <div className=''>
         <header className='mb-6'>
           <Goback />
           <p>Burger King Menu</p>
@@ -21,7 +21,7 @@ const Menu = () => {
           </Link>
         </header>
 
-        <div className='concept '>
+        <div className='scroll'>
           <div className='menu'>
             {Array.from({ length: 6 }, (_, i) => (
               <div className='menu-card' key={i}>

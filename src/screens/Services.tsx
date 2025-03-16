@@ -12,7 +12,7 @@ const Services = () => {
       <div>
         <Header title='Airport Service' icon />
 
-        <div className='concept'>
+        <div className='scroll'>
           <div className='flex select'>
             <div className='select-item active'>
               <span>All</span>

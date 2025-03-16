@@ -14,7 +14,7 @@ const Four = () => {
         <Search />
       </div>
 
-      <div className='h-[90vh] overflow-y-scroll scroll-smooth'>
+      <div className='scroll'>
         {/* Filter */}
         <div className='grid text-[14px] grid-cols-3 text-center mb-4 gap-x-1 items-center justify-between p-1 bg-[#eaf2ff] rounded-2xl'>
           <p className='font-[700] text-[#71727A]'>All</p>
