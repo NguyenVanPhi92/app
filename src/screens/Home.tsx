@@ -9,8 +9,12 @@ import Travel from '../assets/icons/home/Travel'
 import Dialog from '../components/Drawer'
 import Image from '../constants/data'
 import Navbar from './Navbar'
+import { useStoreAction } from '../store/zustand'
+import Flight from '../assets/icons/navs/Flight'
 
 const Home = () => {
+  const home = useStoreAction((state) => state.home)
+
   return (
     <div className='flex flex-col justify-between main'>
       <div className='relative'>
@@ -26,12 +30,22 @@ const Home = () => {
       <div className='h-[90vh] overflow-y-scroll scroll-smooth p-4'>
         {/* Icons */}
         <div className='grid grid-cols-4 gap-2 mb-6 text-center'>
-          <Link to='/travel'>
-            <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
-              <Travel />
-            </div>
-            <p className='text-[12px] text-[#2F3036] mt-1'>Smart Travel</p>
-          </Link>
+          {Number(home.country) === 1 ? (
+            <Link to='/travel'>
+              <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
+                <Travel />
+              </div>
+              <p className='text-[12px] text-[#2F3036] mt-1'>Smart Travel</p>
+            </Link>
+          ) : (
+            <Link to='/flight'>
+              <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
+                <Flight />
+              </div>
+              <p className='text-[12px] text-[#2F3036] mt-1'>Smart Travel</p>
+            </Link>
+          )}
+
           <Link to='/dining'>
             <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
               <DiningIcon />

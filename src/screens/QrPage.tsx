@@ -3,15 +3,12 @@ import QR from '../assets/icons/QR'
 import Sticky from '../assets/icons/Sticky'
 import Goback from '../components/Goback'
 import '../styles/qr.scss'
+import Header from '../components/Header'
 const QrPage = () => {
   return (
     <div className='flex flex-col justify-between p-4 main'>
       <div className=''>
-        <header>
-          <Goback />
-          <p>Checkout</p>
-          <div className=''></div>
-        </header>
+        <Header title='Checkout' />
 
         <div className='text-sm progress'>
           <div className='progress-item'>

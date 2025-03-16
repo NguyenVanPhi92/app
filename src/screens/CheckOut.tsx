@@ -1,16 +1,13 @@
 import Sticky from '../assets/icons/Sticky'
 import { Button } from '../components/button'
 import Goback from '../components/Goback'
+import Header from '../components/Header'
 import '../styles/checkout.scss'
 const Checkout = () => {
   return (
     <div className='flex flex-col justify-between p-4 main'>
       <div className=''>
-        <header>
-          <Goback />
-          <p>Checkout</p>
-          <div className=''></div>
-        </header>
+        <Header title='Checkout' />
 
         <div className='text-sm progress'>
           <div className='progress-item '>

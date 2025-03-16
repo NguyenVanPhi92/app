@@ -1,7 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { Button } from '../components/button'
-import Goback from '../components/Goback'
+import Header from '../components/Header'
 import InputField from '../components/input/InputField'
 import { LoginBody, LoginBodyType } from '../schema/auth.schema'
 
@@ -17,15 +17,11 @@ const Booking = () => {
   // const handleLogin = (data: LoginBodyType) => console.log('data form: ', data)
 
   return (
-    <div className='flex flex-col justify-between main'>
-      <div>
-        <header>
-          <Goback />
-          <p>Booking Sleep Zone</p>
-          <div className=''></div>
-        </header>
+    <div className='flex flex-col justify-between p-4 main'>
+      <Header title='Booking Sleep Zone' />
 
-        <div className='flex flex-col justify-between p-4 concept'>
+      <div>
+        <div className='flex flex-col justify-between concept'>
           <div>
             <div className='mb-4'>
               <h4 className='mb-1 font-bold text-[16px]'>Input your info to complete booking</h4>

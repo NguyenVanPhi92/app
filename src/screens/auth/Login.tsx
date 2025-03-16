@@ -31,7 +31,7 @@ const Login = () => {
           <div className='mb-4'>
             <InputField control={control} name='email' type='text' placeholder='Email Address' />
           </div>
-          <div className='relative mb-4'>
+          <div className='mb-4'>
             <PasswordField control={control} name='password' placeholder='Password' />
           </div>
           <Link to={'/'} className='font-bold text-[14px] text-[#354F79]'>

@@ -1,5 +1,5 @@
 import { Button } from '../components/button'
-import Goback from '../components/Goback'
+import Header from '../components/Header'
 import Image from '../constants/data'
 import '../styles/cart.scss'
 
@@ -7,11 +7,8 @@ const Cart = () => {
   return (
     <div className='flex flex-col justify-between main'>
       <div>
-        <header>
-          <Goback />
-          <p>Your Cart</p>
-          <div className=''></div>
-        </header>
+        <Header title='Your Cart' icon />
+
         <main className='card-list'>
           {Array.from({ length: 6 }, (_, i) => (
             <div className='cart' key={i}>
@@ -38,7 +35,6 @@ const Cart = () => {
           <p className='font-bold'>$20.00</p>
         </div>
       </div>
-
       <div className='p-4'>
         <Button name='Checkout' path='checkout' />
       </div>

@@ -1,8 +1,7 @@
 import { Link } from 'react-router'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import Search from '../assets/icons/Search'
-import Goback from '../components/Goback'
+import Header from '../components/Header'
 import Image from '../constants/data'
 import '../styles/services.scss'
 import Navbar from './Navbar'
@@ -11,13 +10,7 @@ const Services = () => {
   return (
     <div className='flex flex-col justify-between main'>
       <div>
-        <header>
-          <Goback />
-          <p className=''>Airport Services</p>
-          <div className='icon-search'>
-            <Search />
-          </div>
-        </header>
+        <Header title='Airport Service' icon />
 
         <div className='concept'>
           <div className='flex select'>
@@ -115,6 +108,7 @@ const Services = () => {
           </div>
         </div>
       </div>
+
       <div className='mb-2'>
         <Navbar />
       </div>

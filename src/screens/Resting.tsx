@@ -3,18 +3,13 @@ import Search from '../assets/icons/Search'
 import Goback from '../components/Goback'
 import Image from '../constants/data'
 import Navbar from './Navbar'
+import Header from '../components/Header'
 
 const Resting = () => {
   return (
     <div className='flex flex-col justify-between main'>
       <div>
-        <header>
-          <Goback />
-          <p>Resting</p>
-          <div className=''>
-            <Search />
-          </div>
-        </header>
+        <Header title='Resting' icon />
 
         <div className='concept'>
           <img src={Image} alt='img' className='concept-img' />

@@ -31,9 +31,9 @@ const BookingForm = () => {
             selected={date}
             onChange={(date) => setDate(date)}
             placeholderText='Date'
-            className='w-[390px] text-[12px] p-2 border focus:outline-none focus:border-transparent border-gray-300 rounded-[12px] focus:ring-2 focus:ring-blue-400'
+            className='w-[390px] text-[12px] p-3 border focus:outline-none focus:border-transparent border-[#c5c6cc] rounded-[15px] focus:ring-2 focus:ring-blue-400'
           />
-          <Calendar className='absolute text-gray-500 right-2 top-2' size={16} />
+          <Calendar className='absolute text-gray-500 right-2 top-3' size={16} />
         </div>
       </div>
 

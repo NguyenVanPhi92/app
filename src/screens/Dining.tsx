@@ -1,6 +1,5 @@
 import { Link } from 'react-router'
-import Search from '../assets/icons/Search'
-import Goback from '../components/Goback'
+import Header from '../components/Header'
 import Image from '../constants/data'
 import '../styles/dining.scss'
 import Navbar from './Navbar'
@@ -8,13 +7,7 @@ import Navbar from './Navbar'
 const Dining = () => {
   return (
     <div className='flex flex-col justify-between main'>
-      <header className='px-6'>
-        <Goback />
-        <p>Dining</p>
-        <div className=''>
-          <Search />
-        </div>
-      </header>
+      <Header title='Dining' icon />
 
       <div className='concept'>
         <img src={Image} alt='img' className='concept-img' />

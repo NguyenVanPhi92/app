@@ -3,17 +3,12 @@ import Search from '../assets/icons/Search'
 import Goback from '../components/Goback'
 import Image from '../constants/data'
 import Navbar from './Navbar'
+import Header from '../components/Header'
 
 const Shopping = () => {
   return (
     <div className='main'>
-      <header>
-        <Goback />
-        <p>Shopping</p>
-        <div className=''>
-          <Search />
-        </div>
-      </header>
+      <Header title='Shopping' icon />
 
       <div className='concept'>
         <img src={Image} alt='img' className='concept-img' />

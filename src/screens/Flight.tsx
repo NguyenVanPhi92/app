@@ -1,16 +1,13 @@
 import { Button } from '../components/button'
 import Goback from '../components/Goback'
+import Header from '../components/Header'
 import Image from '../constants/data'
 
 const Flight = () => {
   return (
     <div className='main'>
       <div>
-        <header>
-          <Goback />
-          <p>Flight Tracking</p>
-          <div className=''></div>
-        </header>
+        <Header title='Flight Tracking' />
         <img src={Image} alt='img' className='w-full' />
       </div>
 

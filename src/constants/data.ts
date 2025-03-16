@@ -89,3 +89,24 @@ export const TravelSelect = [
   { value: 'baclieu', label: 'Bạc Liêu' },
   { value: 'camau', label: 'Cà Mau' }
 ]
+
+/// Home Page Selection
+export const SelectTerminal = [
+  { value: '1', label: 'Domestic Arrival Terminal' },
+  { value: '2', label: 'Domestic Departure Terminal' },
+  { value: '3', label: 'International Arrival Terminal' },
+  { value: '4', label: 'International Departure Terminal' }
+]
+
+export const SelectLanguage = [
+  { value: '1', label: 'Vietnamese' },
+  { value: '2', label: 'English' },
+  { value: '3', label: 'Chinese' },
+  { value: '4', label: 'Korean' },
+  { value: '5', label: 'Japanese' }
+]
+
+export const SelectMoney = [
+  { value: '1', label: 'VND' },
+  { value: '2', label: 'USA' }
+]

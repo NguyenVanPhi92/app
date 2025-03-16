@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Control, useController } from 'react-hook-form'
+import { IoIosEyeOff, IoMdEye } from 'react-icons/io'
 import { RiEyeCloseLine, RiEyeFill } from 'react-icons/ri'
 
 type PasswordFieldProps = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, any> & {
@@ -40,7 +41,7 @@ export const PasswordField = ({
         </label>
       )}
 
-      <div className='form-item-wrapper'>
+      <div className='relative'>
         <input
           onChange={onChange}
           onBlur={onBlur}
@@ -59,13 +60,13 @@ export const PasswordField = ({
             cursor: 'pointer',
             position: 'absolute',
             right: '10px',
-            top: '24%',
-            transform: 'translateY(20%)'
+            top: '15px'
+            // transform: 'translateY(50%)'
           }}
           onClick={() => setShowPassword((prev) => !prev)}
           className=''
         >
-          {!showPassword ? <RiEyeCloseLine /> : <RiEyeFill />}
+          {!showPassword ? <IoIosEyeOff className='text-[#949494]' /> : <IoMdEye className='text-[#949494]' />}
         </span>
       </div>
 

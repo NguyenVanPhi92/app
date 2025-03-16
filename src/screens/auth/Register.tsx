@@ -37,10 +37,10 @@ const Register = () => {
           <div className='mb-4 '>
             <InputField control={control} name='email' label='Email Address' type='text' placeholder='enter email' />
           </div>
-          <div className='relative mb-4'>
+          <div className='mb-4'>
             <PasswordField control={control} name='password' label='Password' placeholder='enter password' />
           </div>
-          <div className='relative mb-4'>
+          <div className='mb-4'>
             <PasswordField control={control} name='password' placeholder='re-enter password' />
           </div>
           <div className=''>

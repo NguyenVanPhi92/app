@@ -1,15 +1,11 @@
 import { Button } from '../../components/button'
-import Goback from '../../components/Goback'
+import Header from '../../components/Header'
 
 const FeedbackDetail = () => {
   return (
     <div className='flex flex-col justify-between main'>
       <div>
-        <header>
-          <Goback />
-          <p>Feedback Detail </p>
-          <div className=''></div>
-        </header>
+        <Header title='Feedback Detail' />
       </div>
 
       <Button name='Checkout' path='checkout' />
