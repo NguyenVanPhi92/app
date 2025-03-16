@@ -5,12 +5,11 @@ import DiningIcon from '../assets/icons/home/Dining'
 import Hotel from '../assets/icons/home/Hotel'
 import Map from '../assets/icons/home/Map'
 import Ride from '../assets/icons/home/Ride'
-import Travel from '../assets/icons/home/Travel'
+import Flight from '../assets/icons/navs/Flight'
 import Dialog from '../components/Drawer'
 import Image from '../constants/data'
-import Navbar from './Navbar'
 import { useStoreAction } from '../store/zustand'
-import Flight from '../assets/icons/navs/Flight'
+import Navbar from './Navbar'
 
 const Home = () => {
   const home = useStoreAction((state) => state.home)
@@ -31,9 +30,9 @@ const Home = () => {
         {/* Icons */}
         <div className='grid grid-cols-4 gap-2 mb-6 text-center'>
           {Number(home.country) === 1 ? (
-            <Link to='/travel'>
+            <Link to='/one'>
               <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
-                <Travel />
+                <Flight />
               </div>
               <p className='text-[12px] text-[#2F3036] mt-1'>Smart Travel</p>
             </Link>
