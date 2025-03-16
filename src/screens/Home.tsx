@@ -118,7 +118,12 @@ const Home = () => {
 
         {/* Expolore */}
         <div className=''>
-          <h3 className='mb-2 font-bold'>EXPLORE HO CHI MINH CITY</h3>
+          <div className='flex items-center justify-between mb-2'>
+            <h3 className='font-bold'>EXPLORE HO CHI MINH CITY</h3>
+            <Link to={'/one'} className='text-[#354f79] font-bold text-[13px]'>
+              Smart Travel
+            </Link>
+          </div>
           <div className='bg-[#f8f9fe] mb-4 rounded-xl'>
             <div className='relative'>
               <img src={Image} alt='' className='w-full rounded-tr-xl rounded-tl-xl' />

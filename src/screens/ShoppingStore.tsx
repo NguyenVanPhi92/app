@@ -7,6 +7,9 @@ import Image from '../constants/data'
 const ShoppingStore = () => {
   return (
     <div className='flex flex-col justify-between main'>
+      {/* <div className='p-2'>
+        <Header title='Shopping' icon />
+      </div> */}
       <div>
         <img src={Image} alt='img' className='w-full' />
 

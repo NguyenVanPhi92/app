@@ -1,16 +1,24 @@
+import { FaAngleDown, FaCheck, FaChevronDown, FaPlus } from 'react-icons/fa'
 import RadioFill from '../assets/icons/RadioFill'
 import RadioOutline from '../assets/icons/RadioOutline'
 import Sticky from '../assets/icons/Sticky'
 import { Button } from '../components/button'
 import Header from '../components/Header'
-// import '../styles/checkout.scss'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+import Timeline from '../components/Timeline'
 const Checkout = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleCollapse = () => {
+    setIsOpen(!isOpen)
+  }
   return (
     <div className='flex flex-col justify-between p-4 main'>
       <div className=''>
         <Header title='Checkout' />
 
-        <div className='flex justify-between my-6 text-sm'>
+        <div className='flex justify-between my-4 text-sm'>
           <div className='flex flex-col items-center justify-center gap-y-2'>
             <div className='bg-[#b4dbff] rounded-full w-[36px] h-[36px] flex justify-center items-center font-bold p-2'>
               <Sticky />
@@ -38,15 +46,45 @@ const Checkout = () => {
           </div>
         </div>
 
-        <div className='mt-16 mb-10 text-left '>
+        <div className='mt-6 mb-10 text-left '>
           <h4 className='mb-2 text-xl font-bold'>Choose a payment method</h4>
           <p className='text-[#6f6f6f] text-sm'>You won't be charged until you review the order on the next page</p>
         </div>
 
         <div className='flex flex-col gap-y-4'>
-          <div className='flex gap-x-3 items-center p-4 border border-[#D4D6DD] rounded-2xl'>
-            <RadioFill />
-            <p className='font-bold text-[#71727A] text-[14px]'>Credit Card</p>
+          <div className='w-full max-w-md mx-auto border border-[#D4D6DD] rounded-2xl'>
+            <button onClick={toggleCollapse} className='flex items-center p-4 gap-x-3'>
+              <RadioFill />
+              <p className='font-bold text-[#71727A] text-[14px]'>Credit Card</p>
+            </button>
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
+              className='overflow-hidden'
+            >
+              <div className='m-4'>
+                <div className='bg-[#eaf2ff] mb-4 p-4 rounded-xl flex items-center justify-between'>
+                  <div className=''>
+                    <p>Mastercard</p>
+                    <p>xxxx xxxx xxxx 1234</p>
+                  </div>
+                  <FaCheck />
+                </div>
+
+                <div className='border p-4 mb-4 border-[#C5C6CC] rounded-xl flex items-center justify-between'>
+                  <div className=''>
+                    <p>Mastercard</p>
+                    <p>xxxx xxxx xxxx 1234</p>
+                  </div>
+                </div>
+
+                <button className='flex items-center mx-auto gap-x-2'>
+                  <FaPlus color='#354f79' />
+                  <p className='font-bold text-[#354f79] text-[14px]'>Add new card</p>
+                </button>
+              </div>
+            </motion.div>
           </div>
           <div className='flex gap-x-3 items-center p-4 border border-[#D4D6DD] rounded-2xl'>
             <RadioOutline />

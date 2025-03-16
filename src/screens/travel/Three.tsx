@@ -13,7 +13,7 @@ const Three = () => {
       <div className=''>
         <div className='flex justify-between mb-8'>
           <Goback />
-          <p className='font-[600]'>Burger King Menu</p>
+          <p className='font-[600]'>Smart Travel</p>
           <Search />
         </div>
 

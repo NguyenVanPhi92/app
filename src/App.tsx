@@ -1,30 +1,30 @@
 import { Route, Routes } from 'react-router'
-import Products from './screens/Products'
+import Login from './screens/auth/Login'
+import OTP from './screens/auth/OTP'
+import Register from './screens/auth/Register'
+import Booking from './screens/Booking'
 import Cart from './screens/Cart'
 import Checkout from './screens/CheckOut'
-import Services from './screens/Services'
 import Dining from './screens/Dining'
+import FlightTracking from './screens/FlightTracking'
+import Home from './screens/Home'
 import Menu from './screens/Menu'
+import Products from './screens/Products'
 import QrPage from './screens/QrPage'
-import Store from './screens/Store'
+import Feedback from './screens/rating/FeedBack'
+import FeedbackDetail from './screens/rating/FeedBackDetail'
 import Resting from './screens/Resting'
-import SleepZone from './screens/SleepZone'
-import Booking from './screens/Booking'
+import SelectPage from './screens/SelectPage'
+import Services from './screens/Services'
 import Shopping from './screens/Shopping'
 import ShoppingStore from './screens/ShoppingStore'
-import Home from './screens/Home'
-import Login from './screens/auth/Login'
-import Register from './screens/auth/Register'
-import OTP from './screens/auth/OTP'
-import SelectPage from './screens/SelectPage'
-import Flight from './screens/Flight'
-import FeedbackDetail from './screens/rating/FeedBackDetail'
-import Two from './screens/travel/Two'
-import Three from './screens/travel/Three'
-import Four from './screens/travel/Four'
+import SleepZone from './screens/SleepZone'
+import Store from './screens/Store'
 import Five from './screens/travel/Five'
+import Four from './screens/travel/Four'
 import One from './screens/travel/One'
-import Feedback from './screens/rating/FeedBack'
+import Three from './screens/travel/Three'
+import Two from './screens/travel/Two'
 
 function App() {
   return (
@@ -43,7 +43,7 @@ function App() {
         <Route path='/five' element={<Five />} />
 
         <Route path='/services' element={<Services />} />
-        <Route path='/flight' element={<Flight />} />
+        <Route path='/flight' element={<FlightTracking />} />
         <Route path='/dining' element={<Dining />} />
 
         <Route path='/resting' element={<Resting />} />
