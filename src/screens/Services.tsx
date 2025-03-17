@@ -2,9 +2,9 @@ import { Link } from 'react-router'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Header from '../components/Header'
-import Image from '../constants/data'
 import '../styles/services.scss'
 import Navbar from './Navbar'
+import { Image } from '../constants/data'
 
 const Services = () => {
   return (

@@ -1,5 +1,12 @@
 import Image from '../assets/Image.png'
-export default Image
+import Thumbnail from '../assets/thumbnail.jpeg'
+import New1 from '../assets/images/home/new/1.jpg'
+import New2 from '../assets/images/home/new/2.png'
+import Expolo1 from '../assets/images/home/expoloreHCM/1.png'
+import Expolo2 from '../assets/images/home/expoloreHCM/2.jpg'
+import Expolo3 from '../assets/images/home/expoloreHCM/2.png'
+
+export { Thumbnail, Image, New1, New2 }
 
 export const timeOptions = [
   { value: '0', label: 'Check-in time' },
@@ -91,6 +98,47 @@ export const TravelSelect = [
 ]
 
 /// Home Page Selection
+export const News = [
+  {
+    img: New1,
+    name: 'Tan Son Nhat Terminal T3 is set to begin operations in May 2025'
+  },
+  {
+    img: New2,
+    name: 'Domestic flights of Vietnam Airlines and VietJet Air will be relocated to Terminal T3'
+  },
+  {
+    img: New1,
+    name: 'Domestic flights of Vietnam Airlines and VietJet Air will be relocated to Terminal T3'
+  }
+]
+export const ExpoloreHCM = [
+  {
+    img: Expolo1,
+    name: '[Concert] Brothers Overcome Thrones',
+    date: '3/22/2025',
+    city: 'HO CHI MINH',
+    address: 'Thu Duc City, An Phu Ward, District 2, Ho Chi Minh City',
+    des: 'Concert is a heartfelt musical event celebrating resilience, brotherhood, and perseverance. Featuring powerful performances from top artists, the show takes audiences on an emotional journey through music, storytelling, and inspiring visuals. Through heartfelt lyrics and dynamic stage effects, the concert honors the strength and determination to overcome life’s challenges, making it an unforgettable experience for music lovers.'
+  },
+  {
+    img: Expolo2,
+    name: 'Military Parade for the 50th Anniversary of Vietnam’s Reunification Day',
+    date: '4/30/2025',
+    city: 'HO CHI MINH',
+    address: 'Le Duan Street, District 1, Ho Chi Minh City',
+    des: 'On April 30, 2025, Ho Chi Minh City will host a grand military parade to commemorate the 50th anniversary of Vietnam’s Reunification. This event will feature military formations, marching units, and cultural performances, showcasing the nation’s unity, strength, and progress since reunification in 1975. High-ranking officials, veterans, and citizens will gather to honor this historic milestone, reflecting on Vietnam’s journey of resilience and development.'
+  },
+  {
+    img: Expolo3,
+    name: '7 Firework Venues Honoring the 50th Reunification Day',
+    date: '3/22/2025',
+    city: 'HO CHI MINH',
+    address: 'Ho Chi Minh City',
+    des: 'To commemorate the 50th anniversary of Vietnam’s Reunification, Ho Chi Minh City will hold a grand fireworks display at seven key locations on April 30, 2025. The fireworks will be launched from the Saigon River Tunnel area (Thu Duc City), Ben Duoc Martyrs Memorial (Cu Chi District), Nga Ba Giong Martyrs Memorial (Hoc Mon District), Lang Le - Bau Co Historic Site (Binh Chanh District), Can Gio District Football Field, National History and Culture Park, and Dam Sen Cultural Park. This large-scale event will create a dazzling spectacle for residents and visitors, celebrating five decades of resilience, unity, and national progress.'
+  }
+]
+
 export const SelectTerminal = [
   { value: '1', label: 'Domestic Arrival Terminal' },
   { value: '2', label: 'Domestic Departure Terminal' },

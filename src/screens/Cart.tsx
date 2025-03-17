@@ -1,6 +1,6 @@
 import { Button } from '../components/button'
 import Header from '../components/Header'
-import Image from '../constants/data'
+import { Image } from '../constants/data'
 import '../styles/cart.scss'
 
 const Cart = () => {

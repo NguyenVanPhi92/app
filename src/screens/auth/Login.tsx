@@ -1,25 +1,31 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router'
-import { Button } from '../../components/button'
-import InputField from '../../components/fields/InputField'
-import { PasswordField } from '../../components/fields/PasswordField'
-import Image from '../../constants/data'
-import { LoginBody, LoginBodyType } from '../../schema/auth.schema'
-import Google from '../../assets/icons/Google'
+import { Link, useNavigate } from 'react-router'
 import Apple from '../../assets/icons/Apple'
 import Facebook from '../../assets/icons/Facebook'
+import Google from '../../assets/icons/Google'
+import InputField from '../../components/fields/InputField'
+import { PasswordField } from '../../components/fields/PasswordField'
+import { Image } from '../../constants/data'
+import { LoginBody, LoginBodyType } from '../../schema/auth.schema'
+import { useStoreAction } from '../../store/zustand'
 
 const Login = () => {
+  const dispathLogin = useStoreAction((state) => state.dispathLogin)
+  let navigate = useNavigate()
+
   // useForm
   const {
-    control
-    // handleSubmit,
+    control,
+    handleSubmit
     // formState: { isValid }
   } = useForm<LoginBodyType>({ resolver: zodResolver(LoginBody), defaultValues: { email: '', password: '' } })
 
   // handle event
-  // const handleLogin = (data: LoginBodyType) => console.log('data form: ', data)
+  const handleLogin = (data: any) => {
+    dispathLogin(data)
+    navigate('/home')
+  }
 
   return (
     <div className='main'>
@@ -27,7 +33,7 @@ const Login = () => {
       <div className='p-4 '>
         <h1 className='text-xl font-bold'>Welcome!</h1>
 
-        <form action='' className='py-8 border-b-[1px] border-[#74747433]'>
+        <form action='' className='py-8 border-b-[1px] border-[#74747433]' onSubmit={handleSubmit(handleLogin)}>
           <div className='mb-4'>
             <InputField control={control} name='email' type='text' placeholder='Email Address' />
           </div>
@@ -38,7 +44,9 @@ const Login = () => {
             Forgot password?
           </Link>
           <div className='mt-4'>
-            <Button name='Login' path='/' />
+            <button className='button text-sm bg-[#354f79] w-full py-3 font-[500] flex justify-center text-white text-md rounded-xl'>
+              submit
+            </button>
           </div>
 
           <p className='text-[14px] text-center mt-4'>

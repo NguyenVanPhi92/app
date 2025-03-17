@@ -5,8 +5,8 @@ import { IoSearchSharp } from 'react-icons/io5'
 import { Link } from 'react-router'
 import Header from '../components/Header'
 import { BsQrCodeScan } from 'react-icons/bs'
-import Image from '../constants/data'
 import Navbar from './Navbar'
+import { Image } from '../constants/data'
 
 const FlightTracking = () => {
   const [activeTab, setActiveTab] = useState('arrival')

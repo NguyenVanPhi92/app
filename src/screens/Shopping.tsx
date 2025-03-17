@@ -1,7 +1,7 @@
 import { Link } from 'react-router'
 import Header from '../components/Header'
-import Image from '../constants/data'
 import Navbar from './Navbar'
+import { Image } from '../constants/data'
 
 const Shopping = () => {
   return (

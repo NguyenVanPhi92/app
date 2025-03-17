@@ -1,7 +1,7 @@
 const Explore = () => {
   return (
     <svg xmlns='http://www.w3.org/2000/svg' width='21' height='20' viewBox='0 0 21 20' fill='none'>
-      <g clip-path='url(#clip0_3336_1276)'>
+      <g clipPath='url(#clip0_3336_1276)'>
         <mask
           id='mask0_3336_1276'
           style={{ maskType: 'alpha' }}

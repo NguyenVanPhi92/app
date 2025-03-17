@@ -2,7 +2,7 @@ import Clock from '../assets/icons/Clock'
 import Date from '../assets/icons/Date'
 import Location from '../assets/icons/Location'
 import Menu from '../assets/icons/Menu'
-import Image from '../constants/data'
+import { Image } from '../constants/data'
 
 const ShoppingStore = () => {
   return (

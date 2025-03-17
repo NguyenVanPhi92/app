@@ -1,8 +1,8 @@
 import { Link } from 'react-router'
 import Header from '../components/Header'
-import Image from '../constants/data'
 import '../styles/dining.scss'
 import Navbar from './Navbar'
+import { Image } from '../constants/data'
 
 const Dining = () => {
   return (

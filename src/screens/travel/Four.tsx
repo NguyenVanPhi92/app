@@ -2,7 +2,7 @@ import { GoHeart } from 'react-icons/go'
 import Search from '../../assets/icons/Search'
 import { Button } from '../../components/button'
 import Goback from '../../components/Goback'
-import Image from '../../constants/data'
+import { Image } from '../../constants/data'
 
 const Four = () => {
   return (

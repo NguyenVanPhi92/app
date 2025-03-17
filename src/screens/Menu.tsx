@@ -3,8 +3,8 @@ import Bage from '../assets/icons/Bage'
 import Plus from '../assets/icons/Plus'
 import { Button } from '../components/button'
 import Goback from '../components/Goback'
-import Image from '../constants/data'
 import '../styles/menu.scss'
+import { Image } from '../constants/data'
 
 const Menu = () => {
   return (

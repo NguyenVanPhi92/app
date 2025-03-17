@@ -2,7 +2,7 @@ import Clock from '../assets/icons/Clock'
 import Location from '../assets/icons/Location'
 import BookingForm from '../components/BookingForm '
 import { Button } from '../components/button'
-import Image from '../constants/data'
+import { Image } from '../constants/data'
 
 const SleepZone = () => {
   return (

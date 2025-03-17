@@ -1,9 +1,9 @@
 import { FaAngleDown, FaChevronDown } from 'react-icons/fa'
 import { Link } from 'react-router'
 import Timeline from '../../components/Timeline'
-import Image from '../../constants/data'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { Image } from '../../constants/data'
 
 const Five = () => {
   const [isOpen, setIsOpen] = useState(false)

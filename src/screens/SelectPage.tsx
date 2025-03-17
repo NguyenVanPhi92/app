@@ -10,6 +10,8 @@ const SelectPage = () => {
   const [terminal, setTerminal] = useState(SelectTerminal[0])
   const [language, setLanguage] = useState(SelectLanguage[0])
   const [money, setMoney] = useState(SelectMoney[0])
+  const login = useStoreAction((state) => state.login)
+  console.log('login: ', login)
 
   // handle
   const handelTerminal = () =>

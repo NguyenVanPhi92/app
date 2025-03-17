@@ -2,10 +2,10 @@ import { Link } from 'react-router'
 import Search from '../../assets/icons/Search'
 import { Button } from '../../components/button'
 import Goback from '../../components/Goback'
-import Image from '../../constants/data'
 import { GoHeart } from 'react-icons/go'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Image } from '../../constants/data'
 
 const Three = () => {
   return (

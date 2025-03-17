@@ -25,6 +25,7 @@ import Four from './screens/travel/Four'
 import One from './screens/travel/One'
 import Three from './screens/travel/Three'
 import Two from './screens/travel/Two'
+import Event from './screens/Event'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <Routes>
         <Route path='/' element={<SelectPage />} />
         <Route path='/home' element={<Home />} />
+        <Route path='/event' element={<Event />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/code' element={<OTP />} />
