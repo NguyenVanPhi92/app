@@ -18,9 +18,7 @@ const Home = () => {
   const login = useStoreAction((state) => state.login)
   console.log('login: ', !!login.password)
 
-  const hanlde = (e: any) => {
-    dispathEvent(e)
-  }
+  const hanlde = (e: any) => dispathEvent(e)
 
   return (
     <div className='flex flex-col justify-between main'>

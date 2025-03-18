@@ -3,7 +3,7 @@ import { create } from 'zustand'
 type State = {
   login: { email: string; password: string }
   register: {}
-  travel: {}
+  travel: { id: string; categories: string[] }
   shopping: {}
   event: {
     img: any
@@ -24,12 +24,13 @@ type Actions = {
   choose: (home: { country: string; language: string; money: string }) => void
   dispathEvent: (event: { img: any; name: string; date: string; city: string; address: string; des: string }) => void
   dispathLogin: (event: { email: string; password: string }) => void
+  dispathTravel: (event: { id: string; categories: any[] }) => void
 }
 
 export const useStoreAction = create<State & Actions>((set) => ({
   login: { email: '', password: '' },
   register: {},
-  travel: {},
+  travel: { id: '', categories: [] },
   shopping: {},
   event: {
     img: '',
@@ -71,6 +72,14 @@ export const useStoreAction = create<State & Actions>((set) => ({
         ...state.login,
         email: value.email,
         password: value.password
+      }
+    })),
+  dispathTravel: (value: { id: string; categories: any[] }) =>
+    set((state) => ({
+      travel: {
+        ...state.travel,
+        categories: value.categories,
+        id: value.id
       }
     }))
 }))

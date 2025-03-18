@@ -6,7 +6,7 @@ import Facebook from '../../assets/icons/Facebook'
 import Google from '../../assets/icons/Google'
 import InputField from '../../components/fields/InputField'
 import { PasswordField } from '../../components/fields/PasswordField'
-import { Image } from '../../constants/data'
+import { LoginI } from '../../constants/data'
 import { LoginBody, LoginBodyType } from '../../schema/auth.schema'
 import { useStoreAction } from '../../store/zustand'
 
@@ -29,7 +29,7 @@ const Login = () => {
 
   return (
     <div className='main'>
-      <img src={Image} alt='img' className='w-full mb-6 rounded-es-3xl rounded-ee-3xl' />
+      <img src={LoginI} alt='img' className='w-full mb-6 rounded-es-3xl rounded-ee-3xl' />
       <div className='p-4 '>
         <h1 className='text-xl font-bold'>Welcome!</h1>
 

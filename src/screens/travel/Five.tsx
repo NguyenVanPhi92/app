@@ -1,9 +1,9 @@
+import { motion } from 'framer-motion'
+import { useState } from 'react'
 import { FaAngleDown, FaChevronDown } from 'react-icons/fa'
 import { Link } from 'react-router'
 import Timeline from '../../components/Timeline'
-import { motion } from 'framer-motion'
-import { useState } from 'react'
-import { Image } from '../../constants/data'
+import { Travel1 } from '../../constants/data'
 
 const Five = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -15,7 +15,7 @@ const Five = () => {
   return (
     <div className='flex flex-col justify-between main'>
       <div className=''>
-        <img src={Image} alt='img' className='w-full' />
+        <img src={Travel1} alt='img' className='w-full h-[220px] object-cover' />
 
         <div className='px-4'>
           <div className='my-4'>

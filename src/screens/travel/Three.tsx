@@ -5,9 +5,21 @@ import Goback from '../../components/Goback'
 import { GoHeart } from 'react-icons/go'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Image } from '../../constants/data'
+import { Event_HCM, Image } from '../../constants/data'
+import { useStoreAction } from '../../store/zustand'
+import { useState } from 'react'
 
 const Three = () => {
+  const travelCategories = useStoreAction((state) => state.travel)
+  const [idFilter, setIdfilter] = useState(undefined)
+  console.log(idFilter)
+
+  // hanlde
+  // const handleFilter = (id: string) => {
+  //   setEventsHCM(Event_HCM.filter((e) => e.id === id))
+  //   console.log('id: ', id)
+  //   // console.log('event_hcm: ', event_hcm)
+  // }
   return (
     <div className='flex flex-col justify-between p-4 main'>
       <div className=''>
@@ -18,10 +30,16 @@ const Three = () => {
         </div>
 
         <div className='flex mb-8 gap-x-1'>
+          {travelCategories.categories.map((e: any, i) => (
+            <p
+              key={i}
+              onClick={() => setIdfilter(e.id)}
+              className='px-2 py-1 w-max text-[10px] text-[#354f79] bg-[#eaf2ff] rounded-3xl font-[500]'
+            >
+              {e?.name}
+            </p>
+          ))}
           <p className='px-2 py-1 w-max text-[10px] text-white bg-[#354f79] rounded-3xl font-[500]'>RECOMMEND</p>
-          <p className='px-2 py-1 w-max text-[10px] text-[#354f79] bg-[#eaf2ff] rounded-3xl font-[500]'>
-            HISTORYCAL & CULTURAL
-          </p>
         </div>
 
         <div className='mb-6'>
@@ -41,29 +59,31 @@ const Three = () => {
             }}
             modules={[Autoplay]}
           >
-            {Array.from({ length: 8 }, (_, i) => (
-              <SwiperSlide className='SwiperSlide' key={i}>
-                <div className='bg-[#f8f9fe] rounded-2xl'>
-                  <div className='relative'>
-                    <img src={Image} alt='' className='w-full rounded-tl-2xl rounded-tr-2xl' />
-                    <p className='px-3 py-1 absolute right-2 text-[12px] top-2 rounded-full bg-[#354f79] text-white'>
-                      10/2
-                    </p>
-                  </div>
+            {Event_HCM.map((e, _) =>
+              e.event.map((e, i) => (
+                <SwiperSlide className='SwiperSlide' key={i}>
+                  <div className='bg-[#f8f9fe] rounded-2xl h-full'>
+                    <div className='relative'>
+                      <img src={e.img} alt='' className='w-full rounded-tl-2xl rounded-tr-2xl' />
+                      <p className='px-3 py-1 absolute right-2 text-[12px] top-2 rounded-full bg-[#354f79] text-white'>
+                        {e.date}
+                      </p>
+                    </div>
 
-                  <div className='p-4'>
-                    <div className='mb-4'>
-                      <p className='font-bold text-[16px]'>Event name</p>
-                      <p className='text-[16px] text-[#71727A]'>Detailed address</p>
-                    </div>
-                    <div className='border-[1.4px] py-1 border-[#354f79] rounded-xl flex justify-center items-center gap-x-2 text-[#354f79] '>
-                      <GoHeart />
-                      <span className='font-bold'>Interest</span>
+                    <div className='p-4'>
+                      <div className='mb-4'>
+                        <p className='font-bold text-[14px] line-clamp-2'>{e.name}</p>
+                        <p className='text-[#71727A] line-clamp-2 text-[12px]'>{e.address}</p>
+                      </div>
+                      <div className='border-[1.4px] py-1 border-[#354f79] rounded-xl flex justify-center items-center gap-x-2 text-[#354f79] '>
+                        <GoHeart />
+                        <span className='font-bold'>Interest</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
+                </SwiperSlide>
+              ))
+            )}
           </Swiper>
         </div>
 
