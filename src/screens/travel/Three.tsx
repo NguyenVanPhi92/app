@@ -1,16 +1,17 @@
+import { useState } from 'react'
+import { GoHeart } from 'react-icons/go'
 import { Link } from 'react-router'
+import { Autoplay } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import Search from '../../assets/icons/Search'
 import { Button } from '../../components/button'
 import Goback from '../../components/Goback'
-import { GoHeart } from 'react-icons/go'
-import { Autoplay } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
 import { Event_HCM, Image } from '../../constants/data'
 import { useStoreAction } from '../../store/zustand'
-import { useState } from 'react'
 
 const Three = () => {
   const travelCategories = useStoreAction((state) => state.travel)
+  const [activeTab, setActiveTab] = useState('all')
   const [idFilter, setIdfilter] = useState(undefined)
   console.log(idFilter)
 
@@ -21,15 +22,40 @@ const Three = () => {
   //   // console.log('event_hcm: ', event_hcm)
   // }
   return (
-    <div className='flex flex-col justify-between p-4 main'>
-      <div className=''>
+    <div className='flex flex-col justify-between main'>
+      <div className='p-4 scroll' style={{ height: 'calc(100vh - 4rem)' }}>
         <div className='flex justify-between mb-8'>
           <Goback />
           <p className='font-[600]'>Smart Travel</p>
           <Search />
         </div>
 
-        <div className='flex mb-8 gap-x-1'>
+        <div className='grid grid-cols-3 p-1 text-[14px] rounded-full mb-4 bg-[#eaf2ff]'>
+          <button
+            className={`px-6 py-2 rounded-3xl ${activeTab === 'all' ? 'bg-white' : 'text-gray-500'}`}
+            onClick={() => setActiveTab('all')}
+          >
+            <span className={`font-bold ${activeTab === 'all' ? 'text-[#354f79]' : 'text-[#71727A]'}`}>All</span>
+          </button>
+          <button
+            className={`px-6 py-2 rounded-3xl ${activeTab === 'festival' ? 'bg-white' : 'text-gray-500'}`}
+            onClick={() => setActiveTab('festival')}
+          >
+            <span className={`font-bold ${activeTab === 'festival' ? 'text-[#354f79]' : 'text-[#71727A]'}`}>
+              Festival
+            </span>
+          </button>
+          <button
+            className={`px-6 py-2 rounded-3xl ${activeTab === 'destination' ? 'bg-white' : 'text-gray-500'}`}
+            onClick={() => setActiveTab('destination')}
+          >
+            <span className={`font-bold ${activeTab === 'destination' ? 'text-[#354f79]' : 'text-[#71727A]'}`}>
+              Destination
+            </span>
+          </button>
+        </div>
+
+        <div className='flex flex-wrap gap-1 mb-6'>
           {travelCategories.categories.map((e: any, i) => (
             <p
               key={i}
@@ -149,7 +175,9 @@ const Three = () => {
         </div>
       </div>
 
-      <Button name='Next' path='four' />
+      <div className='p-4'>
+        <Button name='Next' path='four' />
+      </div>
     </div>
   )
 }

@@ -42,7 +42,7 @@ const Menu = () => {
       </div>
 
       <div className='p-4'>
-        <Button name='Go to card' path='cart' />
+        <Button name='Go to cart' path='cart' />
       </div>
     </div>
   )

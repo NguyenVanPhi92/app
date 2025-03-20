@@ -12,7 +12,7 @@ const Services = () => {
       <div>
         <Header title='Airport Service' icon />
 
-        <div className='scroll'>
+        <div className='scroll' style={{ height: 'calc(100vh - 7rem)' }}>
           <div className='flex select'>
             <div className='select-item active'>
               <span>All</span>

@@ -9,7 +9,7 @@ const Dining = () => {
     <div className='flex flex-col justify-between main'>
       <Header title='Dining' icon />
 
-      <div className='scroll'>
+      <div className='scroll' style={{ height: 'calc(100vh - 7rem)' }}>
         <img src={Image} alt='img' className='scroll-img' />
 
         <div className='flex option'>

@@ -17,6 +17,7 @@ Tech:
 
 Done Route 1-4
 Done config Zustand
+Bug Cart Page
 TRANSLATE SCSS TO TAILWIND
 CÁC PAGE CẦN CHUYỂN SANG TAILWIND
 

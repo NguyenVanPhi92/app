@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { IoIosClose } from 'react-icons/io'
 import Car from '../assets/icons/home/Car'
 import More from '../assets/icons/home/More'
+import { IconHome } from '../constants/data'
+import { Link } from 'react-router'
 
 const Dialog = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -34,13 +36,11 @@ const Dialog = () => {
               <IoIosClose className='absolute right-2 top-2 text-[30px]' onClick={closeDialog} />
 
               <div className='grid grid-cols-4 gap-4 mt-4'>
-                {Array.from({ length: 12 }, (_, i) => (
-                  <div className='' key={i}>
-                    <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
-                      <Car />
-                    </div>
-                    <p className='text-[12px] text-[#2F3036] mt-1'>Car Rental</p>
-                  </div>
+                {IconHome.map((e, i) => (
+                  <Link to={e.path} className='' key={i}>
+                    <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>{e.icon()}</div>
+                    <p className='text-[12px] text-[#2F3036] mt-1'>{e.name}</p>
+                  </Link>
                 ))}
               </div>
             </motion.div>

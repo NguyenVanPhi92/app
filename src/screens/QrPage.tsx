@@ -8,7 +8,7 @@ const QrPage = () => {
       <div className=''>
         <Header title='Checkout' />
 
-        <div className='flex justify-between my-6 text-sm'>
+        <div className='flex justify-between my-4 text-sm'>
           <div className='flex flex-col items-center justify-center gap-y-2'>
             <div className='bg-[#b4dbff] rounded-full w-[36px] h-[36px] flex justify-center items-center font-bold p-2'>
               <Sticky />

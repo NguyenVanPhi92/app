@@ -9,7 +9,7 @@ const Resting = () => {
       <div>
         <Header title='Resting' icon />
 
-        <div className='scroll'>
+        <div className='scroll' style={{ height: 'calc(100vh - 7rem)' }}>
           <img src={Image} alt='img' className='scroll-img' />
 
           <div className='flex option'>
@@ -39,7 +39,9 @@ const Resting = () => {
         </div>
       </div>
 
-      <Navbar />
+      <div className='mb-2'>
+        <Navbar />
+      </div>
     </div>
   )
 }

@@ -23,6 +23,23 @@ import Event10 from '../assets/images/travel/eventHCM/10.jpg'
 // import Event15 from '../assets/images/travel/eventHCM/15.jpg'
 // import Event16 from '../assets/images/travel/eventHCM/16.jpg'
 import LoginI from '../assets/login.jpg'
+import Flight from '../assets/icons/home/Flight'
+import Travel from '../assets/icons/home/Travel'
+import Lounge from '../assets/icons/home/Lounge'
+import DiningIcon from '../assets/icons/home/Dining'
+import Shopping from '../assets/icons/home/Shopping'
+import Ride from '../assets/icons/home/Ride'
+import Car from '../assets/icons/home/Car'
+import Map from '../assets/icons/home/Map'
+import Hotel from '../assets/icons/home/Hotel'
+import Lost from '../assets/icons/home/Lost'
+import Bag from '../assets/icons/home/Bag'
+import Feedback from '../assets/icons/home/Feedback'
+import First from '../assets/icons/home/First'
+import Banking from '../assets/icons/home/Banking'
+import Sim from '../assets/icons/home/Sim'
+import Currency from '../assets/icons/home/Currency'
+import path from 'path'
 
 export { Thumbnail, Image, New1, New2, Travel1, LoginI }
 
@@ -49,6 +66,26 @@ export const roomOptions = [
   { value: '2', label: '2 Rooms' },
   { value: '2', label: '2 Rooms' },
   { value: '3', label: '3 Rooms' }
+]
+
+// Home
+export const IconHome = [
+  { name: 'Flight Tracking', icon: Flight, path: '/flight' },
+  { name: 'Smart Travel', icon: Travel, path: '/one' },
+  { name: 'Lounge & Rest', icon: Lounge, path: '/' },
+  { name: 'Dining', icon: DiningIcon, path: '/dining' },
+  { name: 'Shopping', icon: Shopping, path: '/' },
+  { name: 'Ride Hailing', icon: Ride, path: '/' },
+  { name: 'Car Rental', icon: Car, path: '/' },
+  { name: 'Maps', icon: Map, path: '/map' },
+  { name: 'Hotel Booking', icon: Hotel, path: '/' },
+  { name: 'Lost & Found', icon: Lost, path: '/' },
+  { name: 'Baggage', icon: Bag, path: '/' },
+  { name: 'Feedback', icon: Feedback, path: '/feedback' },
+  { name: 'First-Aid', icon: First, path: '/' },
+  { name: 'ATM/Banking', icon: Banking, path: '/' },
+  { name: 'eSIM', icon: Sim, path: '/' },
+  { name: 'Currency Exchange', icon: Currency, path: '/' }
 ]
 
 // Travel

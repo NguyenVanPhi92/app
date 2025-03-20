@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import Flight from '../assets/icons/Flight'
+import Flight from '../assets/icons/home/Flight'
 import Bag from '../assets/icons/home/Bag'
 import Car from '../assets/icons/home/Car'
 import DiningIcon from '../assets/icons/home/Dining'
@@ -8,7 +8,7 @@ import Map from '../assets/icons/home/Map'
 import Ride from '../assets/icons/home/Ride'
 import Travel from '../assets/icons/home/Travel'
 import Dialog from '../components/Drawer'
-import { ExpoloreHCM, News, Thumbnail } from '../constants/data'
+import { ExpoloreHCM, New1, New2, News, Thumbnail } from '../constants/data'
 import { useStoreAction } from '../store/zustand'
 import Navbar from './Navbar'
 
@@ -16,7 +16,7 @@ const Home = () => {
   const home = useStoreAction((state) => state.home)
   const dispathEvent = useStoreAction((state) => state.dispathEvent)
   const login = useStoreAction((state) => state.login)
-  console.log('login: ', !!login.password)
+  console.log('home: ', home)
 
   const hanlde = (e: any) => dispathEvent(e)
 
@@ -41,7 +41,7 @@ const Home = () => {
       <div className='p-4 scroll'>
         {/* Icons */}
         <div className='grid grid-cols-4 gap-2 mb-6 text-center'>
-          {Number(home.country) === 1 ? (
+          {Number(home.country) === 1 || Number(home.country) === 3 ? (
             <Link to='/one'>
               <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
                 <Travel />
@@ -102,16 +102,39 @@ const Home = () => {
         {/* News */}
         <div className='mb-6'>
           <h2 className='mb-2 font-bold'>WHAT'S NEW?</h2>
-          <div className='grid items-stretch grid-cols-2 gap-4'>
-            {News.map((e, i) => (
-              <div className='relative' key={i}>
-                <img src={e.img} alt='' className='object-cover h-full rounded-xl' />
+          <div className='grid grid-cols-2 gap-2 text-white'>
+            {/* Large Card */}
+            <div className='bg-blue-100 relative rounded-xl flex flex-col justify-between min-h-[280px]'>
+              <img src={New1} alt='' className='object-cover h-full rounded-xl' />
+              <div className='absolute bottom-4 left-4'>
+                <p className='text-[12px] font-bold'>Subtitle</p>
+                <p className=' text-[12px]'>Tan Son Nhat Terminal T3 is set to begin operations in May 2025</p>
+              </div>
+            </div>
+
+            {/* Small Cards */}
+            <div className='grid grid-rows-2 gap-2'>
+              <div className='relative bg-blue-100 rounded-xl flex flex-col justify-between min-h-[130px]'>
+                <img src={New2} alt='' className='object-cover h-full rounded-xl' />
+
                 <div className='absolute bottom-4 left-4'>
                   <p className='text-[12px] font-bold'>Subtitle</p>
-                  <p className=' text-[12px]'>{e.name}</p>
+                  <p className=' text-[12px]'>
+                    Domestic flights of Vietnam Airlines and VietJet Air will be relocated to Terminal T3
+                  </p>
                 </div>
               </div>
-            ))}
+
+              <div className='bg-blue-100 relative rounded-xl flex flex-col justify-between min-h-[130px]'>
+                <img src={New2} alt='' className='object-cover h-full rounded-xl' />
+                <div className='absolute bottom-4 left-4'>
+                  <p className='text-[12px] font-bold'>Subtitle</p>
+                  <p className=' text-[12px]'>
+                    Domestic flights of Vietnam Airlines and VietJet Air will be relocated to Terminal T3
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

@@ -26,6 +26,7 @@ import One from './screens/travel/One'
 import Three from './screens/travel/Three'
 import Two from './screens/travel/Two'
 import Event from './screens/Event'
+import Map from './screens/Map'
 
 function App() {
   return (
@@ -64,6 +65,7 @@ function App() {
 
         <Route path='/feedback' element={<Feedback />} />
         <Route path='/feedbackdetail' element={<FeedbackDetail />} />
+        <Route path='/map' element={<Map />} />
       </Routes>
     </>
   )

@@ -5,7 +5,7 @@ import { FiCalendar } from 'react-icons/fi'
 
 const CustomInput = ({ value, onClick }: any) => (
   <div className='flex items-center w-full px-4 py-[10px] border border-[#c6c8cb] rounded-[10px]' onClick={onClick}>
-    <span className='text-[#333] text-[14px]'>{value || 'Date'}</span>
+    <span className='text-[#333] text-[14px]'>{value || 'From - to'}</span>
     <FiCalendar className='ml-auto text-gray-400' />
   </div>
 )

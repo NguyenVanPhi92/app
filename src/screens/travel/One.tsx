@@ -46,16 +46,16 @@ const One = () => {
 
           <div className='flex mb-4 gap-x-2'>
             <p className='px-2 py-1 text-[10px] gap-1 bg-[#354f79] w-max text-white rounded-xl flex items-center'>
-              <span className='font-[500]'>HO CHI MINH</span> <AiOutlineClose size={16} />
+              <span className='font-[500]'>HO CHI MINH</span> <AiOutlineClose size={14} />
             </p>
-            <p className='px-2 py-1 text-[10px] gap-1 bg-[#354f79] w-max text-white rounded-xl flex items-center'>
-              <span className='font-[500]'>CAN THO</span> <AiOutlineClose size={16} />
+            <p className='px-2 py-1 text-[10px] gap-1 bg-[#eaf2ff] w-max text-[#354f79] rounded-xl flex items-center'>
+              <span className='font-[500]'>CAN THO</span> <AiOutlineClose size={14} />
             </p>
-            <p className='px-2 py-1 text-[10px] gap-1 bg-[#354f79] w-max text-white rounded-xl flex items-center'>
-              <span className='font-[500]'>HA NOI</span> <AiOutlineClose size={16} />
+            <p className='px-2 py-1 text-[10px] gap-1 bg-[#eaf2ff] w-max text-[#354f79] rounded-xl flex items-center'>
+              <span className='font-[500]'>HA NOI</span> <AiOutlineClose size={14} />
             </p>
-            <p className='px-2 py-1 text-[10px] gap-1 bg-[#354f79] w-max text-white rounded-xl flex items-center'>
-              <span className='font-[500]'>DA NANG</span> <AiOutlineClose size={16} />
+            <p className='px-2 py-1 text-[10px] gap-1 bg-[#eaf2ff] w-max text-[#354f79] rounded-xl flex items-center'>
+              <span className='font-[500]'>DA NANG</span> <AiOutlineClose size={14} />
             </p>
           </div>
 
