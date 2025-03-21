@@ -18,8 +18,8 @@ Tech:
 Done Route 1-4
 Done config Zustand
 Bug Cart Page
-TRANSLATE SCSS TO TAILWIND
 CÁC PAGE CẦN CHUYỂN SANG TAILWIND
+Route 3, Order CHUA XONG
 
 1. Serverces
 2. Dining

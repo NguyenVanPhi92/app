@@ -42,7 +42,7 @@ const SleepZone = () => {
       </div>
 
       <div className='p-4'>
-        <Button name='order' path='booking' />
+        <Button name='Order' path='booking' />
       </div>
     </div>
   )

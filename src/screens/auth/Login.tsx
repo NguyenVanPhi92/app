@@ -45,7 +45,7 @@ const Login = () => {
           </Link>
           <div className='mt-4'>
             <button className='button text-sm bg-[#354f79] w-full py-3 font-[500] flex justify-center text-white text-md rounded-xl'>
-              submit
+              Login
             </button>
           </div>
 

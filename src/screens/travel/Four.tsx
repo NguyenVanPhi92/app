@@ -17,9 +17,9 @@ const Four = () => {
       <div className='scroll'>
         {/* Filter */}
         <div className='grid text-[14px] grid-cols-3 text-center mb-4 gap-x-1 items-center justify-between p-1 bg-[#eaf2ff] rounded-2xl'>
-          <p className='font-[700] text-[#71727A]'>All</p>
-          <p className='w-full py-1 font-[700] text-[#354f79] bg-white rounded-xl'>Festival</p>
-          <p className='font-[700] text-[#71727A]'>Destination</p>
+          <p className='font-[700] text-[#71727A] py-2'>All</p>
+          <p className='w-full py-2 font-[700] text-[#354f79] bg-white rounded-xl'>Festival</p>
+          <p className='font-[700] text-[#71727A] py-2'>Destination</p>
         </div>
         <div className='flex mb-8 gap-x-1'>
           <p className='px-2 py-1 w-max text-[10px] text-white bg-[#354f79] rounded-3xl font-[500]'>RECOMMEND</p>

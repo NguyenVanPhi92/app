@@ -71,20 +71,12 @@ const Three = () => {
         <div className='mb-6'>
           <div className='flex justify-between mb-2'>
             <p className='font-[600]'>MUST-SEE FESTIVAL</p>
-            <Link to='/dining' className='text-sm text-[#354f79] font-[600]'>
+            <Link to='/four' className='text-sm text-[#354f79] font-[600]'>
               See more
             </Link>
           </div>
 
-          <Swiper
-            spaceBetween={10}
-            slidesPerView={2}
-            centeredSlides={true}
-            autoplay={{
-              delay: 1500
-            }}
-            modules={[Autoplay]}
-          >
+          <Swiper spaceBetween={10} slidesPerView={1.4}>
             {Event_HCM.map((e, _) =>
               e.event.map((e, i) => (
                 <SwiperSlide className='SwiperSlide' key={i}>
@@ -121,15 +113,7 @@ const Three = () => {
             </Link>
           </div>
 
-          <Swiper
-            spaceBetween={10}
-            slidesPerView={2}
-            centeredSlides={true}
-            autoplay={{
-              delay: 1200
-            }}
-            modules={[Autoplay]}
-          >
+          <Swiper spaceBetween={10} slidesPerView={1.4}>
             {Array.from({ length: 8 }, (_, i) => (
               <SwiperSlide className='SwiperSlide' key={i}>
                 <div className='bg-[#f8f9fe] rounded-2xl'>

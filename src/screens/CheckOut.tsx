@@ -7,7 +7,7 @@ import Sticky from '../assets/icons/Sticky'
 import { Button } from '../components/button'
 import Header from '../components/Header'
 const Checkout = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
 
   const toggleCollapse = () => {
     setIsOpen(!isOpen)
@@ -73,7 +73,7 @@ const Checkout = () => {
 
                 <div className='border p-4 mb-4 border-[#C5C6CC] rounded-xl flex items-center justify-between'>
                   <div className=''>
-                    <p>Mastercard</p>
+                    <p>Visa</p>
                     <p>xxxx xxxx xxxx 1234</p>
                   </div>
                 </div>

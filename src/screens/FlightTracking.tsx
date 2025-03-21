@@ -20,7 +20,7 @@ const FlightTracking = () => {
       <div className='p-4'>
         <div className='flex items-center justify-between mb-6 cursor-pointer'>
           <p className='font-bold text-[#354f79]'>Find your flights</p>
-          <p className='flex items-center bg-[#354f79] rounded-full px-2 py-1 text-[12px] text-white gap-x-1'>
+          <p className='flex items-center bg-[#354f79] rounded-full px-3 py-1 text-[12px] text-white gap-x-1'>
             <IoSearchSharp />
             <span className='font-[500]'>Find</span>
           </p>
@@ -89,7 +89,7 @@ const FlightTracking = () => {
           className='border-2 border-[#354f79] mt-10 flex items-center justify-center p-3 rounded-xl gap-x-2'
         >
           <BsQrCodeScan color='#354f79' />
-          <span className='font-bold text-[14px] text-[#354f79]'> Download QR Code</span>
+          <span className='font-bold text-[14px] text-[#354f79]'>Scan Boarding Pass</span>
         </Link>
       </div>
 

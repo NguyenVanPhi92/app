@@ -53,7 +53,7 @@ const Store = () => {
       </div>
 
       <div className='p-4'>
-        <Button name='order' path='menu' />
+        <Button name='Order' path='menu' />
       </div>
     </div>
   )
