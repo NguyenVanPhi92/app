@@ -1,10 +1,9 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 import { IoIosClose } from 'react-icons/io'
-import Car from '../assets/icons/home/Car'
+import { Link } from 'react-router'
 import More from '../assets/icons/home/More'
 import { IconHome } from '../constants/data'
-import { Link } from 'react-router'
 
 const Dialog = () => {
   const [isOpen, setIsOpen] = useState(false)

@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { GoHeart } from 'react-icons/go'
 import { Link } from 'react-router'
-import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Search from '../../assets/icons/Search'
 import { Button } from '../../components/button'
