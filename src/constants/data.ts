@@ -646,6 +646,17 @@ export const SelectMoney = [
   { value: '2', label: 'USA' }
 ]
 
+export const TimeSelect = [
+  { value: '0', label: 'Time' },
+  { value: '1', label: 'VND' },
+  { value: '2', label: 'USA' }
+]
+export const GuestSelect = [
+  { value: '0', label: 'Guest' },
+  { value: '1', label: 'VND' },
+  { value: '2', label: 'USA' }
+]
+
 // Menu
 export const MenuStore = [
   {

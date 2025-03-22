@@ -29,6 +29,7 @@ import One from './screens/travel/One'
 import Three from './screens/travel/Three'
 import Two from './screens/travel/Two'
 import Reservation from './screens/Reservation'
+import ReservationBooking from './screens/ReservationBooking'
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path='/flight' element={<FlightTracking />} />
         <Route path='/dining' element={<Dining />} />
         <Route path='/reservation' element={<Reservation />} />
+        <Route path='/reservationBooking' element={<ReservationBooking />} />
 
         <Route path='/resting' element={<Resting />} />
         <Route path='/sleepzone' element={<SleepZone />} />

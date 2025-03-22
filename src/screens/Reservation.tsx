@@ -1,17 +1,27 @@
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
 import { Button } from '../components/button'
+import CustomDatePicker from '../components/fields/DateField'
+import InputField from '../components/fields/InputField'
+import SelectField from '../components/fields/SelectField'
 import Goback from '../components/Goback'
-import { useStoreAction } from '../store/zustand'
+import { GuestSelect, SelectMoney, TimeSelect } from '../constants/data'
+import { LoginBody, LoginBodyType } from '../schema/auth.schema'
 import '../styles/menu.scss'
 
 const Reservation = () => {
-  // const dispathCart = useStoreAction((state) => state.dispathCart)
-  const cart = useStoreAction((state) => state.cart)
+  const [time, setTime] = useState(TimeSelect[0])
+  const [guest, setGuest] = useState(GuestSelect[0])
+  // useForm
+  const {
+    control
+    // handleSubmit,
+    // formState: { isValid }
+  } = useForm<LoginBodyType>({ resolver: zodResolver(LoginBody), defaultValues: { email: '', password: '' } })
 
-  // handle
-  // const addCart = (e: any) => {
-  //   dispathCart(e)
-  // }
-  console.log('Cart: ', cart)
+  // handle event
+  //
 
   return (
     <div className='flex flex-col justify-between main'>
@@ -22,10 +32,28 @@ const Reservation = () => {
         <p className='font-bold'>Reservation</p>
       </div>
 
-      <div className='mt-16 body'></div>
+      <div className='mt-16 body'>
+        <form action='' className='py-4'>
+          <CustomDatePicker label='Date' placeholderText='Date' />
+
+          <div className='grid grid-cols-2 gap-x-4'>
+            <SelectField label='Time' data={TimeSelect} onChange={(e: any) => setTime(e)} value={time} />
+            <SelectField label='Number of Guest' data={GuestSelect} onChange={(e: any) => setGuest(e)} value={guest} />
+          </div>
+          <div className='mb-4'>
+            <InputField
+              control={control}
+              label='Special Request'
+              name='email'
+              type='text'
+              placeholder='Special Request'
+            />
+          </div>
+        </form>
+      </div>
 
       <div className='p-4'>
-        <Button name='Go to cart' path='cart' />
+        <Button name='Next' path='reservationBooking' />
       </div>
     </div>
   )
