@@ -1,10 +1,9 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { Button } from '../components/button'
-import Header from '../components/Header'
 import InputField from '../components/fields/InputField'
-import { LoginBody, LoginBodyType } from '../schema/auth.schema'
 import Goback from '../components/Goback'
+import { LoginBody, LoginBodyType } from '../schema/auth.schema'
 
 const Booking = () => {
   // useForm

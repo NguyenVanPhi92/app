@@ -1,5 +1,4 @@
 import Clock from '../assets/icons/Clock'
-import Close from '../assets/icons/Close'
 import Location from '../assets/icons/Location'
 import CloseTab from '../components/Close'
 import Favorite from '../components/Favorite'

@@ -5,7 +5,6 @@ import RadioFill from '../assets/icons/RadioFill'
 import RadioOutline from '../assets/icons/RadioOutline'
 import Sticky from '../assets/icons/Sticky'
 import { Button } from '../components/button'
-import Header from '../components/Header'
 import Goback from '../components/Goback'
 const Checkout = () => {
   const [isOpen, setIsOpen] = useState(true)

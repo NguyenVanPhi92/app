@@ -1,12 +1,9 @@
-import { Link } from 'react-router'
-import Bage from '../assets/icons/Bage'
 import Plus from '../assets/icons/Plus'
 import { Button } from '../components/button'
-import Header from '../components/Header'
-import { Image, MenuStore } from '../constants/data'
-import '../styles/menu.scss'
-import { useStoreAction } from '../store/zustand'
 import Goback from '../components/Goback'
+import { Image, MenuStore } from '../constants/data'
+import { useStoreAction } from '../store/zustand'
+import '../styles/menu.scss'
 
 const Menu = () => {
   const dispathCart = useStoreAction((state) => state.dispathCart)

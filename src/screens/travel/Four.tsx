@@ -1,9 +1,8 @@
-import { GoHeart } from 'react-icons/go'
+import { useState } from 'react'
 import { Button } from '../../components/button'
+import Favorite from '../../components/Favorite'
 import Header from '../../components/Header'
 import { Image } from '../../constants/data'
-import Favorite from '../../components/Favorite'
-import { useState } from 'react'
 import { useStoreAction } from '../../store/zustand'
 
 const Four = () => {
