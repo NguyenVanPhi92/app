@@ -1,23 +1,26 @@
 import { useState } from 'react'
+import { BsQrCodeScan } from 'react-icons/bs'
 import { FaPlaneArrival, FaPlaneDeparture } from 'react-icons/fa'
 import { FiCalendar } from 'react-icons/fi'
 import { IoSearchSharp } from 'react-icons/io5'
 import { Link } from 'react-router'
-import Header from '../components/Header'
-import { BsQrCodeScan } from 'react-icons/bs'
-import Navbar from './Navbar'
+import Goback from '../components/Goback'
 import { Image } from '../constants/data'
+import Navbar from './Navbar'
 
 const FlightTracking = () => {
   const [activeTab, setActiveTab] = useState('arrival')
   return (
-    <div className='flex flex-col justify-between main'>
-      <div className='p-2'>
-        <Header title='Flight Tracking' />
+    <div className=' main'>
+      <div className='fixed top-0 z-10 p-4 flex justify-center bg-white w-[430px]'>
+        <div className='absolute left-4'>
+          <Goback />
+        </div>
+        <p className='font-bold'>Flight Tracking</p>
       </div>
-      <img src={Image} alt='img' className='w-full' />
 
-      <div className='p-4'>
+      <img src={Image} alt='img' className='w-full h-72' />
+      <div className='p-4 '>
         <div className='flex items-center justify-between mb-6 cursor-pointer'>
           <p className='font-bold text-[#354f79]'>Find your flights</p>
           <p className='flex items-center bg-[#354f79] rounded-full px-3 py-1 text-[12px] text-white gap-x-1'>
@@ -93,9 +96,7 @@ const FlightTracking = () => {
         </Link>
       </div>
 
-      <div className='mb-2'>
-        <Navbar />
-      </div>
+      <Navbar />
     </div>
   )
 }

@@ -3,7 +3,6 @@ import Location from '../assets/icons/Location'
 import CloseTab from '../components/Close'
 import Favorite from '../components/Favorite'
 import { useStoreAction } from '../store/zustand'
-import '../styles/cart.scss'
 
 const Event = () => {
   const event = useStoreAction((state) => state.event)
@@ -41,7 +40,9 @@ const Event = () => {
         </div>
       </div>
 
-      <Favorite />
+      <div className='p-4'>
+        <Favorite />
+      </div>
     </div>
   )
 }
