@@ -45,7 +45,7 @@ const SelectPage = () => {
             onChange={(e: any) => setLanguage(e)}
             value={language}
           />
-          <SelectField label='Currency' data={SelectTerminal} onChange={(e: any) => setMoney(e)} value={money} />
+          <SelectField label='Currency' data={SelectMoney} onChange={(e: any) => setMoney(e)} value={money} />
         </div>
       </div>
 

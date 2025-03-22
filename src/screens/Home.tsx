@@ -38,10 +38,10 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='p-4 scroll'>
+      <div className='p-4 mb-24 body'>
         {/* Icons */}
         <div className='grid grid-cols-4 gap-2 mb-6 text-center'>
-          {Number(home.country) === 1 || Number(home.country) === 3 ? (
+          {Number(home.country) === 2 || Number(home.country) === 4 ? (
             <Link to='/one'>
               <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
                 <Travel />
@@ -104,35 +104,25 @@ const Home = () => {
           <h2 className='mb-2 font-bold'>WHAT'S NEW?</h2>
           <div className='grid grid-cols-2 gap-2 text-white'>
             {/* Large Card */}
-            <div className='bg-blue-100 relative rounded-xl flex flex-col justify-between min-h-[280px]'>
-              <img src={New1} alt='' className='object-cover h-full rounded-xl' />
+            <div className='relative flex flex-col justify-between bg-blue-100 rounded-xl min-h-[230px]'>
+              <img src={New1} alt='' className='inset-0 object-cover h-full opacity-70 rounded-xl' />
               <div className='absolute bottom-4 left-4'>
-                <p className='text-[12px] font-bold'>Subtitle</p>
-                <p className=' text-[12px]'>Tan Son Nhat Terminal T3 is set to begin operations in May 2025</p>
+                <p className=' text-[12px] text-white drop-shadow-2xl'>
+                  Tan Son Nhat Terminal T3 is set to begin operations in May 2025
+                </p>
+                {/* <p className='text-[12px] font-bold'>Subtitle</p> */}
               </div>
             </div>
 
             {/* Small Cards */}
-            <div className='grid grid-rows-2 gap-2'>
-              <div className='relative bg-blue-100 rounded-xl flex flex-col justify-between min-h-[130px]'>
-                <img src={New2} alt='' className='object-cover h-full rounded-xl' />
+            <div className='relative bg-blue-100 rounded-xl flex flex-col justify-between min-h-[130px]'>
+              <img src={New2} alt='' className='object-cover h-full rounded-xl' />
 
-                <div className='absolute bottom-4 left-4'>
-                  <p className='text-[12px] font-bold'>Subtitle</p>
-                  <p className=' text-[12px]'>
-                    Domestic flights of Vietnam Airlines and VietJet Air will be relocated to Terminal T3
-                  </p>
-                </div>
-              </div>
-
-              <div className='bg-blue-100 relative rounded-xl flex flex-col justify-between min-h-[130px]'>
-                <img src={New2} alt='' className='object-cover h-full rounded-xl' />
-                <div className='absolute bottom-4 left-4'>
-                  <p className='text-[12px] font-bold'>Subtitle</p>
-                  <p className=' text-[12px]'>
-                    Domestic flights of Vietnam Airlines and VietJet Air will be relocated to Terminal T3
-                  </p>
-                </div>
+              <div className='absolute bottom-4 left-4'>
+                <p className=' text-[12px]'>
+                  Domestic flights of Vietnam Airlines and VietJet Air will be relocated to Terminal T3
+                </p>
+                {/* <p className='text-[12px] font-bold'>Subtitle</p> */}
               </div>
             </div>
           </div>
@@ -158,7 +148,7 @@ const Home = () => {
               <div className='p-4'>
                 <p className='font-bold'>{e.name}</p>
                 <p className='text-[#494A50] text-[12px] mb-2'>{e.address}</p>
-                <p className='text-[#494A50] text-[12px]'>{e.address}</p>
+                <p className='text-[#494A50] text-[12px] line-clamp-2'>{e.des}</p>
               </div>
             </Link>
           ))}

@@ -38,7 +38,7 @@ const One = () => {
         <form action='' className='mt-12'>
           <div className='mb-4'>
             <label className='block mb-1 text-sm font-semibold'>Your travel plan name</label>
-            <InputField control={control} name='email' type='text' placeholder='Email Address' />
+            <InputField control={control} name='email' type='text' placeholder='Travel Plan' />
           </div>
 
           {/* Select Tỉnh Thành Phố */}
@@ -60,7 +60,8 @@ const One = () => {
           </div>
 
           {/* Date Picker */}
-          <CustomDatePicker label='Dates' />
+          <CustomDatePicker label='Dates From' placeholderText='From' />
+          <CustomDatePicker label='Dates To' placeholderText='To' />
         </form>
       </div>
 

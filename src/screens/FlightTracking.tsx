@@ -1,15 +1,17 @@
 import { useState } from 'react'
+import DatePicker from 'react-datepicker'
 import { BsQrCodeScan } from 'react-icons/bs'
 import { FaPlaneArrival, FaPlaneDeparture } from 'react-icons/fa'
-import { FiCalendar } from 'react-icons/fi'
 import { IoSearchSharp } from 'react-icons/io5'
 import { Link } from 'react-router'
+import { CustomInput } from '../components/fields/DateField'
 import Goback from '../components/Goback'
-import { Image } from '../constants/data'
+import { LightTracking } from '../constants/data'
 import Navbar from './Navbar'
 
 const FlightTracking = () => {
   const [activeTab, setActiveTab] = useState('arrival')
+  const [selectedDate, setSelectedDate] = useState(null)
   return (
     <div className=' main'>
       <div className='fixed top-0 z-10 p-4 flex justify-center bg-white w-[430px]'>
@@ -19,7 +21,7 @@ const FlightTracking = () => {
         <p className='font-bold'>Flight Tracking</p>
       </div>
 
-      <img src={Image} alt='img' className='w-full h-72' />
+      <img src={LightTracking} alt='img' className='w-full h-72' />
       <div className='p-4 '>
         <div className='flex items-center justify-between mb-6 cursor-pointer'>
           <p className='font-bold text-[#354f79]'>Find your flights</p>
@@ -29,16 +31,22 @@ const FlightTracking = () => {
           </p>
         </div>
 
-        <div className='flex pb-8 space-x-4 border-b border-[#C5C6CC]'>
-          <div className='flex items-center px-4 py-2 border border-gray-300 rounded-2xl'>
-            <span className='mr-2 text-gray-500'>Today</span>
-            <FiCalendar className='text-[#C5C6CC]' />
+        <div className='flex items-center pb-8 space-x-4 border-b border-[#C5C6CC]'>
+          <div className='FlightTracking'>
+            <div className=''>
+              <DatePicker
+                selected={selectedDate}
+                onChange={(date: any) => setSelectedDate(date)}
+                customInput={<CustomInput placeholderText='Today' />}
+                dateFormat='dd/MM/yyyy'
+              />
+            </div>
           </div>
 
           <input
             type='text'
             placeholder='Flight No'
-            className='w-full px-4 py-2 text-[#C5C6CC] border border-gray-300 outline-none rounded-2xl'
+            className='w-full px-4 h-10 py-2 text-[#C5C6CC] border border-gray-300 outline-none rounded-2xl'
           />
         </div>
 

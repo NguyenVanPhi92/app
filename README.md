@@ -28,10 +28,8 @@ Bug: Coi lại Header
 4. Menu
 5. Navbar
 
-Done 19 page con 8 page
-Còn Route 3, chưa cày Zustand
-Đang làm route 3
-Còn Checkout chưa xong
+Smart Travel: 1,2,3,4 Done
+Explore: 1,2,4,5
 
 Tính năng:
 add to card

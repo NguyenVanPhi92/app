@@ -38,8 +38,9 @@ import Shopping from '../assets/icons/home/Shopping'
 import Sim from '../assets/icons/home/Sim'
 import Travel from '../assets/icons/home/Travel'
 import LoginI from '../assets/login.jpg'
+import LightTracking from '../assets/images/flightTracking.jpg'
 
-export { Image, LoginI, New1, New2, Thumbnail, Travel1 }
+export { Image, LoginI, New1, New2, Thumbnail, Travel1, LightTracking }
 
 export const timeOptions = [
   { value: '0', label: 'Check-in time' },
@@ -88,8 +89,8 @@ export const IconHome = [
 
 // Travel
 export const TravelSelect = [
-  { value: 'HN', label: 'Hà Nội' },
   { value: 'HCM', label: 'Hồ Chí Minh' },
+  { value: 'HN', label: 'Hà Nội' },
   { value: 'haiphong', label: 'Hải Phòng' },
   { value: 'DN', label: 'Đà Nẵng' },
   { value: 'CT', label: 'Cần Thơ' },
@@ -631,6 +632,7 @@ export const SelectTerminal = [
 ]
 
 export const SelectLanguage = [
+  { value: '0', label: 'Default English' },
   { value: '1', label: 'Vietnamese' },
   { value: '2', label: 'English' },
   { value: '3', label: 'Chinese' },
@@ -639,6 +641,7 @@ export const SelectLanguage = [
 ]
 
 export const SelectMoney = [
+  { value: '0', label: 'Default USD' },
   { value: '1', label: 'VND' },
   { value: '2', label: 'USA' }
 ]

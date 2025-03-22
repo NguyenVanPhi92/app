@@ -3,14 +3,14 @@ import 'react-datepicker/dist/react-datepicker.css'
 import { useState } from 'react'
 import { FiCalendar } from 'react-icons/fi'
 
-const CustomInput = ({ value, onClick }: any) => (
+export const CustomInput = ({ value, onClick, placeholderText }: any) => (
   <div className='flex items-center w-full px-4 py-[10px] border border-[#c6c8cb] rounded-[10px]' onClick={onClick}>
-    <span className='text-[#333] text-[14px]'>{value || 'From - to'}</span>
+    <span className='text-[#333] text-[14px]'>{value || placeholderText}</span>
     <FiCalendar className='ml-auto text-gray-400' />
   </div>
 )
 
-const CustomDatePicker = ({ label }: { label: string }) => {
+const CustomDatePicker = ({ label, placeholderText }: { label: string; placeholderText?: string }) => {
   const [selectedDate, setSelectedDate] = useState(null)
 
   return (
@@ -20,7 +20,7 @@ const CustomDatePicker = ({ label }: { label: string }) => {
         <DatePicker
           selected={selectedDate}
           onChange={(date: any) => setSelectedDate(date)}
-          customInput={<CustomInput />}
+          customInput={<CustomInput placeholderText={placeholderText} />}
           dateFormat='dd/MM/yyyy'
           className='w-[400px]'
         />

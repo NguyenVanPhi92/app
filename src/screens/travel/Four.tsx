@@ -39,17 +39,20 @@ const Four = () => {
             </span>
           </button>
         </div>
-        <div className='flex flex-wrap gap-1 mb-6'>
+
+        <div className='flex gap-1 pb-2 mb-6 overflow-x-scroll' style={{ scrollbarWidth: 'thin' }}>
+          <div className='px-2 py-1 min-w-max text-[10px] text-white bg-[#354f79] rounded-3xl font-[500]'>
+            Recommend
+          </div>
           {travelCategories.categories.map((e: any, i) => (
-            <p
+            <div
               key={i}
               // onClick={() => setIdfilter(e.id)}
-              className='px-2 py-1 w-max text-[10px] text-[#354f79] bg-[#eaf2ff] rounded-3xl font-[500]'
+              className={`px-2 py-1 min-w-max text-[10px] text-[#354f79] bg-[#eaf2ff] rounded-3xl font-[500]`}
             >
               {e?.name}
-            </p>
+            </div>
           ))}
-          <p className='px-2 py-1 w-max text-[10px] text-white bg-[#354f79] rounded-3xl font-[500]'>RECOMMEND</p>
         </div>
 
         {/* CARD */}

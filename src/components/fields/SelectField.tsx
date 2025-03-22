@@ -6,6 +6,8 @@ interface SelectFieldProps {
   label: string
   value: any
   onChange: any
+  defaultInputValue?: string
+
   // Icon: any
 }
 
@@ -43,6 +45,7 @@ const SelectField = ({ data, onChange, value, label }: SelectFieldProps) => {
           options={data}
           value={value}
           onChange={onChange}
+          // defaultInputValue={defaultInputValue}
           className='mt-1 text-[12px] custom-select'
           components={{ DropdownIndicator: () => <FaSortDown className='text-gray-900' size={16} /> }}
         />
