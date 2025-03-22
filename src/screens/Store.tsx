@@ -3,13 +3,15 @@ import Date from '../assets/icons/Date'
 import Location from '../assets/icons/Location'
 import Menu from '../assets/icons/Menu'
 import { Button } from '../components/button'
+import CloseTab from '../components/Close'
 import { Image } from '../constants/data'
 
 const Store = () => {
   return (
     <div className='flex flex-col justify-between main'>
-      <div className=''>
+      <div className='relative'>
         <img src={Image} alt='img' className='w-full' />
+        <CloseTab />
         <div className='p-4'>
           <div className=' border-b-[1px] mb-4 pb-4 border-[#797979]'>
             <div className='flex items-center mb-4 gap-x-4'>

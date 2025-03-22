@@ -2,42 +2,47 @@ import { Link } from 'react-router'
 import Bage from '../assets/icons/Bage'
 import Plus from '../assets/icons/Plus'
 import { Button } from '../components/button'
-import Goback from '../components/Goback'
+import Header from '../components/Header'
+import { Image, MenuStore } from '../constants/data'
 import '../styles/menu.scss'
-import { Image } from '../constants/data'
+import { useStoreAction } from '../store/zustand'
+import Goback from '../components/Goback'
 
 const Menu = () => {
+  const dispathCart = useStoreAction((state) => state.dispathCart)
+  const cart = useStoreAction((state) => state.cart)
+
+  // handle
+  const addCart = (e: any) => {
+    dispathCart(e)
+  }
+  console.log('Cart: ', cart)
+
   return (
     <div className='flex flex-col justify-between main'>
-      <div className=''>
-        <header className='mb-6'>
+      <div className='fixed top-0 z-10 p-4 flex justify-center bg-white w-[430px]'>
+        <div className='absolute left-4'>
           <Goback />
-          <p>Burger King Menu</p>
-          <Link to='/cart' className='relative'>
-            <Bage />
-            <span className='py-[2px] top-[10px] right-[-2px] absolute px-[5px] text-[8px] bg-[#354f79] rounded-full text-white'>
-              9
-            </span>
-          </Link>
-        </header>
+        </div>
+        <p className='font-bold'>Burger King Menu</p>
+      </div>
 
-        <div className='scroll'>
-          <div className='menu'>
-            {Array.from({ length: 6 }, (_, i) => (
-              <div className='menu-card' key={i}>
-                <img src={Image} alt='img' />
-                <div className='menu-card__content'>
-                  <div className='menu-card__content-title'>
-                    <p className='text-[12px]'>Dish Name</p>
-                    <p className='text-[12px]'>$ 5.00</p>
-                  </div>
-                  <p className='menu-card__content-plus'>
-                    <Plus />
-                  </p>
+      <div className='mt-16 body'>
+        <div className='menu'>
+          {MenuStore.map((e, i) => (
+            <div className='menu-card' key={i}>
+              <img src={Image} alt='img' />
+              <div className='menu-card__content'>
+                <div className='menu-card__content-title'>
+                  <p className='text-[12px]'>{e.name}</p>
+                  <p className='text-[12px]'>$ {e.price}</p>
                 </div>
+                <p className='menu-card__content-plus ' onClick={() => addCart(e)}>
+                  <Plus />
+                </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
 

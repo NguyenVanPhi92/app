@@ -4,14 +4,21 @@ import Goback from './Goback'
 interface HeaderProps {
   title: string
   icon?: boolean
+  bag?: React.ReactNode
 }
 
-const Header = ({ title, icon }: HeaderProps) => {
+const Header = ({ title, icon, bag }: HeaderProps) => {
   return (
-    <div className='flex justify-between p-2'>
+    <div className='fixed top-0 z-10 p-4 flex justify-between bg-white w-[430px]'>
       <Goback />
       <p className='font-bold'>{title}</p>
-      <div className=''>{icon && <Search />}</div>
+      {icon && (
+        <div className=''>
+          <Search />
+        </div>
+      )}
+
+      {bag && bag}
     </div>
   )
 }

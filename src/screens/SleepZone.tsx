@@ -2,13 +2,15 @@ import Clock from '../assets/icons/Clock'
 import Location from '../assets/icons/Location'
 import BookingForm from '../components/BookingForm '
 import { Button } from '../components/button'
+import CloseTab from '../components/Close'
 import { Image } from '../constants/data'
 
 const SleepZone = () => {
   return (
     <div className='flex flex-col justify-between main'>
-      <div className='h-[88vh] overflow-y-scroll scroll-smooth' style={{ scrollbarWidth: 'thin' }}>
+      <div className='relative'>
         <img src={Image} alt='img' className='w-full' />
+        <CloseTab />
 
         <div className='p-4'>
           <p className='mb-2 font-bold'>SleepZone Name</p>

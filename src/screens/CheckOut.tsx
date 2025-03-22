@@ -6,6 +6,7 @@ import RadioOutline from '../assets/icons/RadioOutline'
 import Sticky from '../assets/icons/Sticky'
 import { Button } from '../components/button'
 import Header from '../components/Header'
+import Goback from '../components/Goback'
 const Checkout = () => {
   const [isOpen, setIsOpen] = useState(true)
 
@@ -13,11 +14,16 @@ const Checkout = () => {
     setIsOpen(!isOpen)
   }
   return (
-    <div className='flex flex-col justify-between p-4 main'>
-      <div className=''>
-        <Header title='Checkout' />
+    <div className='flex flex-col justify-between main'>
+      <div className='fixed top-0 z-10 p-4 flex justify-center bg-white w-[430px]'>
+        <div className='absolute left-4'>
+          <Goback />
+        </div>
+        <p className='font-bold'>Checkout</p>
+      </div>
 
-        <div className='flex justify-between my-4 text-sm'>
+      <div className='mt-10 body'>
+        <div className='flex justify-between p-4 text-sm'>
           <div className='flex flex-col items-center justify-center gap-y-2'>
             <div className='bg-[#b4dbff] rounded-full w-[36px] h-[36px] flex justify-center items-center font-bold p-2'>
               <Sticky />
@@ -45,12 +51,12 @@ const Checkout = () => {
           </div>
         </div>
 
-        <div className='mt-6 mb-10 text-left '>
+        <div className='p-4 mt-6 text-left '>
           <h4 className='mb-2 text-xl font-bold'>Choose a payment method</h4>
           <p className='text-[#6f6f6f] text-sm'>You won't be charged until you review the order on the next page</p>
         </div>
 
-        <div className='flex flex-col gap-y-4'>
+        <div className='flex flex-col p-4 gap-y-4'>
           <div className='w-full max-w-md mx-auto border border-[#D4D6DD] rounded-2xl'>
             <button onClick={toggleCollapse} className='flex items-center p-4 gap-x-3'>
               <RadioFill />
@@ -96,7 +102,9 @@ const Checkout = () => {
         </div>
       </div>
 
-      <Button name='Next' path='qr' />
+      <div className='p-4'>
+        <Button name='Next' path='qr' />
+      </div>
     </div>
   )
 }

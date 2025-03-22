@@ -9,14 +9,21 @@ const Dining = () => {
     <div className='flex flex-col justify-between main'>
       <Header title='Dining' icon />
 
-      <div className='scroll' style={{ height: 'calc(100vh - 7rem)' }}>
-        <img src={Image} alt='img' className='scroll-img' />
-
-        <div className='flex option'>
-          <div className='option-item'>TERMINAL 1</div>
-          <div className='option-item'>TERMINAL 2</div>
-          <div className='option-item'>TERMINAL 3</div>
-          <div className='option-item'>TERMINAL 4</div>
+      <div className='dining'>
+        <img src={Image} alt='img' className='object-cover w-full h-70' />
+        <div className='flex justify-between p-4'>
+          <div className='text-[10px] text-[#354f79] font-[600] bg-[#eaf2ff] rounded-2xl px-3 py-1 w-max'>
+            TERMINAL 1
+          </div>
+          <div className='text-[10px] text-[#354f79] font-[600] bg-[#eaf2ff] rounded-2xl px-3 py-1 w-max'>
+            TERMINAL 2
+          </div>
+          <div className='text-[10px] text-[#354f79] font-[600] bg-[#eaf2ff] rounded-2xl px-3 py-1 w-max'>
+            TERMINAL 3
+          </div>
+          <div className='text-[10px] text-[#354f79] font-[600] bg-[#eaf2ff] rounded-2xl px-3 py-1 w-max'>
+            TERMINAL 4
+          </div>
         </div>
 
         <div className='shop'>

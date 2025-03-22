@@ -1,16 +1,14 @@
 import { useState } from 'react'
-import { GoHeart } from 'react-icons/go'
 import { Link } from 'react-router'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import Search from '../../assets/icons/Search'
 import { Button } from '../../components/button'
-import Goback from '../../components/Goback'
+import Favorite from '../../components/Favorite'
+import Header from '../../components/Header'
 import { Event_HCM, Image } from '../../constants/data'
 import { useStoreAction } from '../../store/zustand'
 
 const Three = () => {
   const travelCategories = useStoreAction((state) => state.travel)
-  const [activeTab, setActiveTab] = useState('all')
   const [idFilter, setIdfilter] = useState(undefined)
   console.log(idFilter)
 
@@ -22,38 +20,8 @@ const Three = () => {
   // }
   return (
     <div className='flex flex-col justify-between main'>
-      <div className='p-4 scroll' style={{ height: 'calc(100vh - 4rem)' }}>
-        <div className='flex justify-between mb-8'>
-          <Goback />
-          <p className='font-[600]'>Smart Travel</p>
-          <Search />
-        </div>
-
-        <div className='grid grid-cols-3 p-1 text-[14px] rounded-full mb-4 bg-[#eaf2ff]'>
-          <button
-            className={`px-6 py-2 rounded-3xl ${activeTab === 'all' ? 'bg-white' : 'text-gray-500'}`}
-            onClick={() => setActiveTab('all')}
-          >
-            <span className={`font-bold ${activeTab === 'all' ? 'text-[#354f79]' : 'text-[#71727A]'}`}>All</span>
-          </button>
-          <button
-            className={`px-6 py-2 rounded-3xl ${activeTab === 'festival' ? 'bg-white' : 'text-gray-500'}`}
-            onClick={() => setActiveTab('festival')}
-          >
-            <span className={`font-bold ${activeTab === 'festival' ? 'text-[#354f79]' : 'text-[#71727A]'}`}>
-              Festival
-            </span>
-          </button>
-          <button
-            className={`px-6 py-2 rounded-3xl ${activeTab === 'destination' ? 'bg-white' : 'text-gray-500'}`}
-            onClick={() => setActiveTab('destination')}
-          >
-            <span className={`font-bold ${activeTab === 'destination' ? 'text-[#354f79]' : 'text-[#71727A]'}`}>
-              Destination
-            </span>
-          </button>
-        </div>
-
+      <Header title='Smart Travel' icon />
+      <div className='p-4 mt-16 body'>
         <div className='flex flex-wrap gap-1 mb-6'>
           {travelCategories.categories.map((e: any, i) => (
             <p
@@ -79,9 +47,9 @@ const Three = () => {
             {Event_HCM.map((e, _) =>
               e.event.map((e, i) => (
                 <SwiperSlide className='SwiperSlide' key={i}>
-                  <div className='bg-[#f8f9fe] rounded-2xl h-full'>
+                  <div className='bg-[#f8f9fe] rounded-2xl h-[340px]'>
                     <div className='relative'>
-                      <img src={e.img} alt='' className='w-full rounded-tl-2xl rounded-tr-2xl' />
+                      <img src={e.img} alt='' className='w-full h-40 rounded-tl-2xl rounded-tr-2xl' />
                       <p className='px-3 py-1 absolute right-2 text-[12px] top-2 rounded-full bg-[#354f79] text-white'>
                         {e.date}
                       </p>
@@ -92,10 +60,7 @@ const Three = () => {
                         <p className='font-bold text-[14px] line-clamp-2'>{e.name}</p>
                         <p className='text-[#71727A] line-clamp-2 text-[12px]'>{e.address}</p>
                       </div>
-                      <div className='border-[1.4px] py-1 border-[#354f79] rounded-xl flex justify-center items-center gap-x-2 text-[#354f79] '>
-                        <GoHeart />
-                        <span className='font-bold'>Interest</span>
-                      </div>
+                      <Favorite />
                     </div>
                   </div>
                 </SwiperSlide>
@@ -128,28 +93,7 @@ const Three = () => {
                       <p className='font-bold text-[16px]'>Places</p>
                       <p className='text-[16px] text-[#71727A]'>Detailed address</p>
                     </div>
-                    <div className='flex items-center justify-center py-2 rounded-2xl gap-x-2'>
-                      <svg xmlns='http://www.w3.org/2000/svg' width='13' height='12' viewBox='0 0 13 12' fill='none'>
-                        <mask
-                          id='mask0_3471_1093'
-                          style={{ maskType: 'alpha' }}
-                          maskUnits='userSpaceOnUse'
-                          x='0'
-                          y='0'
-                          width='13'
-                          height='12'
-                        >
-                          <path
-                            d='M3.875 0.693604C2.08628 0.693604 0.625 2.13087 0.625 3.91735C0.625 4.58725 0.759877 5.67584 1.50343 6.96578C2.24493 8.25215 3.57209 9.70478 5.90388 11.1383L5.90633 11.1398C6.08522 11.2486 6.2906 11.3062 6.5 11.3062C6.7094 11.3062 6.91478 11.2486 7.09367 11.1398L7.09612 11.1383C9.42791 9.70478 10.7551 8.25215 11.4966 6.96578C12.2401 5.67584 12.375 4.58725 12.375 3.91735C12.375 2.13087 10.9137 0.693604 9.125 0.693604C8.18264 0.693604 7.38537 1.19782 6.87009 1.6249C6.73202 1.73934 6.60801 1.8534 6.5 1.95958C6.39199 1.8534 6.26798 1.73934 6.12991 1.6249C5.61463 1.19782 4.81736 0.693604 3.875 0.693604Z'
-                            fill='#354F79'
-                          />
-                        </mask>
-                        <g mask='url(#mask0_3471_1093)'>
-                          <rect x='0.5' width='12' height='12' fill='#354F79' />
-                        </g>
-                      </svg>
-                      <span className='font-bold text-[#354f79]'>Interest</span>
-                    </div>
+                    <Favorite />
                   </div>
                 </div>
               </SwiperSlide>

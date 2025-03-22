@@ -642,3 +642,43 @@ export const SelectMoney = [
   { value: '1', label: 'VND' },
   { value: '2', label: 'USA' }
 ]
+
+// Menu
+export const MenuStore = [
+  {
+    id: '1',
+    img: 'https://www.vietnamairlines.com/vn/vi/images/airline-logo/vn.png',
+    name: 'Vietnam Airlines 1',
+    price: 1233
+  },
+  {
+    id: '2',
+    img: 'https://www.vietnamairlines.com/vn/vi/images/airline-logo/vn.png',
+    name: 'Vietnam Airlines 2',
+    price: 34234
+  },
+  {
+    id: '3',
+    img: 'https://www.vietnamairlines.com/vn/vi/images/airline-logo/vn.png',
+    name: 'Vietnam Airlines 4',
+    price: 5345
+  },
+  {
+    id: '4',
+    img: 'https://www.vietnamairlines.com/vn/vi/images/airline-logo/vn.png',
+    name: 'Vietnam Airlines 5',
+    price: 1234
+  },
+  {
+    id: '5',
+    img: 'https://www.vietnamairlines.com/vn/vi/images/airline-logo/vn.png',
+    name: 'Vietnam Airlines 6',
+    price: 6432
+  },
+  {
+    id: '6',
+    img: 'https://www.vietnamairlines.com/vn/vi/images/airline-logo/vn.png',
+    name: 'Vietnam Airlines 7',
+    price: 4746
+  }
+]

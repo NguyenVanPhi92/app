@@ -10,13 +10,15 @@ const BookingForm = () => {
   const [rooms, setRooms] = useState(roomOptions[0])
 
   const handleChangeTime = (e: any) => {
-    setCheckInTime(e.value)
+    console.log('time: ', e)
+
+    setCheckInTime(e)
   }
   const handleChangeHr = (e: any) => {
-    setHours(e.value)
+    setHours(e)
   }
   const handleChangeRoom = (e: any) => {
-    setRooms(e.value)
+    setRooms(e)
   }
 
   return (

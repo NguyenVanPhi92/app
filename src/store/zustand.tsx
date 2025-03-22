@@ -5,6 +5,7 @@ type State = {
   register: {}
   travel: { id: string; categories: string[] }
   shopping: {}
+  cart: { img: string; name: string; price: string }[]
   event: {
     img: any
     name: string
@@ -25,12 +26,14 @@ type Actions = {
   dispathEvent: (event: { img: any; name: string; date: string; city: string; address: string; des: string }) => void
   dispathLogin: (event: { email: string; password: string }) => void
   dispathTravel: (event: { id: string; categories: any[] }) => void
+  dispathCart: (event: { img: string; name: string; price: string }) => void
 }
 
 export const useStoreAction = create<State & Actions>((set) => ({
   login: { email: '', password: '' },
   register: {},
   travel: { id: '', categories: [] },
+  cart: [],
   shopping: {},
   event: {
     img: '',
@@ -81,5 +84,10 @@ export const useStoreAction = create<State & Actions>((set) => ({
         categories: value.categories,
         id: value.id
       }
+    })),
+  dispathCart: (value: { img: string; name: string; price: string }) =>
+    set((state) => ({
+      cart: [...state.cart, value]
+      // cart: state.cart.map((item) => (item.name === value.name ? { ...item, ...value } : item))
     }))
 }))

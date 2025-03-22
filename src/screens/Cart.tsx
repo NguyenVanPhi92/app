@@ -6,9 +6,8 @@ import '../styles/cart.scss'
 const Cart = () => {
   return (
     <div className='flex flex-col justify-between main'>
-      <div className='p-4 scroll' style={{ height: 'calc(100vh - 4rem)' }}>
-        <Header title='Your Cart' icon />
-
+      <Header title='Your Cart' icon />
+      <div className='body mb-44' style={{ height: 'calc(100vh - 4rem)' }}>
         <main className='card-list'>
           {Array.from({ length: 6 }, (_, i) => (
             <div className='cart' key={i}>
@@ -30,13 +29,13 @@ const Cart = () => {
             </div>
           ))}
         </main>
+      </div>
+
+      <div className='fixed bottom-0 w-[430px] p-4 bg-white'>
         <div className='flex justify-between mx-2'>
           <p className=''>Total</p>
           <p className='font-bold'>$20.00</p>
         </div>
-      </div>
-
-      <div className='p-4'>
         <Button name='Checkout' path='checkout' />
       </div>
     </div>

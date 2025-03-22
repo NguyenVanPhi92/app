@@ -28,12 +28,13 @@ const Login = () => {
   }
 
   return (
-    <div className='main'>
-      <img src={LoginI} alt='img' className='w-full mb-6 rounded-es-3xl rounded-ee-3xl' />
+    <div className='relative main'>
+      <img src={LoginI} alt='img' className='w-full mb-6 rounded-es-3xl h-72 rounded-ee-3xl' />
+
       <div className='p-4 '>
         <h1 className='text-xl font-bold'>Welcome!</h1>
 
-        <form action='' className='py-8 border-b-[1px] border-[#74747433]' onSubmit={handleSubmit(handleLogin)}>
+        <form action='' className='pb-8 pt-4 border-b-[1px] border-[#74747433]' onSubmit={handleSubmit(handleLogin)}>
           <div className='mb-4'>
             <InputField control={control} name='email' type='text' placeholder='Email Address' />
           </div>

@@ -1,6 +1,8 @@
-import { GoHeart } from 'react-icons/go'
 import Clock from '../assets/icons/Clock'
+import Close from '../assets/icons/Close'
 import Location from '../assets/icons/Location'
+import CloseTab from '../components/Close'
+import Favorite from '../components/Favorite'
 import { useStoreAction } from '../store/zustand'
 import '../styles/cart.scss'
 
@@ -10,8 +12,9 @@ const Event = () => {
 
   return (
     <div className='flex flex-col justify-between main'>
-      <div className=''>
+      <div className='relative'>
         <img src={event.img} alt='img' className='w-full' />
+        <CloseTab />
         <div className='p-4'>
           <div className='pb-4 mb-4 '>
             <div className='flex items-center mb-1 gap-x-4'>
@@ -39,12 +42,7 @@ const Event = () => {
         </div>
       </div>
 
-      <div className='p-4'>
-        <div className='border-[1.4px] py-1 border-[#354f79] rounded-xl flex justify-center items-center gap-x-2 text-[#354f79] '>
-          <GoHeart />
-          <span className='font-bold'>Interest</span>
-        </div>
-      </div>
+      <Favorite />
     </div>
   )
 }

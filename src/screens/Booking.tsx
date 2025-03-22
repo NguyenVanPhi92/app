@@ -4,6 +4,7 @@ import { Button } from '../components/button'
 import Header from '../components/Header'
 import InputField from '../components/fields/InputField'
 import { LoginBody, LoginBodyType } from '../schema/auth.schema'
+import Goback from '../components/Goback'
 
 const Booking = () => {
   // useForm
@@ -17,18 +18,23 @@ const Booking = () => {
   // const handleLogin = (data: LoginBodyType) => console.log('data form: ', data)
 
   return (
-    <div className='flex flex-col justify-between p-4 main'>
-      <Header title='Booking Sleep Zone' />
+    <div className='flex flex-col justify-between main'>
+      <div className='fixed top-0 z-10 p-4 flex justify-center bg-white w-[430px]'>
+        <div className='absolute left-4'>
+          <Goback />
+        </div>
+        <p className='font-bold'>Booking Sleep Zone</p>
+      </div>
 
-      <div>
-        <div className='flex flex-col justify-between scroll'>
+      <div className='p-4 mt-16'>
+        <div className='flex flex-col justify-between'>
           <div>
             <div className='mb-4'>
               <h4 className='mb-1 font-bold text-[16px]'>Input your info to complete booking</h4>
               <p className='text-[12px] text-[#5a5a5a]'>Booking details will be sent via phone and email.</p>
             </div>
 
-            <form action='' className='py-4 border-b-[1px] border-[#74747433]'>
+            <form action='' className='py-4'>
               <div className='mb-4'>
                 <InputField control={control} label='Name' name='name' type='text' placeholder='nhập name' />
               </div>
@@ -41,7 +47,7 @@ const Booking = () => {
             </form>
           </div>
 
-          <div className=''>
+          <div className='mt-16 pt-2 border-t-[1px] border-[#74747433]'>
             <h4 className='font-bold text-[16px]'>Review Booking</h4>
             <div className='px-10 text-[#71727A]'>
               <div className='flex items-center justify-between'>
@@ -62,7 +68,7 @@ const Booking = () => {
               </div>
             </div>
 
-            <div className='flex justify-between mt-10'>
+            <div className='flex justify-between px-6 mt-10'>
               <p>Total</p>
               <p className='font-bold'>$20.00</p>
             </div>
@@ -70,7 +76,9 @@ const Booking = () => {
         </div>
       </div>
 
-      <Button name='Checkout' path='checkout' />
+      <div className='p-4'>
+        <Button name='Checkout' path='checkout' />
+      </div>
     </div>
   )
 }

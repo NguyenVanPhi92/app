@@ -20,6 +20,7 @@ Done config Zustand
 Bug Cart Page
 CÁC PAGE CẦN CHUYỂN SANG TAILWIND
 Route 3, Order CHUA XONG
+Bug: Coi lại Header
 
 1. Serverces
 2. Dining

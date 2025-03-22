@@ -53,7 +53,7 @@ const Home = () => {
               <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
                 <Flight />
               </div>
-              <p className='text-[12px] text-[#2F3036] mt-1'>Smart Travel</p>
+              <p className='text-[12px] text-[#2F3036] mt-1'>Flight Tracking</p>
             </Link>
           )}
 

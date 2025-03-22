@@ -1,14 +1,19 @@
 import { Link } from 'react-router'
 import QR from '../assets/icons/QR'
 import Sticky from '../assets/icons/Sticky'
-import Header from '../components/Header'
+import Goback from '../components/Goback'
 const QrPage = () => {
   return (
-    <div className='flex flex-col justify-between p-4 main'>
-      <div className=''>
-        <Header title='Checkout' />
+    <div className='flex flex-col justify-between main'>
+      <div className='fixed top-0 z-10 p-4 flex justify-center bg-white w-[430px]'>
+        <div className='absolute left-4'>
+          <Goback />
+        </div>
+        <p className='font-bold'>Checkout</p>
+      </div>
 
-        <div className='flex justify-between my-4 text-sm'>
+      <div className='mt-6 body'>
+        <div className='flex justify-between p-4 my-4 text-sm'>
           <div className='flex flex-col items-center justify-center gap-y-2'>
             <div className='bg-[#b4dbff] rounded-full w-[36px] h-[36px] flex justify-center items-center font-bold p-2'>
               <Sticky />
@@ -45,7 +50,7 @@ const QrPage = () => {
           <QR />
         </div>
       </div>
-      <div className='m-4 mb-0'>
+      <div className='p-4 m-4 mb-0'>
         <Link
           to='/checkout'
           className='border-2 border-[#354f79] flex items-center justify-center p-3 rounded-xl gap-x-2'

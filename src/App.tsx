@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router'
+import ScrollToTop from './components/ScrollToTop'
 import Login from './screens/auth/Login'
 import OTP from './screens/auth/OTP'
 import Register from './screens/auth/Register'
@@ -6,8 +7,10 @@ import Booking from './screens/Booking'
 import Cart from './screens/Cart'
 import Checkout from './screens/CheckOut'
 import Dining from './screens/Dining'
+import Event from './screens/Event'
 import FlightTracking from './screens/FlightTracking'
 import Home from './screens/Home'
+import Map from './screens/Map'
 import Menu from './screens/Menu'
 import Products from './screens/Products'
 import QrPage from './screens/QrPage'
@@ -25,12 +28,11 @@ import Four from './screens/travel/Four'
 import One from './screens/travel/One'
 import Three from './screens/travel/Three'
 import Two from './screens/travel/Two'
-import Event from './screens/Event'
-import Map from './screens/Map'
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<SelectPage />} />
         <Route path='/home' element={<Home />} />
