@@ -1,11 +1,10 @@
+import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { Button } from '../components/button'
 import InputField from '../components/fields/InputField'
 import Goback from '../components/Goback'
 import { LoginBody, LoginBodyType } from '../schema/auth.schema'
-import { useStoreAction } from '../store/zustand'
 import '../styles/menu.scss'
-import { zodResolver } from '@hookform/resolvers/zod'
 
 const ReservationBooking = () => {
   // useForm
