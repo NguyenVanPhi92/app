@@ -1,4 +1,4 @@
-const Explore = () => {
+const Explore = ({ color }: { color: string }) => {
   return (
     <svg xmlns='http://www.w3.org/2000/svg' width='21' height='20' viewBox='0 0 21 20' fill='none'>
       <g clipPath='url(#clip0_3336_1276)'>
@@ -17,7 +17,7 @@ const Explore = () => {
           />
         </mask>
         <g mask='url(#mask0_3336_1276)'>
-          <rect x='0.5' y='-0.000976562' width='20' height='20' fill='#D4D6DD' />
+          <rect x='0.5' y='-0.000976562' width='20' height='20' fill={color} />
         </g>
       </g>
       <defs>

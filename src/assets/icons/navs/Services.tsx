@@ -1,4 +1,4 @@
-const Services = () => {
+const Services = ({ color }: { color: string }) => {
   return (
     <svg xmlns='http://www.w3.org/2000/svg' width='21' height='20' viewBox='0 0 21 20' fill='none'>
       <mask
@@ -16,7 +16,7 @@ const Services = () => {
         />
       </mask>
       <g mask='url(#mask0_3336_697)'>
-        <rect x='0.5' y='-0.000976562' width='20' height='20' fill='#354F79' />
+        <rect x='0.5' y='-0.000976562' width='20' height='20' fill={color} />
       </g>
     </svg>
   )

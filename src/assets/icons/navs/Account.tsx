@@ -1,4 +1,4 @@
-const Account = () => {
+const Account = ({ color }: { color: string }) => {
   return (
     <svg xmlns='http://www.w3.org/2000/svg' width='21' height='20' viewBox='0 0 21 20' fill='none'>
       <mask
@@ -20,7 +20,7 @@ const Account = () => {
         />
       </mask>
       <g mask='url(#mask0_3336_769)'>
-        <rect x='0.5' y='-0.000976562' width='19.9992' height='19.9995' fill='#D4D6DD' />
+        <rect x='0.5' y='-0.000976562' width='19.9992' height='19.9995' fill={color} />
       </g>
     </svg>
   )

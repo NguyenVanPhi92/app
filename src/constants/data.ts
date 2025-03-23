@@ -632,18 +632,16 @@ export const SelectTerminal = [
 ]
 
 export const SelectLanguage = [
-  { value: '0', label: 'Default English' },
+  { value: '0', label: 'English' },
   { value: '1', label: 'Vietnamese' },
-  { value: '2', label: 'English' },
-  { value: '3', label: 'Chinese' },
-  { value: '4', label: 'Korean' },
-  { value: '5', label: 'Japanese' }
+  { value: '2', label: 'Chinese' },
+  { value: '3', label: 'Korean' },
+  { value: '4', label: 'Japanese' }
 ]
 
 export const SelectMoney = [
-  { value: '0', label: 'Default USD' },
-  { value: '1', label: 'VND' },
-  { value: '2', label: 'USA' }
+  { value: '0', label: 'USA' },
+  { value: '1', label: 'VND' }
 ]
 
 export const TimeSelect = [

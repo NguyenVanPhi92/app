@@ -4,32 +4,32 @@ import Explore from '../assets/icons/navs/Explore'
 import Flight from '../assets/icons/navs/Flight'
 import Scan from '../assets/icons/navs/Scan'
 import Services from '../assets/icons/navs/Services'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 const navbar = [
   {
     name: 'Explore',
-    icon: <Explore />,
+    icon: <Explore color='#D4D6DD' />,
     path: '/home'
   },
   {
     name: 'Flight',
-    icon: <Flight />,
+    icon: <Flight color='#D4D6DD' />,
     path: '/flight'
   },
   {
     name: 'Scan QR',
-    icon: <Scan />,
+    icon: <Scan color='#D4D6DD' />,
     path: '/qr'
   },
   {
     name: 'Services',
-    icon: <Services />,
+    icon: <Services color='#D4D6DD' />,
     path: '/services'
   },
   {
     name: 'Account',
-    icon: <Account />,
+    icon: <Account color='#D4D6DD' />,
     path: '/'
   }
 ]
@@ -49,7 +49,7 @@ const Navbar = () => {
           className='flex flex-col items-center gap-y-2'
           onClick={() => handleActive(item.path)}
         >
-          {item.icon}
+          {item.icon && React.cloneElement(item.icon, { color: item.path === active ? '#354f79' : '#D4D6DD' })}
           <p className={`${item.path === active ? 'text-[#354f79] font-bold' : 'text-[#333] font-[500]'}`}>
             {item.name}
           </p>

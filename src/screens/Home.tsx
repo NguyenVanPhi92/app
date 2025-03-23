@@ -41,7 +41,7 @@ const Home = () => {
       <div className='p-4 mb-24 body'>
         {/* Icons */}
         <div className='grid grid-cols-4 gap-2 mb-6 text-center'>
-          {Number(home.country) === 2 || Number(home.country) === 4 ? (
+          {Number(home.country) === 1 || Number(home.country) === 3 ? (
             <Link to='/one'>
               <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
                 <Travel />
