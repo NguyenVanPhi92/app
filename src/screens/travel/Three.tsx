@@ -14,6 +14,8 @@ const Three = () => {
   const eventList = Event_HCM.filter((e) => e.id === idFilter)
   const destinationList = DESTINATION_HCM.filter((e) => e.id === idFilter)
 
+  console.log('travelCategories.categories, ', travelCategories.categories)
+
   const handleFilter = (id: any) => {
     setIdfilter(id)
     setActiveFilter(id)
@@ -49,8 +51,8 @@ const Three = () => {
           <Swiper spaceBetween={10} slidesPerView={1.4}>
             {eventList.length !== 0 ? (
               eventList.map((e, _) =>
-                e.event.map((e, i) => (
-                  <SwiperSlide className='SwiperSlide' key={i}>
+                e.event.map((e, _) => (
+                  <SwiperSlide className='SwiperSlide' key={_}>
                     <div className='bg-[#f8f9fe] rounded-2xl h-[340px]'>
                       <div className='relative'>
                         <img src={e.img} alt='' className='w-full h-40 rounded-tl-2xl rounded-tr-2xl' />
@@ -87,7 +89,7 @@ const Three = () => {
 
           <Swiper spaceBetween={10} slidesPerView={1.4}>
             {destinationList.length !== 0 ? (
-              destinationList.map((e, i) =>
+              destinationList.map((e, _) =>
                 e.event.map((event, j) => (
                   <SwiperSlide className='SwiperSlide' key={j}>
                     <div className='bg-[#f8f9fe] rounded-2xl'>

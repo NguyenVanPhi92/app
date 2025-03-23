@@ -17,9 +17,9 @@ const Four = () => {
       <div className='p-4 mt-20 body'>
         {/* Filter */}
         <div className='grid grid-cols-3 p-1 text-[14px] rounded-xl mb-4 bg-[#eaf2ff]'>
-          {listNav.map((e, i) => (
+          {listNav.map((e, _) => (
             <button
-              key={i}
+              key={_}
               className={`px-6 py-2 rounded-xl ${activeTab === e ? 'bg-white' : 'text-gray-500'}`}
               onClick={() => setActiveTab(e)}
             >
@@ -31,7 +31,7 @@ const Four = () => {
         {/* CARD */}
         <div className='mb-6'>
           {activeTab === 'Festival' &&
-            Event_HCM.map((e, i) =>
+            Event_HCM.map((e, _) =>
               e.event.map((event, j) => (
                 <div className='bg-[#f8f9fe] rounded-2xl mb-6' key={j}>
                   <div className='relative'>
@@ -54,7 +54,7 @@ const Four = () => {
             )}
 
           {activeTab === 'Destination' &&
-            DESTINATION_HCM.map((e, i) =>
+            DESTINATION_HCM.map((e, _) =>
               e.event.map((event, j) => (
                 <div className='bg-[#f8f9fe] rounded-2xl mb-6' key={j}>
                   <div className='relative'>
@@ -77,7 +77,7 @@ const Four = () => {
             )}
 
           {activeTab === 'All' &&
-            Event_HCM.map((e, i) =>
+            Event_HCM.map((e, _) =>
               e.event.map((event, j) => (
                 <div className='bg-[#f8f9fe] rounded-2xl mb-6' key={j}>
                   <div className='relative'>
@@ -100,7 +100,7 @@ const Four = () => {
             )}
 
           {activeTab === 'All' &&
-            DESTINATION_HCM.map((e, i) =>
+            DESTINATION_HCM.map((e, _) =>
               e.event.map((event, j) => (
                 <div className='bg-[#f8f9fe] rounded-2xl mb-6' key={j}>
                   <div className='relative'>

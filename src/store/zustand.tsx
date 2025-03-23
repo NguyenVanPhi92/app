@@ -3,7 +3,7 @@ import { create } from 'zustand'
 type State = {
   login: { email: string; password: string }
   register: {}
-  travel: { id: string; categories: string[] }
+  travel: { id: string; categories: any[] }
   shopping: {}
   cart: { img: string; name: string; price: string }[]
   event: {
