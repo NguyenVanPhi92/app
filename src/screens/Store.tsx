@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import Clock from '../assets/icons/Clock'
 import Date from '../assets/icons/Date'
 import Location from '../assets/icons/Location'
@@ -32,10 +33,10 @@ const Store = () => {
             </div>
 
             <div className='flex justify-end text-sm gap-x-4'>
-              <div className='flex items-center cursor-pointer gap-x-1'>
+              <Link to={'/reservation'} className='flex items-center cursor-pointer gap-x-1'>
                 <Date />
                 <p className='text-[#354f79] font-[500]'>Reserve</p>
-              </div>
+              </Link>
 
               <div className='flex items-center cursor-pointer gap-x-1'>
                 <Menu />
