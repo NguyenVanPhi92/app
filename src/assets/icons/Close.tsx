@@ -24,7 +24,7 @@ const Close = () => {
         />
       </mask>
       <g mask='url(#mask0_3331_2460)'>
-        <rect y='0.115234' width='20' height='20' fill='#2F3036' />
+        <rect y='0.115234' width='20' height='20' fill='#b7b7b7' />
       </g>
     </svg>
   )

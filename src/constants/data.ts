@@ -593,12 +593,9 @@ export const News = [
   {
     img: New2,
     name: 'Domestic flights of Vietnam Airlines and VietJet Air will be relocated to Terminal T3'
-  },
-  {
-    img: New1,
-    name: 'Domestic flights of Vietnam Airlines and VietJet Air will be relocated to Terminal T3'
   }
 ]
+
 export const ExpoloreHCM = [
   {
     img: Expolo1,
@@ -695,4 +692,12 @@ export const MenuStore = [
     name: 'Vietnam Airlines 7',
     price: 4746
   }
+]
+
+// Services
+export const optionTagTerminal = [
+  { id: 1, name: 'TERMINAL 1' },
+  { id: 2, name: 'TERMINAL 2' },
+  { id: 3, name: 'CAFÉ' },
+  { id: 4, name: 'QUICK BITES' }
 ]

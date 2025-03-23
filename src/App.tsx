@@ -30,6 +30,8 @@ import Three from './screens/travel/Three'
 import Two from './screens/travel/Two'
 import Reservation from './screens/Reservation'
 import ReservationBooking from './screens/ReservationBooking'
+import ScanPage from './screens/Scan'
+import Profile from './screens/Profile'
 
 function App() {
   return (
@@ -58,6 +60,8 @@ function App() {
         <Route path='/resting' element={<Resting />} />
         <Route path='/sleepzone' element={<SleepZone />} />
         <Route path='/booking' element={<Booking />} />
+        <Route path='/scan' element={<ScanPage />} />
+        <Route path='/profile' element={<Profile />} />
 
         <Route path='/product' element={<Products />} />
         <Route path='/menu' element={<Menu />} />

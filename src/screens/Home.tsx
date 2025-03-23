@@ -8,7 +8,7 @@ import Map from '../assets/icons/home/Map'
 import Ride from '../assets/icons/home/Ride'
 import Travel from '../assets/icons/home/Travel'
 import Dialog from '../components/Drawer'
-import { ExpoloreHCM, New1, New2, Thumbnail } from '../constants/data'
+import { ExpoloreHCM, News, Thumbnail } from '../constants/data'
 import { useStoreAction } from '../store/zustand'
 import Navbar from './Navbar'
 
@@ -16,7 +16,6 @@ const Home = () => {
   const home = useStoreAction((state) => state.home)
   const dispathEvent = useStoreAction((state) => state.dispathEvent)
   const login = useStoreAction((state) => state.login)
-  console.log('home: ', home)
 
   const hanlde = (e: any) => dispathEvent(e)
 
@@ -39,7 +38,7 @@ const Home = () => {
       </div>
 
       <div className='p-4 mb-24 body'>
-        {/* Icons */}
+        {/* Menu Icons */}
         <div className='grid grid-cols-4 gap-2 mb-6 text-center'>
           {Number(home.country) === 1 || Number(home.country) === 3 ? (
             <Link to='/one'>
@@ -102,29 +101,16 @@ const Home = () => {
         {/* News */}
         <div className='mb-6'>
           <h2 className='mb-2 font-bold'>WHAT'S NEW?</h2>
+
           <div className='grid grid-cols-2 gap-2 text-white'>
-            {/* Large Card */}
-            <div className='relative flex flex-col justify-between bg-blue-100 rounded-xl min-h-[230px]'>
-              <img src={New1} alt='' className='inset-0 object-cover h-full opacity-70 rounded-xl' />
-              <div className='absolute bottom-4 left-4'>
-                <p className=' text-[12px] text-white drop-shadow-2xl'>
-                  Tan Son Nhat Terminal T3 is set to begin operations in May 2025
-                </p>
-                {/* <p className='text-[12px] font-bold'>Subtitle</p> */}
+            {News.map((e, i) => (
+              <div key={i} className='relative flex flex-col justify-between bg-blue-100 rounded-xl min-h-[230px]'>
+                <img src={e.img} alt='' className='inset-0 object-cover h-full opacity-70 rounded-xl' />
+                <div className='absolute bottom-4 left-4'>
+                  <p className=' text-[12px] text-white drop-shadow-2xl'>{e.name}</p>
+                </div>
               </div>
-            </div>
-
-            {/* Small Cards */}
-            <div className='relative bg-blue-100 rounded-xl flex flex-col justify-between min-h-[130px]'>
-              <img src={New2} alt='' className='object-cover h-full rounded-xl' />
-
-              <div className='absolute bottom-4 left-4'>
-                <p className=' text-[12px]'>
-                  Domestic flights of Vietnam Airlines and VietJet Air will be relocated to Terminal T3
-                </p>
-                {/* <p className='text-[12px] font-bold'>Subtitle</p> */}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 

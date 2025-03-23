@@ -6,19 +6,16 @@ import { PasswordField } from '../../components/fields/PasswordField'
 import { LoginBody, LoginBodyType } from '../../schema/auth.schema'
 
 const Register = () => {
-  // useForm
-  const {
-    control
-    // handleSubmit,
-    // formState: { isValid }
-  } = useForm<LoginBodyType>({ resolver: zodResolver(LoginBody), defaultValues: { email: '', password: '' } })
+  const { control } = useForm<LoginBodyType>({
+    resolver: zodResolver(LoginBody),
+    defaultValues: { email: '', password: '' }
+  })
 
   // handle event
   // const handleLogin = (data: LoginBodyType) => console.log('data form: ', data)
 
   return (
     <div className='flex flex-col justify-between p-4 main'>
-      {/* <img src={Image} al   t='img' className='w-full mb-6 rounded-es-3xl rounded-ee-3xl' /> */}
       <div className=''>
         <div className='mt-20'>
           <h1 className='text-xl font-bold'>Sign up!</h1>
@@ -48,6 +45,7 @@ const Register = () => {
           </div>
         </form>
       </div>
+
       <div className=''>
         <Button name='Submit' path='code' />
       </div>

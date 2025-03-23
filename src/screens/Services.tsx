@@ -1,40 +1,44 @@
+import { useState } from 'react'
 import { Link } from 'react-router'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Header from '../components/Header'
+import TerminalSelected from '../components/TerminalSelected'
+import { Image } from '../constants/data'
 import '../styles/services.scss'
 import Navbar from './Navbar'
-import { Image } from '../constants/data'
+
+const optionTag = [
+  { id: 1, name: 'All' },
+  { id: 2, name: 'Dining' },
+  { id: 3, name: 'Lounge & Rest' },
+  { id: 4, name: 'Shopping' }
+]
 
 const Services = () => {
+  const [activeFilter, setActiveFilter] = useState<number | undefined>(1)
   return (
     <div className='flex flex-col justify-between main'>
       <Header title='Airport Service' icon />
 
-      <div className='body'>
+      <div className='mt-12 mb-28 body'>
         <div className='flex select'>
-          <div className='select-item active'>
-            <span>All</span>
-          </div>
-          <span></span>
-          <div className='select-item'>
-            <span>Dining</span>
-          </div>
-          <span></span>
-          <div className='select-item'>
-            <span>Lounge & Rest</span>
-          </div>
-          <span></span>
-          <div className='select-item'>
-            <span>Shopping</span>
-          </div>
+          {optionTag.map((e, i) => (
+            <>
+              <div
+                className={`select-item cursor-pointer ${activeFilter === e.id && 'active'}`}
+                onClick={() => setActiveFilter(e.id)}
+                key={i}
+              >
+                <span>{e.name}</span>
+              </div>
+              <span></span>
+            </>
+          ))}
         </div>
 
-        <div className='flex option'>
-          <div className='option-item'>TERMINAL 1</div>
-          <div className='option-item'>TERMINAL 2</div>
-          <div className='option-item'>TERMINAL 3</div>
-          <div className='option-item'>TERMINAL 4</div>
+        <div className='my-4'>
+          <TerminalSelected />
         </div>
 
         <div className='dining'>

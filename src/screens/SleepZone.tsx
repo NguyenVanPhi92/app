@@ -14,27 +14,26 @@ const SleepZone = () => {
 
         <div className='p-4'>
           <p className='mb-2 font-bold'>SleepZone Name</p>
-
-          <p className='text-[10px] bg-[#eaf2ff] text-[#354f79] rounded-full w-[30px] py-1 px-4 flex justify-center mb-2 font-[500] items-center'>
+          <p className='text-[10px] bg-[#eaf2ff] text-[#354f79] rounded-full w-[48px] py-1 text-center mb-2 font-[500]'>
             TAG
           </p>
 
           <div className='flex flex-col items-start text-sm '>
             <div className='flex items-center -ml-[2px] gap-x-4'>
               <Location />
-              <p>Location</p>
+              <p className='text-[#71727A]'>Location</p>
             </div>
 
             <div className='flex items-center gap-x-4'>
               <Clock />
-              <p>Operations Hours</p>
+              <p className='text-[#71727A]'>Operations Hours</p>
             </div>
           </div>
         </div>
 
         <div className='p-4 mb-10'>
           <h3 className='font-bold'>About</h3>
-          <p className='mt-2 text-[12px]'>
+          <p className='mt-2 text-[12px] text-[#71727A]'>
             Description Description Description Description Description Description Description Description Description
             Description Description Description
           </p>

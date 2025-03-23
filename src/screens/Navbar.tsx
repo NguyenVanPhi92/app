@@ -20,7 +20,7 @@ const navbar = [
   {
     name: 'Scan QR',
     icon: <Scan color='#D4D6DD' />,
-    path: '/qr'
+    path: '/scan'
   },
   {
     name: 'Services',
@@ -30,7 +30,7 @@ const navbar = [
   {
     name: 'Account',
     icon: <Account color='#D4D6DD' />,
-    path: '/'
+    path: '/profile'
   }
 ]
 

@@ -15,14 +15,13 @@ const Login = () => {
   let navigate = useNavigate()
 
   // useForm
-  const {
-    control,
-    handleSubmit
-    // formState: { isValid }
-  } = useForm<LoginBodyType>({ resolver: zodResolver(LoginBody), defaultValues: { email: '', password: '' } })
+  const { control, handleSubmit } = useForm<LoginBodyType>({
+    resolver: zodResolver(LoginBody),
+    defaultValues: { email: '', password: '' }
+  })
 
   // handle event
-  const handleLogin = (data: any) => {
+  const handleLogin = (data: { email: string; password: string }) => {
     dispathLogin(data)
     navigate('/home')
   }
@@ -33,7 +32,6 @@ const Login = () => {
 
       <div className='p-4 '>
         <h1 className='text-xl font-bold'>Welcome!</h1>
-
         <form action='' className='pb-8 pt-4 border-b-[1px] border-[#74747433]' onSubmit={handleSubmit(handleLogin)}>
           <div className='mb-4'>
             <InputField control={control} name='email' type='text' placeholder='Email Address' />
@@ -61,7 +59,6 @@ const Login = () => {
         <div className='flex justify-center mt-8'>
           <div className='text-center '>
             <p className='mb-6'>Or continue with</p>
-
             <div className='flex gap-x-6'>
               <Google />
               <Apple />

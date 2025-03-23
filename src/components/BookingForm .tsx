@@ -24,7 +24,7 @@ const BookingForm = () => {
   return (
     <div className='px-4'>
       {/* Date Picker */}
-      <CustomDatePicker label='Dates' placeholderText='chosse date' />
+      <CustomDatePicker label='Dates' placeholderText='chosse Date' />
 
       {/* Check-in Time */}
       <SelectField

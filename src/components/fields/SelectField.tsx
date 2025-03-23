@@ -7,8 +7,6 @@ interface SelectFieldProps {
   value: any
   onChange: any
   defaultInputValue?: string
-
-  // Icon: any
 }
 
 const SelectField = ({ data, onChange, value, label }: SelectFieldProps) => {
@@ -35,21 +33,19 @@ const SelectField = ({ data, onChange, value, label }: SelectFieldProps) => {
       color: '#9ca3af'
     })
   }
+
   return (
-    <div className=''>
-      {/* SelectTerminal */}
-      <div className='mb-4'>
-        <label className='block mb-1 text-sm font-semibold'>{label}</label>
-        <Select
-          styles={customStyles}
-          options={data}
-          value={value}
-          onChange={onChange}
-          // defaultInputValue={defaultInputValue}
-          className='mt-1 text-[12px] custom-select'
-          components={{ DropdownIndicator: () => <FaSortDown className='text-gray-900' size={16} /> }}
-        />
-      </div>
+    <div className='mb-4'>
+      <label className='block mb-1 text-sm font-semibold'>{label}</label>
+      <Select
+        styles={customStyles}
+        options={data}
+        value={value}
+        onChange={onChange}
+        // defaultInputValue={defaultInputValue}
+        className='mt-1 text-[12px] custom-select'
+        components={{ DropdownIndicator: () => <FaSortDown className='mb-1 text-gray-900' size={16} /> }}
+      />
     </div>
   )
 }

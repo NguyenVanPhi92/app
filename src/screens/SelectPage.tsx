@@ -5,22 +5,18 @@ import { SelectLanguage, SelectMoney, SelectTerminal } from '../constants/data'
 import { useStoreAction } from '../store/zustand'
 
 const SelectPage = () => {
-  const home = useStoreAction((state) => state.home)
   const choose = useStoreAction((state) => state.choose)
   const [terminal, setTerminal] = useState(SelectTerminal[0])
   const [language, setLanguage] = useState(SelectLanguage[0])
   const [money, setMoney] = useState(SelectMoney[0])
-  const login = useStoreAction((state) => state.login)
-  console.log('login: ', login)
 
   // handle
-  const handelTerminal = () =>
+  const handelSelectHome = () =>
     choose({
       country: terminal.value,
       language: language.value,
       money: money.value
     })
-  console.log('data: ', home)
 
   return (
     <div className='flex flex-col justify-between p-4 main '>
@@ -49,7 +45,7 @@ const SelectPage = () => {
         </div>
       </div>
 
-      <Button name='Start' path='home' onClick={handelTerminal} />
+      <Button name='Start' path='home' onClick={handelSelectHome} />
     </div>
   )
 }

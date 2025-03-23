@@ -33,19 +33,27 @@ const Booking = () => {
               <p className='text-[12px] text-[#5a5a5a]'>Booking details will be sent via phone and email.</p>
             </div>
 
+            {/* Form */}
             <form action='' className='py-4'>
               <div className='mb-4'>
-                <InputField control={control} label='Name' name='name' type='text' placeholder='nhập name' />
+                <InputField control={control} label='Name' name='name' type='text' placeholder='Name' />
               </div>
               <div className='mb-4'>
-                <InputField control={control} label='Phone' name='phone' type='text' placeholder='nhập phone' />
+                <InputField
+                  control={control}
+                  label='Phone Number'
+                  name='phone'
+                  type='text'
+                  placeholder='Phone Number'
+                />
               </div>
               <div className='mb-4'>
-                <InputField control={control} label='Email' name='email' type='text' placeholder='nhập email' />
+                <InputField control={control} label='Email' name='email' type='text' placeholder='Email' />
               </div>
             </form>
           </div>
 
+          {/* Review Booking */}
           <div className='mt-16 pt-2 border-t-[1px] border-[#74747433]'>
             <h4 className='font-bold text-[16px]'>Review Booking</h4>
             <div className='px-10 text-[#71727A]'>
