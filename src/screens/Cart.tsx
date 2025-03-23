@@ -7,10 +7,10 @@ const Cart = () => {
   return (
     <div className='flex flex-col justify-between main'>
       <Header title='Your Cart' icon />
-      <div className='body mb-44' style={{ height: 'calc(100vh - 4rem)' }}>
-        <main className='card-list'>
+      <div className='body mb-44'>
+        <main className='mt-16'>
           {Array.from({ length: 6 }, (_, i) => (
-            <div className='cart' key={i}>
+            <div className='mb-2 cart border-b border-[#ededed] pb-2' key={i}>
               <img src={Image} alt='img' />
               <div className='cart-content'>
                 <div className='cart-content__title'>
