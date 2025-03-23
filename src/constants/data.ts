@@ -159,7 +159,9 @@ export const TravelCate = [
     cate: [
       {
         id: 'HC',
-        name: 'Historical & Cultural'
+        name: 'Historical & Cultural',
+        event: [''],
+        detination: ''
       },
       {
         id: 'CA',
