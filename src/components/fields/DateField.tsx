@@ -10,8 +10,20 @@ export const CustomInput = ({ value, onClick, placeholderText }: any) => (
   </div>
 )
 
-const CustomDatePicker = ({ label, placeholderText }: { label: string; placeholderText?: string }) => {
+const CustomDatePicker = ({
+  label,
+  placeholderText,
+  onChange
+}: {
+  label: string
+  placeholderText?: string
+  onChange?: any
+}) => {
   const [selectedDate, setSelectedDate] = useState(null)
+  const handleDate = (date: any) => {
+    setSelectedDate(date)
+    onChange && onChange(date)
+  }
 
   return (
     <div className='mb-4'>
@@ -19,7 +31,7 @@ const CustomDatePicker = ({ label, placeholderText }: { label: string; placehold
       <div className=''>
         <DatePicker
           selected={selectedDate}
-          onChange={(date: any) => setSelectedDate(date)}
+          onChange={(date: any) => handleDate(date)}
           customInput={<CustomInput placeholderText={placeholderText} />}
           dateFormat='dd/MM/yyyy'
           className='w-[400px]'

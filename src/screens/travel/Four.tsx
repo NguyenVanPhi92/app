@@ -10,7 +10,7 @@ const Four = () => {
   const [activeTab, setActiveTab] = useState('All')
 
   return (
-    <div className='flex flex-col justify-between main'>
+    <div className='flex flex-col justify-between pb-16 main'>
       {/* Nav Head */}
       <Header title='Smart Travel' icon />
 
@@ -124,7 +124,7 @@ const Four = () => {
         </div>
       </div>
 
-      <div className='p-4'>
+      <div className='fixed bottom-0 w-[430px] px-4 py-2 bg-white shadow-top'>
         <Button name='Next' path='five' />
       </div>
     </div>

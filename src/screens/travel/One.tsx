@@ -13,6 +13,10 @@ import { useStoreAction } from '../../store/zustand'
 const One = () => {
   const [address, setAddress] = useState(TravelSelect[0])
   const dispathTravel = useStoreAction((state) => state.dispathTravel)
+  const [travelName, setTravelName] = useState('')
+  const [date_from, setDate_from] = useState('')
+  const [date_to, setDate_to] = useState('')
+  const dispathTravelBooking = useStoreAction((state) => state.dispathTravelBooking)
   // useForm
   const {
     control
@@ -21,7 +25,27 @@ const One = () => {
   } = useForm<LoginBodyType>({ resolver: zodResolver(LoginBody), defaultValues: { email: '', password: '' } })
 
   // handle event
-  const handleAddress = () => dispathTravel({ id: address.value, categories: [] })
+  const handleSelected = () => {
+    dispathTravel({ id: address.value, categories: [] })
+    setTravelName('')
+    dispathTravelBooking({
+      name: travelName,
+      city: address.label,
+      date_from: date_from,
+      date_to: date_to
+    })
+  }
+
+  console.log(
+    'address',
+
+    {
+      name: travelName,
+      city: address.label,
+      date_from: date_from,
+      date_to: date_to
+    }
+  )
 
   return (
     <div className='flex flex-col justify-between p-4 main'>
@@ -60,12 +84,12 @@ const One = () => {
           </div>
 
           {/* Date Picker */}
-          <CustomDatePicker label='Dates From' placeholderText='From' />
-          <CustomDatePicker label='Dates To' placeholderText='To' />
+          <CustomDatePicker label='Dates From' placeholderText='From' onChange={setDate_from} />
+          <CustomDatePicker label='Dates To' placeholderText='To' onChange={setDate_to} />
         </form>
       </div>
 
-      <Button name='Next' path='two' onClick={handleAddress} />
+      <Button name='Next' path='two' onClick={handleSelected} />
     </div>
   )
 }

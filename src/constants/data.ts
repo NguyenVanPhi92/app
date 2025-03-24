@@ -47,6 +47,15 @@ import Ride from '../assets/icons/home/Ride'
 import Shopping from '../assets/icons/home/Shopping'
 import Sim from '../assets/icons/home/Sim'
 import Travel from '../assets/icons/home/Travel'
+import TravelPlan1 from '../assets/images/travel/plan/1.jpg'
+import TravelPlan2 from '../assets/images/travel/plan/2.jpg'
+import TravelPlan3 from '../assets/images/travel/plan/3.jpg'
+import TravelPlan4 from '../assets/images/travel/plan/4.jpg'
+import TravelPlan5 from '../assets/images/travel/plan/5.jpg'
+import TravelPlan6 from '../assets/images/travel/plan/6.png'
+import TravelPlan7 from '../assets/images/travel/plan/7.jpg'
+import TravelPlan8 from '../assets/images/travel/plan/8.jpg'
+import TravelPlan9 from '../assets/images/travel/plan/9.jpg'
 import LoginI from '../assets/login.jpg'
 import LightTracking from '../assets/images/flightTracking.jpg'
 
@@ -589,6 +598,129 @@ export const DESTINATION_HCM = [
         address: '3 Hoa Binh, District 11, Ho Chi Minh City',
         time: '08:00 AM – 06:00 PM',
         desc: 'Dam Sen Park is one of the largest and most popular amusement parks in Ho Chi Minh City, offering a blend of cultural, recreational, and water activities. The park features over 40 thrilling rides, including roller coasters, a giant Ferris wheel, and a 4D cinema, making it a perfect destination for families and adventure seekers. It also has a beautifully landscaped garden with a lake, a bird sanctuary, and an orchid garden, providing a relaxing escape within the bustling city. The adjacent Dam Sen Water Park offers a variety of water slides, wave pools, and lazy rivers for those looking to cool off from the tropical heat. With its diverse attractions, Dam Sen Park is an exciting spot for both locals and tourists looking for entertainment in Ho Chi Minh City.'
+      }
+    ]
+  }
+]
+
+// Travel Plan
+export const TravelPlan = [
+  {
+    name: 'Day 1',
+    date: '3/22/2025',
+    plan: 'First day at Ho Chi Minh City',
+    event: [
+      {
+        date: '4/29/2025',
+        time: '5:00:00 PM',
+        des: 'Saigon Notre-Dame Cathedral',
+        address: '1 Cong Xa Paris, District 1',
+        img: TravelPlan1
+      },
+      {
+        date: '4/29/2025',
+        time: '7:00:00 PM',
+        des: 'Saigon Central Post Office',
+        address: '2 Cong Xa Paris, District 1',
+        img: TravelPlan2
+      },
+      {
+        date: '4/29/2025',
+        time: '8:00:00 PM',
+        des: 'Dinner time',
+        address: '',
+        img: Image
+      },
+      {
+        date: '4/29/2025',
+        time: '4:00:00 PM',
+        des: 'Landmark 81',
+        address: '720A Dien Bien Phu, Binh Thanh District',
+        img: TravelPlan3
+      }
+    ]
+  },
+  {
+    name: 'Day 2',
+    date: '4/30/2025',
+    plan: "50th Anniversary of Viet Nam's Reunification Day",
+    event: [
+      {
+        date: '4/30/2025',
+        time: '7:00:00 AM',
+        des: 'Military Parade for the 50th Anniversary of Vietnam’s Reunification Day',
+        address: 'Le Duan Street, District 1',
+        img: TravelPlan4
+      },
+      {
+        date: '4/30/2025',
+        time: '12:00:00 PM',
+        des: 'Lunch time',
+        address: '',
+        img: Image
+      },
+      {
+        date: '4/30/2025',
+        time: '1:00:00 PM',
+        des: 'War Remnants Museum',
+        address: '28 Vo Van Tan, District 3',
+        img: TravelPlan5
+      },
+      {
+        date: '4/30/2025',
+        time: '6:00:00 PM',
+        des: 'Sunset on the Saigon River',
+        address: 'Ton Duc Thang, District 1',
+        img: TravelPlan6
+      },
+      {
+        date: '4/30/2025',
+        time: '7:00:00 PM',
+        des: 'Dinner time',
+        address: '',
+        img: Image
+      },
+      {
+        date: '4/30/2025',
+        time: '9:00:00 PM',
+        des: 'Nguyen Hue Walking Street',
+        address: 'Nguyen Hue, District 1',
+        img: TravelPlan7
+      },
+      {
+        date: '4/30/2025',
+        time: '11:00:00 PM',
+        des: 'Fireworks at Bach Dang Wharf',
+        address: '2 Ton Duc Thang, District 1',
+        img: TravelPlan8
+      }
+    ]
+  },
+  {
+    name: 'Day 3',
+    date: '5/1/2025',
+    plan: 'A slower pace to enjoy nature ',
+    event: [
+      {
+        date: '4/29/2025',
+        time: '7:00:00 PM',
+        des: 'Saigon Zoo & Botanical Garden',
+        address: '2B Nguyen Binh Khiem, District 1, Ho Chi Minh City',
+        img: TravelPlan9
+      },
+      {
+        date: '4/29/2025',
+        time: '12:00:00 PM',
+        des: 'Lunch time',
+        address: '',
+        img: Image
+      },
+      {
+        date: '4/29/2025',
+        time: '3:00:00 PM',
+        des: 'Heading to Tan Son Nhat Airport for the 5:00 PM Flight to San Francisco.',
+        address: '',
+        img: Image
       }
     ]
   }

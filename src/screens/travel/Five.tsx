@@ -1,53 +1,30 @@
-import { motion } from 'framer-motion'
-import { useState } from 'react'
-import { FaAngleDown, FaChevronDown } from 'react-icons/fa'
 import { Link } from 'react-router'
+import CloseTab from '../../components/Close'
 import Timeline from '../../components/Timeline'
 import { Travel1 } from '../../constants/data'
+import { useStoreAction } from '../../store/zustand'
+import dayjs from 'dayjs'
 
 const Five = () => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggleCollapse = () => {
-    setIsOpen(!isOpen)
-  }
+  const bookingTravel = useStoreAction((state) => state.bookingTravel)
 
   return (
     <div className='flex flex-col justify-between main'>
-      <div className=''>
+      <div className='relative'>
         <img src={Travel1} alt='img' className='w-full h-[220px] object-cover' />
+        <CloseTab />
 
         <div className='px-4'>
           <div className='my-4'>
-            <p className='font-bold'>Travel Plan Name</p>
-            <p className=''>City - Date (From - to)</p>
+            <p className='font-bold'>Travel Plan</p>
+            <p className='text-[14px]'>
+              {bookingTravel.city} - Date ({dayjs(bookingTravel.date_from).format('YYYY-MM-DD')} -{' '}
+              {dayjs(bookingTravel.date_to).format('YYYY-MM-DD')})
+            </p>
           </div>
 
           <div className='px-4'>
-            <div className='flex justify-between mb-2'>
-              <p className='font-bold text-[14px]'>Day 1 - Date</p>
-              <FaAngleDown />
-            </div>
-            <div className='w-full max-w-md mx-auto'>
-              <button
-                onClick={toggleCollapse}
-                className='flex items-center justify-between w-full text-lg font-medium text-left'
-              >
-                <span className='font-bold text-[14px]'>Day 2 - Date</span>
-                <FaChevronDown
-                  size={14}
-                  className={`transform transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}
-                />
-              </button>
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
-                transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className='overflow-hidden'
-              >
-                <Timeline />
-              </motion.div>
-            </div>
+            <Timeline />
           </div>
         </div>
       </div>

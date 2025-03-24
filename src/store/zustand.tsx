@@ -5,6 +5,7 @@ type State = {
   register: {}
   travel: { id: string; categories: any[] }
   shopping: {}
+  bookingTravel: { name: string; city: string; date_from: string; date_to: string }
   cart: { img: string; name: string; price: string }[]
   event: {
     img: any
@@ -26,6 +27,7 @@ type Actions = {
   dispathEvent: (event: { img: any; name: string; date: string; city: string; address: string; des: string }) => void
   dispathLogin: (event: { email: string; password: string }) => void
   dispathTravel: (event: { id: string; categories: any[] }) => void
+  dispathTravelBooking: (event: { name: string; city: string; date_from: string; date_to: string }) => void
   dispathCart: (event: { img: string; name: string; price: string }) => void
 }
 
@@ -33,6 +35,7 @@ export const useStoreAction = create<State & Actions>((set) => ({
   login: { email: '', password: '' },
   register: {},
   travel: { id: '', categories: [] },
+  bookingTravel: { name: '', city: '', date_from: '', date_to: '' },
   cart: [],
   shopping: {},
   event: {
@@ -89,5 +92,15 @@ export const useStoreAction = create<State & Actions>((set) => ({
     set((state) => ({
       cart: [...state.cart, value]
       // cart: state.cart.map((item) => (item.name === value.name ? { ...item, ...value } : item))
+    })),
+  dispathTravelBooking: (value: { name: string; city: string; date_from: string; date_to: string }) =>
+    set((state) => ({
+      bookingTravel: {
+        ...state.bookingTravel,
+        name: value.name,
+        city: value.city,
+        date_from: value.date_from,
+        date_to: value.date_to
+      }
     }))
 }))
