@@ -12,15 +12,25 @@ import Event3 from '../assets/images/travel/eventHCM/3.jpg'
 import Event4 from '../assets/images/travel/eventHCM/4.jpg'
 import Event5 from '../assets/images/travel/eventHCM/5.jpg'
 import Event6 from '../assets/images/travel/eventHCM/6.jpg'
-import { default as Event7, default as Event8 } from '../assets/images/travel/eventHCM/7.jpg'
+import Event7 from '../assets/images/travel/eventHCM/7.jpg'
+import Event8 from '../assets/images/travel/eventHCM/8.jpg'
 import Event9 from '../assets/images/travel/eventHCM/9.jpg'
 import Thumbnail from '../assets/thumbnail.jpeg'
-// import Event11 from '../assets/images/travel/eventHCM/11.jpg'
-// import Event12 from '../assets/images/travel/eventHCM/12.jpg'
-// import Event13 from '../assets/images/travel/eventHCM/13.jpg'
-// import Event14 from '../assets/images/travel/eventHCM/14.jpg'
-// import Event15 from '../assets/images/travel/eventHCM/15.jpg'
-// import Event16 from '../assets/images/travel/eventHCM/16.jpg'
+import arrival1 from '../assets/images/flightTracking/arrival/1.png'
+import arrival2 from '../assets/images/flightTracking/arrival/2.jpg'
+import arrival3 from '../assets/images/flightTracking/arrival/3.jpg'
+import Event11 from '../assets/images/travel/eventHCM/11.jpg'
+import Event12 from '../assets/images/travel/eventHCM/12.jpg'
+import Event13 from '../assets/images/travel/eventHCM/13.jpg'
+import Event14 from '../assets/images/travel/eventHCM/14.jpg'
+import Event15 from '../assets/images/travel/eventHCM/15.jpg'
+import Event16 from '../assets/images/travel/eventHCM/16.jpg'
+import Event17 from '../assets/images/travel/eventHCM/17.jpg'
+import Event18 from '../assets/images/travel/eventHCM/18.jpg'
+import Event19 from '../assets/images/travel/eventHCM/19.jpg'
+import Event20 from '../assets/images/travel/eventHCM/20.jpg'
+import Event21 from '../assets/images/travel/eventHCM/21.jpg'
+import Event22 from '../assets/images/travel/eventHCM/22.jpg'
 import Bag from '../assets/icons/home/Bag'
 import Banking from '../assets/icons/home/Banking'
 import Car from '../assets/icons/home/Car'
@@ -324,7 +334,7 @@ export const Event_HCM = [
     event: [
       {
         id: 'CBOT',
-        img: Event1,
+        img: Event2,
         name: '[Concert] Brothers Overcome Thrones ',
         city: 'HO CHI MINH',
         address: 'Thu Duc City, An Phu Ward, District 2, Ho Chi Minh City',
@@ -333,7 +343,7 @@ export const Event_HCM = [
       },
       {
         id: 'MBST',
-        img: Event1,
+        img: Event3,
         name: '[Minishow] B.U.I STORIES - Trung Quân & Bùi Anh Tuấn',
         city: 'HO CHI MINH',
         address: 'Ben Thanh Theater, Ben Nghe Ward, District 1, Ho Chi Minh City',
@@ -348,7 +358,7 @@ export const Event_HCM = [
     event: [
       {
         id: '7DVH',
-        img: Event1,
+        img: Event4,
         name: '7 Firework Venues Honoring the 50th Reunification Day',
         city: 'HO CHI MINH',
         address: 'Ho Chi Minh City',
@@ -363,7 +373,7 @@ export const Event_HCM = [
     event: [
       {
         id: '3HCMPF',
-        img: Event1,
+        img: Event5,
         name: '3rd Ho Chi Minh City Orchid Festival 2025',
         city: 'HO CHI MINH',
         address: 'Tao Dan Park, District 1, Ho Chi Minh City',
@@ -378,7 +388,7 @@ export const Event_HCM = [
     event: [
       {
         id: 'VICS',
-        img: Event1,
+        img: Event6,
         name: "Vietnam Int'l Cafe Show 2025",
         city: 'HO CHI MINH',
         address: 'SECC, 799 Nguyen Van Linh Boulevard, District 7, Ho Chi Minh City',
@@ -396,7 +406,7 @@ export const DESTINATION_HCM = [
     event: [
       {
         id: 'IP',
-        img: Event1,
+        img: Event7,
         name: 'Independence Palace',
         city: 'HO CHI MINH',
         address: '135 Nam Ky Khoi Nghia, District 1, Ho Chi Minh City',
@@ -405,7 +415,7 @@ export const DESTINATION_HCM = [
       },
       {
         id: 'WRM',
-        img: Event2,
+        img: Event8,
         name: 'War Remnants Museum',
         city: 'HO CHI MINH',
         address: '28 Vo Van Tan, District 3, Ho Chi Minh City',
@@ -414,7 +424,7 @@ export const DESTINATION_HCM = [
       },
       {
         id: 'HCMCM',
-        img: Event3,
+        img: Event9,
         name: 'Ho Chi Minh City Museum',
         city: 'HO CHI MINH',
         address: '65 Ly Tu Trong, District 1, Ho Chi Minh City',
@@ -429,7 +439,7 @@ export const DESTINATION_HCM = [
     event: [
       {
         id: 'SNC',
-        img: Event4,
+        img: Event10,
         name: 'Saigon Notre-Dame Cathedral',
         city: 'HO CHI MINH',
         address: '1 Cong Xa Paris, District 1, Ho Chi Minh City',
@@ -438,7 +448,7 @@ export const DESTINATION_HCM = [
       },
       {
         id: 'SCPO',
-        img: Event5,
+        img: Event11,
         name: 'Saigon Central Post Office',
         city: 'HO CHI MINH',
         address: '2 Cong Xa Paris, District 1, Ho Chi Minh City',
@@ -453,7 +463,7 @@ export const DESTINATION_HCM = [
     event: [
       {
         id: 'HCMCMFA',
-        img: Event6,
+        img: Event12,
         name: 'Ho Chi Minh City Museum of Fine Arts',
         city: 'HO CHI MINH',
         address: '97 Pho Duc Chinh, District 1, Ho Chi Minh City',
@@ -468,7 +478,7 @@ export const DESTINATION_HCM = [
     event: [
       {
         id: 'SM',
-        img: Event7,
+        img: Event13,
         name: 'Ben Thanh Market',
         city: 'HO CHI MINH',
         address: 'Le Loi, District 1, Ho Chi Minh City',
@@ -477,7 +487,7 @@ export const DESTINATION_HCM = [
       },
       {
         id: 'SC',
-        img: Event8,
+        img: Event14,
         name: 'Saigon Centre',
         city: 'HO CHI MINH',
         address: '65 Le Loi, District 1, Ho Chi Minh City',
@@ -492,7 +502,7 @@ export const DESTINATION_HCM = [
     event: [
       {
         id: 'L81',
-        img: Event9,
+        img: Event15,
         name: 'Landmark 81',
         city: 'HO CHI MINH',
         address: '720A Dien Bien Phu, Binh Thanh District, Ho Chi Minh City',
@@ -501,7 +511,7 @@ export const DESTINATION_HCM = [
       },
       {
         id: 'BT',
-        img: Event9,
+        img: Event16,
         name: 'Bitexco Tower',
         city: 'HO CHI MINH',
         address: '36 Ho Tung Mau, District 1, Ho Chi Minh City',
@@ -510,7 +520,7 @@ export const DESTINATION_HCM = [
       },
       {
         id: 'NHWS',
-        img: Event10,
+        img: Event17,
         name: 'Nguyen Hue Walking Street',
         city: 'HO CHI MINH',
         address: 'Nguyen Hue, District 1, Ho Chi Minh City',
@@ -525,7 +535,7 @@ export const DESTINATION_HCM = [
     event: [
       {
         id: 'BVWS',
-        img: Event9,
+        img: Event18,
         name: 'Bui Vien Walking Street',
         city: 'HO CHI MINH',
         address: 'Bui Vien Street, District 1, Ho Chi Minh City',
@@ -540,7 +550,7 @@ export const DESTINATION_HCM = [
     event: [
       {
         id: 'TDP',
-        img: Event9,
+        img: Event19,
         name: 'Tao Dan Park',
         city: 'HO CHI MINH',
         address: 'Nguyen Thi Minh Khai, District 1, Ho Chi Minh City',
@@ -549,7 +559,7 @@ export const DESTINATION_HCM = [
       },
       {
         id: 'TDPZBG',
-        img: Event9,
+        img: Event20,
         name: 'Tao Dan ParkSaigon Zoo & Botanical Gardens',
         city: 'HO CHI MINH',
         address: '2B Nguyen Binh Khiem, District 1, Ho Chi Minh City',
@@ -564,7 +574,7 @@ export const DESTINATION_HCM = [
     event: [
       {
         id: 'SOH',
-        img: Event9,
+        img: Event21,
         name: 'Saigon Opera House',
         city: 'HO CHI MINH',
         address: '7 Lam Son Square, District 1, Ho Chi Minh Ciy',
@@ -573,7 +583,7 @@ export const DESTINATION_HCM = [
       },
       {
         id: 'DSP',
-        img: Event9,
+        img: Event22,
         name: 'Dam Sen Park',
         city: 'HO CHI MINH',
         address: '3 Hoa Binh, District 11, Ho Chi Minh City',
@@ -639,7 +649,7 @@ export const SelectLanguage = [
 ]
 
 export const SelectMoney = [
-  { value: '0', label: 'USA' },
+  { value: '0', label: 'USD' },
   { value: '1', label: 'VND' }
 ]
 
@@ -700,4 +710,141 @@ export const optionTagTerminal = [
   { id: 2, name: 'TERMINAL 2' },
   { id: 3, name: 'CAFÉ' },
   { id: 4, name: 'QUICK BITES' }
+]
+
+// Flight Tracking
+export const FlightTrackingArrival = [
+  {
+    flight_time: '4:00 PM',
+    estimated_time: '4:30 PM',
+    terminal: 1,
+    gate: 6,
+    from_code: 'DAD',
+    from_name: 'Da Nang',
+    to_code: 'SGN',
+    to_name: 'Ho Chi Minh',
+    airlines: 'Vietnam Airlines',
+    img: arrival1,
+    flight_code: 'VN651'
+  },
+  {
+    flight_time: '4:15 PM',
+    estimated_time: '4:30 PM',
+    terminal: 2,
+    gate: 7,
+    from_code: 'SIN',
+    from_name: 'Singapore',
+    to_code: 'SGN',
+    to_name: 'Ho Chi Minh',
+    airlines: 'Vietjet Air',
+    img: arrival2,
+    flight_code: 'VJ813'
+  },
+  {
+    flight_time: '4:15 PM',
+    estimated_time: '4:30 PM',
+    terminal: 1,
+    gate: 8,
+    from_code: 'HAN',
+    from_name: 'Ha Noi',
+    to_code: 'SGN',
+    to_name: 'Ho Chi Minh',
+    airlines: 'Vietjet Air',
+    img: arrival3,
+    flight_code: 'VJ123'
+  },
+  {
+    flight_time: '4:20 PM',
+    estimated_time: '4:30 PM',
+    terminal: 1,
+    gate: 9,
+    from_code: 'TBB',
+    from_name: 'Tuy Hoa',
+    to_code: 'SGN',
+    to_name: 'Ho Chi Minh',
+    airlines: 'Vietjet Air',
+    img: arrival2,
+    flight_code: 'VJ786'
+  },
+  {
+    flight_time: '4:30 PM',
+    estimated_time: '4:35 PM',
+    terminal: 2,
+    gate: 2,
+    from_code: 'PEK',
+    from_name: 'Beijing',
+    to_code: 'SGN',
+    to_name: 'Ho Chi Minh',
+    airlines: 'Vietnam Airlines',
+    img: arrival1,
+    flight_code: 'VN631'
+  }
+]
+
+export const FlightTrackingDeparture = [
+  {
+    flight_time: '4:00 PM',
+    estimated_time: '6:00 PM',
+    terminal: 2,
+    gate: 6,
+    from_code: 'SGN',
+    from_name: 'Ho Chi Minh',
+    to_code: 'SFO',
+    to_name: 'San Francisco',
+    airlines: 'Vietnam Airlines',
+    img: arrival1,
+    flight_code: 'VN614'
+  },
+  {
+    flight_time: '4:15 PM',
+    estimated_time: '4:30 PM',
+    terminal: 2,
+    gate: 7,
+    from_code: 'SGN',
+    from_name: 'Ho Chi Minh',
+    to_code: 'SIN',
+    to_name: 'Singapore',
+    airlines: 'Vietnam Airlines',
+    img: arrival1,
+    flight_code: 'VN789'
+  },
+  {
+    flight_time: '4:15 PM',
+    estimated_time: '4:30 PM',
+    terminal: 1,
+    gate: 8,
+    from_code: 'SGN',
+    from_name: 'Ho Chi Minh',
+    to_code: 'HAN',
+    to_name: 'Ha Noi',
+    airlines: 'Vietjet Air',
+    img: arrival2,
+    flight_code: 'VJ126'
+  },
+  {
+    flight_time: '5:00 PM',
+    estimated_time: '4:30 PM',
+    terminal: 2,
+    gate: 9,
+    from_code: 'SGN',
+    from_name: 'Ho Chi Minh',
+    to_code: 'PEK',
+    to_name: 'Beijing',
+    airlines: 'Vietnam Airlines',
+    img: arrival1,
+    flight_code: 'VN654'
+  },
+  {
+    flight_time: '6:15 PM',
+    estimated_time: '6:30 AM',
+    terminal: 1,
+    gate: 2,
+    from_code: 'SGN',
+    from_name: 'Ho Chi Minh',
+    to_code: 'SGN',
+    to_name: 'Ho Chi Minh',
+    airlines: 'Vietjet Air',
+    img: arrival2,
+    flight_code: 'VJ123'
+  }
 ]

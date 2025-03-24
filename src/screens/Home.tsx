@@ -1,11 +1,11 @@
 import { Link } from 'react-router'
 import Bag from '../assets/icons/home/Bag'
-import Car from '../assets/icons/home/Car'
 import DiningIcon from '../assets/icons/home/Dining'
+import Feedback from '../assets/icons/home/Feedback'
 import Flight from '../assets/icons/home/Flight'
-import Hotel from '../assets/icons/home/Hotel'
+import Lounge from '../assets/icons/home/Lounge'
 import Map from '../assets/icons/home/Map'
-import Ride from '../assets/icons/home/Ride'
+import Shopping from '../assets/icons/home/Shopping'
 import Travel from '../assets/icons/home/Travel'
 import Dialog from '../components/Drawer'
 import { ExpoloreHCM, News, Thumbnail } from '../constants/data'
@@ -64,9 +64,9 @@ const Home = () => {
           </Link>
           <div className='cursor-pointer'>
             <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
-              <Ride />
+              <Shopping />
             </div>
-            <p className='text-[12px] text-[#2F3036] mt-1'>Ride Hailing</p>
+            <p className='text-[12px] text-[#2F3036] mt-1'>Shopping</p>
           </div>
           <div className='cursor-pointer'>
             <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
@@ -82,15 +82,15 @@ const Home = () => {
           </div>
           <div className='cursor-pointer'>
             <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
-              <Hotel />
+              <Lounge />
             </div>
-            <p className='text-[12px] text-[#2F3036] mt-1'>Hotel Booking</p>
+            <p className='text-[12px] text-[#2F3036] mt-1'>Lounge & Rest</p>
           </div>
           <div className='cursor-pointer'>
             <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
-              <Car />
+              <Feedback />
             </div>
-            <p className='text-[12px] text-[#2F3036] mt-1'>Car Rental</p>
+            <p className='text-[12px] text-[#2F3036] mt-1'>Feeback</p>
           </div>
           <div className='cursor-pointer'>
             <Dialog />

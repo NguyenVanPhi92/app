@@ -6,7 +6,7 @@ import { IoSearchSharp } from 'react-icons/io5'
 import { Link } from 'react-router'
 import { CustomInput } from '../components/fields/DateField'
 import Goback from '../components/Goback'
-import { LightTracking } from '../constants/data'
+import { FlightTrackingArrival, FlightTrackingDeparture, LightTracking } from '../constants/data'
 import Navbar from './Navbar'
 
 const FlightTracking = () => {
@@ -22,7 +22,7 @@ const FlightTracking = () => {
       </div>
 
       <img src={LightTracking} alt='img' className='w-full h-72' />
-      <div className='p-4 '>
+      <div className='p-4'>
         <div className='flex items-center justify-between mb-6 cursor-pointer'>
           <p className='font-bold text-[#354f79]'>Find your flights</p>
           <p className='flex items-center bg-[#354f79] rounded-full px-3 py-1 text-[12px] text-white gap-x-1'>
@@ -50,8 +50,8 @@ const FlightTracking = () => {
           />
         </div>
 
-        <div className='flex flex-col items-center p-4 '>
-          <div className='flex p-1 rounded-lg bg-[#f8f9fe]'>
+        <div className=''>
+          <div className='flex justify-center p-1 rounded-lg my-4 bg-[#f8f9fe]'>
             <button
               className={`flex items-center space-x-2 px-6 py-2 rounded-lg ${
                 activeTab === 'arrival' ? 'bg-white' : 'text-gray-500'
@@ -72,27 +72,121 @@ const FlightTracking = () => {
             </button>
           </div>
 
-          <div className='flex gap-x-4'>
-            <div className='mt-6 text-center'>
-              <div className='text-3xl font-bold text-blue-900'>20:00</div>
-              <div className='text-gray-500'>123456</div>
-            </div>
+          {activeTab === 'arrival' &&
+            FlightTrackingArrival.map((item, index) => (
+              <div className='px-2 mb-4' key={index}>
+                <div className='flex items-center justify-between w-full gap-x-4'>
+                  <div className='text-2xl font-bold text-blue-900 min-w-28'>{item.flight_time}</div>
 
-            <div className='flex items-center mt-6 space-x-6'>
-              <FaPlaneArrival className='text-2xl text-blue-900' />
-              <div className='flex flex-col items-center'>
-                <span className='font-bold text-[12px]'>DAD</span>
-                <span className='text-gray-500 text-[12px]'>Da Nang</span>
+                  <div className='w-full'>
+                    <div className='flex items-center justify-between gap-x-2'>
+                      <FaPlaneArrival className='text-2xl text-blue-900' size={20} />
+                      <div className='flex flex-col items-center'>
+                        <div className='flex flex-col items-center gap-x-2'>
+                          <span className='font-bold text-[12px]'>{item.from_code}</span>
+                          <span className='text-gray-500 text-[12px]'>{item.from_name}</span>
+                        </div>
+                      </div>
+
+                      <div className='font-bold text-[10px] text-black w-10'>--------</div>
+
+                      <div className='flex flex-col items-center'>
+                        <span className='font-bold text-[12px]'>{item.to_code}</span>
+                        <span className='text-gray-500 text-[12px]'>{item.from_name}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='flex items-center gap-x-4'>
+                  <div className='text-[14px] min-w-28'>
+                    <p>{item.terminal}</p>
+                    <p>{item.gate}</p>
+                  </div>
+
+                  <div className='flex items-center justify-between w-full gap-x-4'>
+                    <div className='flex items-center gap-x-2'>
+                      <img className='w-6 h-6 rounded-3xl' src={item.img} alt='' />
+                      <p className='text-[14px]'>{item.airlines}</p>
+                    </div>
+
+                    <div className='flex items-center gap-x-2'>
+                      <p className='text-[14px]'>{item.flight_code}</p>
+                      <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'>
+                        <rect width='24' height='24' rx='12' fill='#EAF2FF' />
+                        <mask id='mask0_3710_2975' maskUnits='userSpaceOnUse' x='4' y='4' width='16' height='16'>
+                          <path
+                            d='M12.9997 5.33301C12.9997 4.78072 12.552 4.33301 11.9997 4.33301C11.4474 4.33301 10.9997 4.78072 10.9997 5.33301V10.9997H5.33301C4.78072 10.9997 4.33301 11.4474 4.33301 11.9997C4.33301 12.552 4.78072 12.9997 5.33301 12.9997H10.9997V18.6663C10.9997 19.2186 11.4474 19.6663 11.9997 19.6663C12.552 19.6663 12.9997 19.2186 12.9997 18.6663V12.9997H18.6663C19.2186 12.9997 19.6663 12.552 19.6663 11.9997C19.6663 11.4474 19.2186 10.9997 18.6663 10.9997H12.9997V5.33301Z'
+                            fill='white'
+                          />
+                        </mask>
+                        <g mask='url(#mask0_3710_2975)'>
+                          <rect x='4' y='4' width='16' height='16' fill='#354F79' />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
+            ))}
 
-              <div className='font-bold text-[10px] text-black'>--------</div>
+          {activeTab === 'departure' &&
+            FlightTrackingDeparture.map((item, index) => (
+              <div className='px-2 mb-4' key={index}>
+                <div className='flex items-center justify-between w-full gap-x-4'>
+                  <div className='text-2xl font-bold text-blue-900 min-w-28'>{item.flight_time}</div>
 
-              <div className='flex flex-col items-center'>
-                <span className='font-bold text-[12px]'>SGN</span>
-                <span className='text-gray-500 text-[12px]'>Ho Chi Minh</span>
+                  <div className='w-full'>
+                    <div className='flex items-center justify-between gap-x-2'>
+                      <FaPlaneArrival className='text-2xl text-blue-900' size={20} />
+                      <div className='flex flex-col items-center'>
+                        <div className='flex flex-col items-center gap-x-2'>
+                          <span className='font-bold text-[12px]'>{item.from_code}</span>
+                          <span className='text-gray-500 text-[12px]'>{item.from_name}</span>
+                        </div>
+                      </div>
+
+                      <div className='font-bold text-[10px] text-black w-10'>--------</div>
+
+                      <div className='flex flex-col items-center'>
+                        <span className='font-bold text-[12px]'>{item.to_code}</span>
+                        <span className='text-gray-500 text-[12px]'>{item.from_name}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='flex items-center gap-x-4'>
+                  <div className='text-[14px] min-w-28'>
+                    <p>{item.terminal}</p>
+                    <p>{item.gate}</p>
+                  </div>
+
+                  <div className='flex items-center justify-between w-full gap-x-4'>
+                    <div className='flex items-center gap-x-2'>
+                      <img className='w-6 h-6 rounded-3xl' src={item.img} alt='' />
+                      <p className='text-[14px]'>{item.airlines}</p>
+                    </div>
+
+                    <div className='flex items-center gap-x-2'>
+                      <p className='text-[14px]'>{item.flight_code}</p>
+                      <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'>
+                        <rect width='24' height='24' rx='12' fill='#EAF2FF' />
+                        <mask id='mask0_3710_2975' maskUnits='userSpaceOnUse' x='4' y='4' width='16' height='16'>
+                          <path
+                            d='M12.9997 5.33301C12.9997 4.78072 12.552 4.33301 11.9997 4.33301C11.4474 4.33301 10.9997 4.78072 10.9997 5.33301V10.9997H5.33301C4.78072 10.9997 4.33301 11.4474 4.33301 11.9997C4.33301 12.552 4.78072 12.9997 5.33301 12.9997H10.9997V18.6663C10.9997 19.2186 11.4474 19.6663 11.9997 19.6663C12.552 19.6663 12.9997 19.2186 12.9997 18.6663V12.9997H18.6663C19.2186 12.9997 19.6663 12.552 19.6663 11.9997C19.6663 11.4474 19.2186 10.9997 18.6663 10.9997H12.9997V5.33301Z'
+                            fill='white'
+                          />
+                        </mask>
+                        <g mask='url(#mask0_3710_2975)'>
+                          <rect x='4' y='4' width='16' height='16' fill='#354F79' />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            ))}
         </div>
 
         <Link
