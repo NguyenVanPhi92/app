@@ -321,6 +321,129 @@ export const TravelCate = [
   }
 ]
 
+// Travel Plan
+export const TravelPlan = [
+  {
+    name: 'Day 1',
+    date: '3/22/2025',
+    plan: 'First day at Ho Chi Minh City',
+    event: [
+      {
+        date: '4/29/2025',
+        time: '5:00:00 PM',
+        des: 'Saigon Notre-Dame Cathedral',
+        address: '1 Cong Xa Paris, District 1',
+        img: TravelPlan1
+      },
+      {
+        date: '4/29/2025',
+        time: '7:00:00 PM',
+        des: 'Saigon Central Post Office',
+        address: '2 Cong Xa Paris, District 1',
+        img: TravelPlan2
+      },
+      {
+        date: '4/29/2025',
+        time: '8:00:00 PM',
+        des: 'Dinner time',
+        address: '',
+        img: Image
+      },
+      {
+        date: '4/29/2025',
+        time: '4:00:00 PM',
+        des: 'Landmark 81',
+        address: '720A Dien Bien Phu, Binh Thanh District',
+        img: TravelPlan3
+      }
+    ]
+  },
+  {
+    name: 'Day 2',
+    date: '4/30/2025',
+    plan: "50th Anniversary of Viet Nam's Reunification Day",
+    event: [
+      {
+        date: '4/30/2025',
+        time: '7:00:00 AM',
+        des: 'Military Parade for the 50th Anniversary of Vietnam’s Reunification Day',
+        address: 'Le Duan Street, District 1',
+        img: TravelPlan4
+      },
+      {
+        date: '4/30/2025',
+        time: '12:00:00 PM',
+        des: 'Lunch time',
+        address: '',
+        img: Image
+      },
+      {
+        date: '4/30/2025',
+        time: '1:00:00 PM',
+        des: 'War Remnants Museum',
+        address: '28 Vo Van Tan, District 3',
+        img: TravelPlan5
+      },
+      {
+        date: '4/30/2025',
+        time: '6:00:00 PM',
+        des: 'Sunset on the Saigon River',
+        address: 'Ton Duc Thang, District 1',
+        img: TravelPlan6
+      },
+      {
+        date: '4/30/2025',
+        time: '7:00:00 PM',
+        des: 'Dinner time',
+        address: '',
+        img: Image
+      },
+      {
+        date: '4/30/2025',
+        time: '9:00:00 PM',
+        des: 'Nguyen Hue Walking Street',
+        address: 'Nguyen Hue, District 1',
+        img: TravelPlan7
+      },
+      {
+        date: '4/30/2025',
+        time: '11:00:00 PM',
+        des: 'Fireworks at Bach Dang Wharf',
+        address: '2 Ton Duc Thang, District 1',
+        img: TravelPlan8
+      }
+    ]
+  },
+  {
+    name: 'Day 3',
+    date: '5/1/2025',
+    plan: 'A slower pace to enjoy nature ',
+    event: [
+      {
+        date: '4/29/2025',
+        time: '7:00:00 PM',
+        des: 'Saigon Zoo & Botanical Garden',
+        address: '2B Nguyen Binh Khiem, District 1, Ho Chi Minh City',
+        img: TravelPlan9
+      },
+      {
+        date: '4/29/2025',
+        time: '12:00:00 PM',
+        des: 'Lunch time',
+        address: '',
+        img: Image
+      },
+      {
+        date: '4/29/2025',
+        time: '3:00:00 PM',
+        des: 'Heading to Tan Son Nhat Airport for the 5:00 PM Flight to San Francisco.',
+        address: '',
+        img: Image
+      }
+    ]
+  }
+]
+
 export const Event_HCM = [
   {
     id: 'HC',
@@ -603,129 +726,6 @@ export const DESTINATION_HCM = [
   }
 ]
 
-// Travel Plan
-export const TravelPlan = [
-  {
-    name: 'Day 1',
-    date: '3/22/2025',
-    plan: 'First day at Ho Chi Minh City',
-    event: [
-      {
-        date: '4/29/2025',
-        time: '5:00:00 PM',
-        des: 'Saigon Notre-Dame Cathedral',
-        address: '1 Cong Xa Paris, District 1',
-        img: TravelPlan1
-      },
-      {
-        date: '4/29/2025',
-        time: '7:00:00 PM',
-        des: 'Saigon Central Post Office',
-        address: '2 Cong Xa Paris, District 1',
-        img: TravelPlan2
-      },
-      {
-        date: '4/29/2025',
-        time: '8:00:00 PM',
-        des: 'Dinner time',
-        address: '',
-        img: Image
-      },
-      {
-        date: '4/29/2025',
-        time: '4:00:00 PM',
-        des: 'Landmark 81',
-        address: '720A Dien Bien Phu, Binh Thanh District',
-        img: TravelPlan3
-      }
-    ]
-  },
-  {
-    name: 'Day 2',
-    date: '4/30/2025',
-    plan: "50th Anniversary of Viet Nam's Reunification Day",
-    event: [
-      {
-        date: '4/30/2025',
-        time: '7:00:00 AM',
-        des: 'Military Parade for the 50th Anniversary of Vietnam’s Reunification Day',
-        address: 'Le Duan Street, District 1',
-        img: TravelPlan4
-      },
-      {
-        date: '4/30/2025',
-        time: '12:00:00 PM',
-        des: 'Lunch time',
-        address: '',
-        img: Image
-      },
-      {
-        date: '4/30/2025',
-        time: '1:00:00 PM',
-        des: 'War Remnants Museum',
-        address: '28 Vo Van Tan, District 3',
-        img: TravelPlan5
-      },
-      {
-        date: '4/30/2025',
-        time: '6:00:00 PM',
-        des: 'Sunset on the Saigon River',
-        address: 'Ton Duc Thang, District 1',
-        img: TravelPlan6
-      },
-      {
-        date: '4/30/2025',
-        time: '7:00:00 PM',
-        des: 'Dinner time',
-        address: '',
-        img: Image
-      },
-      {
-        date: '4/30/2025',
-        time: '9:00:00 PM',
-        des: 'Nguyen Hue Walking Street',
-        address: 'Nguyen Hue, District 1',
-        img: TravelPlan7
-      },
-      {
-        date: '4/30/2025',
-        time: '11:00:00 PM',
-        des: 'Fireworks at Bach Dang Wharf',
-        address: '2 Ton Duc Thang, District 1',
-        img: TravelPlan8
-      }
-    ]
-  },
-  {
-    name: 'Day 3',
-    date: '5/1/2025',
-    plan: 'A slower pace to enjoy nature ',
-    event: [
-      {
-        date: '4/29/2025',
-        time: '7:00:00 PM',
-        des: 'Saigon Zoo & Botanical Garden',
-        address: '2B Nguyen Binh Khiem, District 1, Ho Chi Minh City',
-        img: TravelPlan9
-      },
-      {
-        date: '4/29/2025',
-        time: '12:00:00 PM',
-        des: 'Lunch time',
-        address: '',
-        img: Image
-      },
-      {
-        date: '4/29/2025',
-        time: '3:00:00 PM',
-        des: 'Heading to Tan Son Nhat Airport for the 5:00 PM Flight to San Francisco.',
-        address: '',
-        img: Image
-      }
-    ]
-  }
-]
-
 /// Home Page Selection
 export const News = [
   {
@@ -790,6 +790,7 @@ export const TimeSelect = [
   { value: '1', label: 'VND' },
   { value: '2', label: 'USA' }
 ]
+
 export const GuestSelect = [
   { value: '0', label: 'Guest' },
   { value: '1', label: 'VND' },
