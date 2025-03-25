@@ -5,6 +5,14 @@ type State = {
   register: {}
   travel: { id: string; categories: any[] }
   shopping: {}
+  diningStore: {
+    name: string
+    location: string
+    time: string
+    desc: string
+    tag: string
+    img: string
+  }
   bookingTravel: { name: string; city: string; date_from: string; date_to: string }
   cart: { img: string; name: string; price: string }[]
   event: {
@@ -29,6 +37,14 @@ type Actions = {
   dispathTravel: (event: { id: string; categories: any[] }) => void
   dispathTravelBooking: (event: { name: string; city: string; date_from: string; date_to: string }) => void
   dispathCart: (event: { img: string; name: string; price: string }) => void
+  dispathDiningStore: (event: {
+    name: string
+    location: string
+    time: string
+    desc: string
+    tag: string
+    img: string
+  }) => void
 }
 
 export const useStoreAction = create<State & Actions>((set) => ({
@@ -36,6 +52,14 @@ export const useStoreAction = create<State & Actions>((set) => ({
   register: {},
   travel: { id: '', categories: [] },
   bookingTravel: { name: '', city: '', date_from: '', date_to: '' },
+  diningStore: {
+    name: '',
+    location: '',
+    time: '',
+    desc: '',
+    tag: '',
+    img: ''
+  },
   cart: [],
   shopping: {},
   event: {
@@ -101,6 +125,25 @@ export const useStoreAction = create<State & Actions>((set) => ({
         city: value.city,
         date_from: value.date_from,
         date_to: value.date_to
+      }
+    })),
+  dispathDiningStore: (value: {
+    name: string
+    location: string
+    time: string
+    desc: string
+    tag: string
+    img: string
+  }) =>
+    set((state) => ({
+      diningStore: {
+        ...state.diningStore,
+        name: value.name,
+        location: value.location,
+        time: value.time,
+        desc: value.desc,
+        tag: value.tag,
+        img: value.img
       }
     }))
 }))

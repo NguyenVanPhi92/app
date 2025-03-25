@@ -58,6 +58,14 @@ import TravelPlan8 from '../assets/images/travel/plan/8.jpg'
 import TravelPlan9 from '../assets/images/travel/plan/9.jpg'
 import LoginI from '../assets/login.jpg'
 import LightTracking from '../assets/images/flightTracking.jpg'
+import DiningStore1 from '../assets/images/dinning/store/1.jpg'
+import DiningStore2 from '../assets/images/dinning/store/2.png'
+import DiningStore3 from '../assets/images/dinning/store/3.jpg'
+import DiningStore4 from '../assets/images/dinning/store/4.png'
+import DiningStore5 from '../assets/images/dinning/store/5.png'
+import DiningStore6 from '../assets/images/dinning/store/6.png'
+import DiningStore7 from '../assets/images/dinning/store/7.jpg'
+import DiningStore8 from '../assets/images/dinning/store/8.png'
 
 export { Image, LoginI, New1, New2, Thumbnail, Travel1, LightTracking }
 
@@ -795,6 +803,74 @@ export const GuestSelect = [
   { value: '0', label: 'Guest' },
   { value: '1', label: 'VND' },
   { value: '2', label: 'USA' }
+]
+
+// Dining
+export const DiningStore = [
+  {
+    name: "McDonald's",
+    location: 'Domestic Terminal (T1) ',
+    time: '24/7',
+    desc: 'A globally recognized fast-food chain offering a variety of burgers, fries, and beverages, perfect for a quick meal any time of the day.',
+    tag: 'Quick Bites',
+    img: DiningStore1
+  },
+  {
+    name: 'Highlands Coffee',
+    location: 'International Terminal (T2) ',
+    time: '07:00 - 22:00',
+    desc: 'A popular Vietnamese coffee chain known for its robust coffee, signature Phin drip brew, and a selection of pastries and light snacks.',
+    tag: 'Café',
+    img: DiningStore2
+  },
+  {
+    name: 'The Phoenix',
+    location: 'International Terminal (T2) ',
+    time: '24/7',
+    desc: 'A spacious restaurant offering a variety of dishes, including Australian oxtail pho and Singaporean frog porridge. ',
+    tag: 'Restaurant',
+    img: DiningStore3
+  },
+  {
+    name: 'Phúc Long Coffee & Tea',
+    location: 'Domestic Terminal (T1) ',
+    time: '07:00 - 22:00',
+    desc: 'A well-loved Vietnamese café chain specializing in rich, flavorful tea and coffee, accompanied by a selection of pastries and snacks.',
+    tag: 'Café',
+    img: DiningStore4
+  },
+  {
+    name: 'Burger King',
+    location: 'International Terminal (T2) ',
+    time: '24/7',
+    desc: 'A global fast-food chain known for its burgers and quick service. ',
+    tag: 'Quick Bites',
+    img: DiningStore5
+  },
+  {
+    name: "Domino's Pizza",
+    location: 'Domestic Terminal (T1) ',
+    time: '24/7',
+    desc: 'An international pizza chain offering a variety of pizzas and sides. ',
+    tag: 'Quick Bites',
+    img: DiningStore6
+  },
+  {
+    name: 'Starbucks',
+    location: 'Domestic Terminal (T1) ',
+    time: '24/7',
+    desc: 'A world-renowned coffeehouse serving a range of espresso-based drinks, teas, and pastries, providing a cozy atmosphere for travelers.',
+    tag: 'Café',
+    img: DiningStore7
+  },
+  {
+    name: 'Big Bowl',
+    location: 'International Terminal (T2)',
+    time: '24/7',
+    desc: 'Specializes in traditional Vietnamese dishes, particularly pho (noodle soup). The restaurant offers a quick-service experience with seating available, catering to travelers seeking authentic local cuisine in a timely manner. ',
+    tag: 'Restaurant',
+    img: DiningStore8
+  }
 ]
 
 // Menu

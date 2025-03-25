@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import { optionTagTerminal } from '../constants/data'
 
-// how use
-export default function TerminalSelected() {
+interface Prop {
+  onChang?: any
+}
+
+export default function TerminalSelected({ onChang }: Prop) {
   const [activeFilterTerminal, setActiveFilterTerminal] = useState<number | undefined>(1)
 
   return (
@@ -13,7 +16,10 @@ export default function TerminalSelected() {
             activeFilterTerminal === e.id ? 'bg-[#354f79] text-white' : 'text-[#354f79] bg-[#eaf2ff]'
           }`}
           key={i}
-          onClick={() => setActiveFilterTerminal(e.id)}
+          onClick={() => {
+            setActiveFilterTerminal(e.id)
+            onChang && onChang(e.name)
+          }}
         >
           {e.name}
         </div>
