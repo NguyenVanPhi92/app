@@ -11,6 +11,9 @@ import Dialog from '../components/Drawer'
 import { ExpoloreHCM, News, Thumbnail } from '../constants/data'
 import { useStoreAction } from '../store/zustand'
 import Navbar from './Navbar'
+import Car from '../assets/icons/home/Car'
+import Hotel from '../assets/icons/home/Hotel'
+import Ride from '../assets/icons/home/Ride'
 
 const Home = () => {
   const home = useStoreAction((state) => state.home)
@@ -62,12 +65,23 @@ const Home = () => {
             </div>
             <p className='text-[12px] text-[#2F3036] mt-1'>Dining</p>
           </Link>
-          <div className='cursor-pointer'>
-            <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
-              <Shopping />
-            </div>
-            <p className='text-[12px] text-[#2F3036] mt-1'>Shopping</p>
-          </div>
+
+          {Number(home.country) === 1 || Number(home.country) === 3 ? (
+            <Link to='/one'>
+              <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
+                <Ride />
+              </div>
+              <p className='text-[12px] text-[#2F3036] mt-1'>Ride Hailing</p>
+            </Link>
+          ) : (
+            <Link to='/shopping'>
+              <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
+                <Shopping />
+              </div>
+              <p className='text-[12px] text-[#2F3036] mt-1'>Shopping</p>
+            </Link>
+          )}
+
           <div className='cursor-pointer'>
             <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
               <Map />
@@ -80,18 +94,36 @@ const Home = () => {
             </div>
             <p className='text-[12px] text-[#2F3036] mt-1'>Baggage</p>
           </div>
-          <div className='cursor-pointer'>
-            <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
-              <Lounge />
-            </div>
-            <p className='text-[12px] text-[#2F3036] mt-1'>Lounge & Rest</p>
-          </div>
-          <div className='cursor-pointer'>
-            <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
-              <Feedback />
-            </div>
-            <p className='text-[12px] text-[#2F3036] mt-1'>Feeback</p>
-          </div>
+          {Number(home.country) === 1 || Number(home.country) === 3 ? (
+            <Link to='/booking'>
+              <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
+                <Hotel />
+              </div>
+              <p className='text-[12px] text-[#2F3036] mt-1'>Hotel Booking</p>
+            </Link>
+          ) : (
+            <Link to='/resting'>
+              <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
+                <Lounge />
+              </div>
+              <p className='text-[12px] text-[#2F3036] mt-1'>Lounge & Rest</p>
+            </Link>
+          )}
+          {Number(home.country) === 1 || Number(home.country) === 3 ? (
+            <Link to='/booking'>
+              <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
+                <Car />
+              </div>
+              <p className='text-[12px] text-[#2F3036] mt-1'>Car Rental</p>
+            </Link>
+          ) : (
+            <Link to='/feedback'>
+              <div className='p-3 rounded-xl bg-[#eaf2ff] m-auto w-16'>
+                <Feedback />
+              </div>
+              <p className='text-[12px] text-[#2F3036] mt-1'>Feeback</p>
+            </Link>
+          )}
           <div className='cursor-pointer'>
             <Dialog />
             <p className='text-[12px] text-[#2F3036] mt-1'>See More</p>

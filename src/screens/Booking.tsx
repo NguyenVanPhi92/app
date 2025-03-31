@@ -59,25 +59,25 @@ const Booking = () => {
             <div className='px-10 text-[#71727A]'>
               <div className='flex items-center justify-between'>
                 <p className='font-bold text-[14px]'>Date</p>
-                <p className='text-[14px]'>10 April 2025</p>
+                <p className='text-[14px]'>1 May 2025</p>
               </div>
               <div className='flex items-center justify-between'>
                 <p className='font-bold text-[14px]'>Check-in Time</p>
-                <p className='text-[14px]'>9.00 AM</p>
+                <p className='text-[14px]'>5.00 AM</p>
               </div>
               <div className='flex items-center justify-between'>
                 <p className='font-bold text-[14px]'>Hours of use</p>
-                <p className='text-[14px]'>3 hours</p>
+                <p className='text-[14px]'>2 hours</p>
               </div>
               <div className='flex items-center justify-between'>
                 <p className='font-bold text-[14px]'>Room Quantity</p>
-                <p className='text-[14px]'>2 rooms</p>
+                <p className='text-[14px]'>1 rooms</p>
               </div>
             </div>
 
             <div className='flex justify-between px-6 mt-10'>
               <p>Total</p>
-              <p className='font-bold'>$20.00</p>
+              <p className='font-bold'>$14.00</p>
             </div>
           </div>
         </div>

@@ -1,10 +1,10 @@
+import { useState } from 'react'
 import { Link } from 'react-router'
 import Header from '../components/Header'
 import TerminalSelected from '../components/TerminalSelected'
-import { DiningStore, Image } from '../constants/data'
+import { BannerDining, DiningStore } from '../constants/data'
 import { useStoreAction } from '../store/zustand'
 import Navbar from './Navbar'
-import { useState } from 'react'
 
 const Dining = () => {
   const dispathDiningStore = useStoreAction((state) => state.dispathDiningStore)
@@ -16,7 +16,7 @@ const Dining = () => {
       <Header title='Dining' icon />
 
       <div className='dining'>
-        <img src={Image} alt='img' className='object-cover w-full h-70' />
+        <img src={BannerDining} alt='img' className='object-cover w-full h-70' />
         <div className='m-4'>
           <TerminalSelected onChang={setTag} />
         </div>

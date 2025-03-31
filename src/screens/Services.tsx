@@ -4,7 +4,7 @@ import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Header from '../components/Header'
 import TerminalSelected from '../components/TerminalSelected'
-import { Image } from '../constants/data'
+import { DiningStore, Image, RestingData } from '../constants/data'
 import '../styles/services.scss'
 import Navbar from './Navbar'
 
@@ -48,12 +48,14 @@ const Services = () => {
           </div>
 
           <div className='dining-shop'>
-            {Array.from({ length: 4 }, (_, i) => (
-              <Link to='/dining' className='dining-shop__card' key={i}>
-                <img src={Image} alt='img' />
+            {DiningStore.map((e, idx) => (
+              <Link to='/dining' className='dining-shop__card' key={idx}>
+                <img src={e.img} alt='img' />
                 <div className='dining-shop__card--title'>
-                  <p>Shop</p>
-                  <p>Location - Operations Hour</p>
+                  <p>{e.name}</p>
+                  <p>
+                    {e.location} - {e.time}
+                  </p>
                 </div>
               </Link>
             ))}
@@ -75,12 +77,12 @@ const Services = () => {
             modules={[Autoplay]}
             className='resting-card'
           >
-            {Array.from({ length: 8 }, (_, i) => (
-              <SwiperSlide className='resting-card__item' key={i}>
+            {RestingData.map((e, idx) => (
+              <SwiperSlide className='resting-card__item' key={idx}>
                 <Link to='/resting'>
-                  <img src={Image} alt='img' className='object-cover' />
+                  <img src={e.img} alt='img' className='object-cover' />
                   <div className='resting-card__item--title'>
-                    <p>Lounge</p>
+                    <p>{e.name}</p>
                     <p>$ 12.00</p>
                   </div>
                 </Link>

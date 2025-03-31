@@ -4,6 +4,14 @@ type State = {
   login: { email: string; password: string }
   register: {}
   travel: { id: string; categories: any[] }
+  resting: {
+    name: string
+    location: string
+    time: string
+    about: string
+    tag: string
+    img: string
+  }
   shopping: {}
   diningStore: {
     name: string
@@ -45,6 +53,14 @@ type Actions = {
     tag: string
     img: string
   }) => void
+  dispathResting: (event: {
+    name: string
+    location: string
+    time: string
+    about: string
+    tag: string
+    img: string
+  }) => void
 }
 
 export const useStoreAction = create<State & Actions>((set) => ({
@@ -52,6 +68,7 @@ export const useStoreAction = create<State & Actions>((set) => ({
   register: {},
   travel: { id: '', categories: [] },
   bookingTravel: { name: '', city: '', date_from: '', date_to: '' },
+  resting: { name: '', location: '', time: '', about: '', tag: '', img: '' },
   diningStore: {
     name: '',
     location: '',
@@ -142,6 +159,18 @@ export const useStoreAction = create<State & Actions>((set) => ({
         location: value.location,
         time: value.time,
         desc: value.desc,
+        tag: value.tag,
+        img: value.img
+      }
+    })),
+  dispathResting: (value: { name: string; location: string; time: string; about: string; tag: string; img: string }) =>
+    set((state) => ({
+      resting: {
+        ...state.resting,
+        name: value.name,
+        location: value.location,
+        time: value.time,
+        about: value.about,
         tag: value.tag,
         img: value.img
       }

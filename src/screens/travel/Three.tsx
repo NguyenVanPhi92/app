@@ -82,7 +82,7 @@ const Three = () => {
         <div>
           <div className='flex justify-between mb-2'>
             <p className='font-[600]'>TOP DESTINATION</p>
-            <Link to='/dining' className='text-sm text-[#354f79] font-[600]'>
+            <Link to='/four' className='text-sm text-[#354f79] font-[600]'>
               See more
             </Link>
           </div>
@@ -96,14 +96,14 @@ const Three = () => {
                       <div className='relative'>
                         <img src={event.img} alt='' className='w-full h-40 rounded-tl-2xl rounded-tr-2xl' />
                         <p className='px-3 py-1 absolute right-2 text-[12px] top-2 rounded-full bg-[#354f79] text-white'>
-                          {event.time}
+                          {event.city}
                         </p>
                       </div>
 
                       <div className='p-4'>
                         <div className='mb-4'>
-                          <p className='font-bold text-[16px]'>{event.city}</p>
-                          <p className='text-[16px] text-[#71727A]'>{event.address}</p>
+                          <p className='font-bold text-[12px]'>{event.time}</p>
+                          <p className='text-[12px] text-[#71727A]'>{event.address}</p>
                         </div>
                         <Favorite />
                       </div>

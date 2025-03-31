@@ -41,8 +41,10 @@ const Store = () => {
               </Link>
 
               <div className='flex items-center cursor-pointer gap-x-1'>
-                <Menu />
-                <p className='text-[#354f79] font-[500]'>View Menu</p>
+                <Link to={'/menu'} className='flex items-center cursor-pointer gap-x-1'>
+                  <Menu />
+                  <p className='text-[#354f79] font-[500]'>View Menu</p>
+                </Link>
               </div>
             </div>
           </div>

@@ -112,6 +112,7 @@ const FeedbackDetail = () => {
 
         {/* Image */}
         <div className='text-center'>
+          <input type='file' />
           <h3 className='mb-1 text-[14px] font-bold mt-2'> Let share a memorable moment!</h3>
           <Upload />
         </div>

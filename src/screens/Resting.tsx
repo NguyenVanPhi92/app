@@ -1,8 +1,9 @@
+import { useState } from 'react'
 import { Link } from 'react-router'
 import Header from '../components/Header'
+import { BannerResting, RestingData } from '../constants/data'
+import { useStoreAction } from '../store/zustand'
 import Navbar from './Navbar'
-import { Image } from '../constants/data'
-import { useState } from 'react'
 
 const option = [
   { id: 1, name: 'TERMINAL 1' },
@@ -13,9 +14,14 @@ const option = [
 
 const Resting = () => {
   const [activeFilter, setActiveFilter] = useState<number | undefined>(1)
+  const dispathResting = useStoreAction((state) => state.dispathResting)
+
+  // const handleResting = (data: any) => {
+
+  // }
   return (
     <div className='flex flex-col justify-between pb-20 pt-14 main'>
-      <img src={Image} alt='img' className='scroll-img' />
+      <img src={BannerResting} alt='img' className='scroll-img' />
 
       <div>
         <Header title='Resting' icon />
@@ -37,21 +43,24 @@ const Resting = () => {
 
           {/* List products */}
           <div className='flex flex-col'>
-            {Array.from({ length: 4 }, (_, i) => (
+            {RestingData.map((e, idx) => (
               <Link
                 to='/sleepzone'
                 className='flex items-center py-4 gap-x-4 border-b-[1px] border-[#74747433]'
-                key={i}
+                key={idx}
+                onClick={() => dispathResting(e)}
               >
-                <img src={Image} alt='img' className='object-cover w-24 h-24 rounded-2xl' />
+                <img src={e.img} alt='img' className='object-cover w-24 h-24 rounded-2xl' />
 
                 <div className='flex flex-col gap-y-4'>
                   <div className=''>
-                    <p className='font-bold'>Sleep Zone</p>
-                    <p className='text-[14px] text-[#737373]'>Location - Operations Hour</p>
+                    <p className='font-[400] text-[12px] line-clamp-2'>{e.about}</p>
+                    <p className='text-[14px] text-[#737373]'>
+                      {e.location} - {e.time}
+                    </p>
                   </div>
-                  <p className='p-1 flex items-center justify-center font-[600] text-[#354f79] bg-[#eaf2ff] w-[40px] rounded-full text-[10px]'>
-                    TAG
+                  <p className='p-1 flex min-w-max items-center justify-center font-[600] text-[#354f79] bg-[#eaf2ff] w-[40px] rounded-full text-[10px]'>
+                    {e.tag}
                   </p>
                 </div>
               </Link>

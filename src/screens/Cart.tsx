@@ -1,20 +1,24 @@
 import { Button } from '../components/button'
 import Header from '../components/Header'
-import { Image } from '../constants/data'
+import { useStoreAction } from '../store/zustand'
 import '../styles/cart.scss'
 
 const Cart = () => {
+  const listMenu = useStoreAction((state) => state.cart)
+  const totalPrice = listMenu.reduce((sum, item) => sum + parseFloat(item.price), 0)
+  // console.log('menu: ', cart)
+
   return (
     <div className='flex flex-col justify-between main'>
       <Header title='Your Cart' icon />
       <div className='body mb-44'>
         <main className='mt-16'>
-          {Array.from({ length: 6 }, (_, i) => (
-            <div className='mb-2 cart border-b border-[#ededed] pb-2' key={i}>
-              <img src={Image} alt='img' />
+          {listMenu.map((e, idx) => (
+            <div className='mb-2 cart border-b border-[#ededed] pb-2' key={idx}>
+              <img src={e.img} alt='img' />
               <div className='cart-content'>
                 <div className='cart-content__title'>
-                  <h3 className='font-[600] text-[12px]'>Dish Name</h3>
+                  <h3 className='font-[600] text-[12px]'>{e.name}</h3>
                   <p className='text-[10px]'>Dish Description</p>
                 </div>
                 <div className='flex justify-between'>
@@ -23,7 +27,7 @@ const Cart = () => {
                     <span>1</span>
                     <p className='px-[6px] rounded-full text-white bg-[#354f79]'>+</p>
                   </div>
-                  <p className='text-[12px]'>$ 5.00</p>
+                  <p className='text-[12px]'>$ {e.price}</p>
                 </div>
               </div>
             </div>
@@ -34,7 +38,7 @@ const Cart = () => {
       <div className='fixed bottom-0 w-[430px] p-4 bg-white'>
         <div className='flex justify-between mx-2'>
           <p className=''>Total</p>
-          <p className='font-bold'>$20.00</p>
+          <p className='font-bold'>$ {totalPrice},00</p>
         </div>
         <Button name='Checkout' path='checkout' />
       </div>

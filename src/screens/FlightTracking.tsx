@@ -74,7 +74,7 @@ const FlightTracking = () => {
 
           {activeTab === 'arrival' &&
             FlightTrackingArrival.map((item, index) => (
-              <div className='px-2 mb-4' key={index}>
+              <div className='px-2 mb-8' key={index}>
                 <div className='flex items-center justify-between w-full gap-x-4'>
                   <div className='text-2xl font-bold text-blue-900 min-w-28'>{item.flight_time}</div>
 
@@ -100,8 +100,8 @@ const FlightTracking = () => {
 
                 <div className='flex items-center gap-x-4'>
                   <div className='text-[14px] min-w-28'>
-                    <p>{item.terminal}</p>
-                    <p>{item.gate}</p>
+                    <p>Terminal {item.terminal}</p>
+                    <p>Gate {item.gate}</p>
                   </div>
 
                   <div className='flex items-center justify-between w-full gap-x-4'>
@@ -132,13 +132,13 @@ const FlightTracking = () => {
 
           {activeTab === 'departure' &&
             FlightTrackingDeparture.map((item, index) => (
-              <div className='px-2 mb-4' key={index}>
+              <div className='px-2 mb-8' key={index}>
                 <div className='flex items-center justify-between w-full gap-x-4'>
                   <div className='text-2xl font-bold text-blue-900 min-w-28'>{item.flight_time}</div>
 
                   <div className='w-full'>
                     <div className='flex items-center justify-between gap-x-2'>
-                      <FaPlaneArrival className='text-2xl text-blue-900' size={20} />
+                      <FaPlaneDeparture color='#354f79' />
                       <div className='flex flex-col items-center'>
                         <div className='flex flex-col items-center gap-x-2'>
                           <span className='font-bold text-[12px]'>{item.from_code}</span>
@@ -158,8 +158,8 @@ const FlightTracking = () => {
 
                 <div className='flex items-center gap-x-4'>
                   <div className='text-[14px] min-w-28'>
-                    <p>{item.terminal}</p>
-                    <p>{item.gate}</p>
+                    <p>Termainal {item.terminal}</p>
+                    <p>Gate {item.gate}</p>
                   </div>
 
                   <div className='flex items-center justify-between w-full gap-x-4'>

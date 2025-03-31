@@ -1,12 +1,19 @@
 import Image from '../assets/Image.png'
+import BannerDining from '../assets/images/dinning/banner.jpg'
+import BannerResting from '../assets/images/resting/banner.jpg'
 import Expolo1 from '../assets/images/home/expoloreHCM/1.png'
 import Expolo2 from '../assets/images/home/expoloreHCM/2.jpg'
 import Expolo3 from '../assets/images/home/expoloreHCM/2.png'
 import New1 from '../assets/images/home/new/1.jpg'
 import New2 from '../assets/images/home/new/2.png'
 import Travel1 from '../assets/images/travel/1.jpg'
+import festival1 from '../assets/images/travel/festival/1.jpg'
+import festival2 from '../assets/images/travel/festival/2.png'
+import festival3 from '../assets/images/travel/festival/3.jpg'
+import festival4 from '../assets/images/travel/festival/4.jpg'
+import festival5 from '../assets/images/travel/festival/5.jpg'
+import festival6 from '../assets/images/travel/festival/6.jpg'
 import Event1 from '../assets/images/travel/eventHCM/1.jpg'
-import Event10 from '../assets/images/travel/eventHCM/10.jpg'
 import Event2 from '../assets/images/travel/eventHCM/2.jpg'
 import Event3 from '../assets/images/travel/eventHCM/3.jpg'
 import Event4 from '../assets/images/travel/eventHCM/4.jpg'
@@ -15,6 +22,7 @@ import Event6 from '../assets/images/travel/eventHCM/6.jpg'
 import Event7 from '../assets/images/travel/eventHCM/7.jpg'
 import Event8 from '../assets/images/travel/eventHCM/8.jpg'
 import Event9 from '../assets/images/travel/eventHCM/9.jpg'
+import Event10 from '../assets/images/travel/eventHCM/10.jpg'
 import Thumbnail from '../assets/thumbnail.jpeg'
 import arrival1 from '../assets/images/flightTracking/arrival/1.png'
 import arrival2 from '../assets/images/flightTracking/arrival/2.jpg'
@@ -25,12 +33,12 @@ import Event13 from '../assets/images/travel/eventHCM/13.jpg'
 import Event14 from '../assets/images/travel/eventHCM/14.jpg'
 import Event15 from '../assets/images/travel/eventHCM/15.jpg'
 import Event16 from '../assets/images/travel/eventHCM/16.jpg'
-import Event17 from '../assets/images/travel/eventHCM/17.jpg'
-import Event18 from '../assets/images/travel/eventHCM/18.jpg'
-import Event19 from '../assets/images/travel/eventHCM/19.jpg'
-import Event20 from '../assets/images/travel/eventHCM/20.jpg'
-import Event21 from '../assets/images/travel/eventHCM/21.jpg'
-import Event22 from '../assets/images/travel/eventHCM/22.jpg'
+// import Event17 from '../assets/images/travel/eventHCM/17.jpg'
+// import Event18 from '../assets/images/travel/eventHCM/18.jpg'
+// import Event19 from '../assets/images/travel/eventHCM/19.jpg'
+// import Event20 from '../assets/images/travel/eventHCM/20.jpg'
+// import Event21 from '../assets/images/travel/eventHCM/21.jpg'
+// import Event22 from '../assets/images/travel/eventHCM/22.jpg'
 import Bag from '../assets/icons/home/Bag'
 import Banking from '../assets/icons/home/Banking'
 import Car from '../assets/icons/home/Car'
@@ -56,6 +64,8 @@ import TravelPlan6 from '../assets/images/travel/plan/6.png'
 import TravelPlan7 from '../assets/images/travel/plan/7.jpg'
 import TravelPlan8 from '../assets/images/travel/plan/8.jpg'
 import TravelPlan9 from '../assets/images/travel/plan/9.jpg'
+import TravelPlan10 from '../assets/images/travel/plan/dine.png'
+import TravelPlan11 from '../assets/images/travel/plan/airport.png'
 import LoginI from '../assets/login.jpg'
 import LightTracking from '../assets/images/flightTracking.jpg'
 import DiningStore1 from '../assets/images/dinning/store/1.jpg'
@@ -66,14 +76,26 @@ import DiningStore5 from '../assets/images/dinning/store/5.png'
 import DiningStore6 from '../assets/images/dinning/store/6.png'
 import DiningStore7 from '../assets/images/dinning/store/7.jpg'
 import DiningStore8 from '../assets/images/dinning/store/8.png'
+import resting1 from '../assets/images/resting/1.jpg'
+import resting2 from '../assets/images/resting/2.jpg'
+import highland1 from '../assets/images/dinning/menu/highland/1.jpg'
+import highland2 from '../assets/images/dinning/menu/highland/2.jpg'
+import highland3 from '../assets/images/dinning/menu/highland/3.jpg'
+import highland4 from '../assets/images/dinning/menu/highland/4.jpg'
+import highland5 from '../assets/images/dinning/menu/highland/5.jpg'
+import highland6 from '../assets/images/dinning/menu/highland/6.jpg'
+import highland7 from '../assets/images/dinning/menu/highland/7.jpg'
+import highland8 from '../assets/images/dinning/menu/highland/8.png'
+import highland9 from '../assets/images/dinning/menu/highland/9.jpg'
+import highland10 from '../assets/images/dinning/menu/highland/10.jpg'
 
-export { Image, LoginI, New1, New2, Thumbnail, Travel1, LightTracking }
+export { Image, LoginI, New1, New2, Thumbnail, Travel1, LightTracking, BannerDining, BannerResting }
 
 export const timeOptions = [
   { value: '0', label: 'Check-in time' },
-  { value: '08:00 AM', label: '08:00 AM' },
-  { value: '09:00 AM', label: '09:00 AM' },
-  { value: '10:00 AM', label: '10:00 AM' }
+  { value: '04:00 PM', label: '04:00 PM' },
+  { value: '05:00 PM', label: '05:00 PM' },
+  { value: '06:00 PM', label: '06:00 PM' }
 ]
 
 export const hoursOptions = [
@@ -333,33 +355,33 @@ export const TravelCate = [
 export const TravelPlan = [
   {
     name: 'Day 1',
-    date: '3/22/2025',
+    date: '29/4/2025',
     plan: 'First day at Ho Chi Minh City',
     event: [
       {
         date: '4/29/2025',
-        time: '5:00:00 PM',
+        time: '5:00 PM',
         des: 'Saigon Notre-Dame Cathedral',
         address: '1 Cong Xa Paris, District 1',
         img: TravelPlan1
       },
       {
         date: '4/29/2025',
-        time: '7:00:00 PM',
+        time: '7:00 PM',
         des: 'Saigon Central Post Office',
         address: '2 Cong Xa Paris, District 1',
         img: TravelPlan2
       },
       {
         date: '4/29/2025',
-        time: '8:00:00 PM',
+        time: '8:00 PM',
         des: 'Dinner time',
         address: '',
-        img: Image
+        img: TravelPlan10
       },
       {
         date: '4/29/2025',
-        time: '4:00:00 PM',
+        time: '4:00 PM',
         des: 'Landmark 81',
         address: '720A Dien Bien Phu, Binh Thanh District',
         img: TravelPlan3
@@ -373,49 +395,49 @@ export const TravelPlan = [
     event: [
       {
         date: '4/30/2025',
-        time: '7:00:00 AM',
+        time: '7:00 AM',
         des: 'Military Parade for the 50th Anniversary of Vietnam’s Reunification Day',
         address: 'Le Duan Street, District 1',
         img: TravelPlan4
       },
       {
         date: '4/30/2025',
-        time: '12:00:00 PM',
+        time: '12:00 PM',
         des: 'Lunch time',
         address: '',
-        img: Image
+        img: TravelPlan10
       },
       {
         date: '4/30/2025',
-        time: '1:00:00 PM',
+        time: '1:00 PM',
         des: 'War Remnants Museum',
         address: '28 Vo Van Tan, District 3',
         img: TravelPlan5
       },
       {
         date: '4/30/2025',
-        time: '6:00:00 PM',
+        time: '6:00 PM',
         des: 'Sunset on the Saigon River',
         address: 'Ton Duc Thang, District 1',
         img: TravelPlan6
       },
       {
         date: '4/30/2025',
-        time: '7:00:00 PM',
+        time: '7:00 PM',
         des: 'Dinner time',
         address: '',
-        img: Image
+        img: TravelPlan10
       },
       {
         date: '4/30/2025',
-        time: '9:00:00 PM',
+        time: '9:00 PM',
         des: 'Nguyen Hue Walking Street',
         address: 'Nguyen Hue, District 1',
         img: TravelPlan7
       },
       {
         date: '4/30/2025',
-        time: '11:00:00 PM',
+        time: '11:00 PM',
         des: 'Fireworks at Bach Dang Wharf',
         address: '2 Ton Duc Thang, District 1',
         img: TravelPlan8
@@ -429,24 +451,24 @@ export const TravelPlan = [
     event: [
       {
         date: '4/29/2025',
-        time: '7:00:00 PM',
+        time: '7:00 PM',
         des: 'Saigon Zoo & Botanical Garden',
         address: '2B Nguyen Binh Khiem, District 1, Ho Chi Minh City',
         img: TravelPlan9
       },
       {
         date: '4/29/2025',
-        time: '12:00:00 PM',
+        time: '12:00 PM',
         des: 'Lunch time',
         address: '',
-        img: Image
+        img: TravelPlan10
       },
       {
         date: '4/29/2025',
-        time: '3:00:00 PM',
+        time: '3:00 PM',
         des: 'Heading to Tan Son Nhat Airport for the 5:00 PM Flight to San Francisco.',
         address: '',
-        img: Image
+        img: TravelPlan11
       }
     ]
   }
@@ -459,7 +481,7 @@ export const Event_HCM = [
     event: [
       {
         id: 'MPAVRD',
-        img: Event1,
+        img: festival1,
         name: 'Military Parade for the 50th Anniversary of Vietnam’s Reunification Day',
         city: 'HO CHI MINH',
         address: 'Le Duan Street, District 1, Ho Chi Minh City',
@@ -474,7 +496,7 @@ export const Event_HCM = [
     event: [
       {
         id: 'CBOT',
-        img: Event2,
+        img: festival2,
         name: '[Concert] Brothers Overcome Thrones ',
         city: 'HO CHI MINH',
         address: 'Thu Duc City, An Phu Ward, District 2, Ho Chi Minh City',
@@ -483,7 +505,7 @@ export const Event_HCM = [
       },
       {
         id: 'MBST',
-        img: Event3,
+        img: festival3,
         name: '[Minishow] B.U.I STORIES - Trung Quân & Bùi Anh Tuấn',
         city: 'HO CHI MINH',
         address: 'Ben Thanh Theater, Ben Nghe Ward, District 1, Ho Chi Minh City',
@@ -498,7 +520,7 @@ export const Event_HCM = [
     event: [
       {
         id: '7DVH',
-        img: Event4,
+        img: festival4,
         name: '7 Firework Venues Honoring the 50th Reunification Day',
         city: 'HO CHI MINH',
         address: 'Ho Chi Minh City',
@@ -513,7 +535,7 @@ export const Event_HCM = [
     event: [
       {
         id: '3HCMPF',
-        img: Event5,
+        img: festival5,
         name: '3rd Ho Chi Minh City Orchid Festival 2025',
         city: 'HO CHI MINH',
         address: 'Tao Dan Park, District 1, Ho Chi Minh City',
@@ -528,7 +550,7 @@ export const Event_HCM = [
     event: [
       {
         id: 'VICS',
-        img: Event6,
+        img: festival6,
         name: "Vietnam Int'l Cafe Show 2025",
         city: 'HO CHI MINH',
         address: 'SECC, 799 Nguyen Van Linh Boulevard, District 7, Ho Chi Minh City',
@@ -546,7 +568,7 @@ export const DESTINATION_HCM = [
     event: [
       {
         id: 'IP',
-        img: Event7,
+        img: Event1,
         name: 'Independence Palace',
         city: 'HO CHI MINH',
         address: '135 Nam Ky Khoi Nghia, District 1, Ho Chi Minh City',
@@ -555,7 +577,7 @@ export const DESTINATION_HCM = [
       },
       {
         id: 'WRM',
-        img: Event8,
+        img: Event2,
         name: 'War Remnants Museum',
         city: 'HO CHI MINH',
         address: '28 Vo Van Tan, District 3, Ho Chi Minh City',
@@ -564,7 +586,7 @@ export const DESTINATION_HCM = [
       },
       {
         id: 'HCMCM',
-        img: Event9,
+        img: Event3,
         name: 'Ho Chi Minh City Museum',
         city: 'HO CHI MINH',
         address: '65 Ly Tu Trong, District 1, Ho Chi Minh City',
@@ -579,7 +601,7 @@ export const DESTINATION_HCM = [
     event: [
       {
         id: 'SNC',
-        img: Event10,
+        img: Event4,
         name: 'Saigon Notre-Dame Cathedral',
         city: 'HO CHI MINH',
         address: '1 Cong Xa Paris, District 1, Ho Chi Minh City',
@@ -588,7 +610,7 @@ export const DESTINATION_HCM = [
       },
       {
         id: 'SCPO',
-        img: Event11,
+        img: Event5,
         name: 'Saigon Central Post Office',
         city: 'HO CHI MINH',
         address: '2 Cong Xa Paris, District 1, Ho Chi Minh City',
@@ -603,7 +625,7 @@ export const DESTINATION_HCM = [
     event: [
       {
         id: 'HCMCMFA',
-        img: Event12,
+        img: Event6,
         name: 'Ho Chi Minh City Museum of Fine Arts',
         city: 'HO CHI MINH',
         address: '97 Pho Duc Chinh, District 1, Ho Chi Minh City',
@@ -618,7 +640,7 @@ export const DESTINATION_HCM = [
     event: [
       {
         id: 'SM',
-        img: Event13,
+        img: Event7,
         name: 'Ben Thanh Market',
         city: 'HO CHI MINH',
         address: 'Le Loi, District 1, Ho Chi Minh City',
@@ -627,7 +649,7 @@ export const DESTINATION_HCM = [
       },
       {
         id: 'SC',
-        img: Event14,
+        img: Event8,
         name: 'Saigon Centre',
         city: 'HO CHI MINH',
         address: '65 Le Loi, District 1, Ho Chi Minh City',
@@ -642,7 +664,7 @@ export const DESTINATION_HCM = [
     event: [
       {
         id: 'L81',
-        img: Event15,
+        img: Event9,
         name: 'Landmark 81',
         city: 'HO CHI MINH',
         address: '720A Dien Bien Phu, Binh Thanh District, Ho Chi Minh City',
@@ -651,7 +673,7 @@ export const DESTINATION_HCM = [
       },
       {
         id: 'BT',
-        img: Event16,
+        img: Event10,
         name: 'Bitexco Tower',
         city: 'HO CHI MINH',
         address: '36 Ho Tung Mau, District 1, Ho Chi Minh City',
@@ -660,7 +682,7 @@ export const DESTINATION_HCM = [
       },
       {
         id: 'NHWS',
-        img: Event17,
+        img: Event11,
         name: 'Nguyen Hue Walking Street',
         city: 'HO CHI MINH',
         address: 'Nguyen Hue, District 1, Ho Chi Minh City',
@@ -675,7 +697,7 @@ export const DESTINATION_HCM = [
     event: [
       {
         id: 'BVWS',
-        img: Event18,
+        img: Event12,
         name: 'Bui Vien Walking Street',
         city: 'HO CHI MINH',
         address: 'Bui Vien Street, District 1, Ho Chi Minh City',
@@ -690,7 +712,7 @@ export const DESTINATION_HCM = [
     event: [
       {
         id: 'TDP',
-        img: Event19,
+        img: Event13,
         name: 'Tao Dan Park',
         city: 'HO CHI MINH',
         address: 'Nguyen Thi Minh Khai, District 1, Ho Chi Minh City',
@@ -699,7 +721,7 @@ export const DESTINATION_HCM = [
       },
       {
         id: 'TDPZBG',
-        img: Event20,
+        img: Event14,
         name: 'Tao Dan ParkSaigon Zoo & Botanical Gardens',
         city: 'HO CHI MINH',
         address: '2B Nguyen Binh Khiem, District 1, Ho Chi Minh City',
@@ -714,7 +736,7 @@ export const DESTINATION_HCM = [
     event: [
       {
         id: 'SOH',
-        img: Event21,
+        img: Event15,
         name: 'Saigon Opera House',
         city: 'HO CHI MINH',
         address: '7 Lam Son Square, District 1, Ho Chi Minh Ciy',
@@ -723,7 +745,7 @@ export const DESTINATION_HCM = [
       },
       {
         id: 'DSP',
-        img: Event22,
+        img: Event16,
         name: 'Dam Sen Park',
         city: 'HO CHI MINH',
         address: '3 Hoa Binh, District 11, Ho Chi Minh City',
@@ -870,6 +892,100 @@ export const DiningStore = [
     desc: 'Specializes in traditional Vietnamese dishes, particularly pho (noodle soup). The restaurant offers a quick-service experience with seating available, catering to travelers seeking authentic local cuisine in a timely manner. ',
     tag: 'Restaurant',
     img: DiningStore8
+  }
+]
+
+// Menu Dining
+export const HighlandsCoffee = [
+  {
+    name: 'Green Tea Freeze',
+    price: '4.00',
+    img: highland1
+  },
+  {
+    name: 'Chocolate Freeze',
+    price: '4.00',
+    img: highland2
+  },
+  {
+    name: 'Golden Lotus Tea (Water Chestnut topping)',
+    price: '3.50',
+    img: highland3
+  },
+  {
+    name: 'Peach Lemongrass Tea',
+    price: '3.50',
+    img: highland4
+  },
+  {
+    name: 'Lychee Tea',
+    price: '3.50',
+    img: highland5
+  },
+  {
+    name: 'Silver Stone',
+    price: '3.00',
+    img: highland6
+  },
+  {
+    name: 'PhinDi Choco',
+    price: '3.50',
+    img: highland7
+  },
+  {
+    name: 'PhinDi Red Tea',
+    price: '3.50',
+    img: highland8
+  },
+  {
+    name: 'PhinDi Milk Cream',
+    price: '3.50',
+    img: highland9
+  },
+  {
+    name: 'Citrus coffee detonic',
+    price: '5.00',
+    img: highland10
+  }
+]
+
+export const HighlandsCoffeeCart = [
+  {
+    name: 'Green Tea Freeze',
+    price: '4.00',
+    img: highland1
+  },
+  {
+    name: 'Chocolate Freeze',
+    price: '4.00',
+    img: highland2
+  },
+  {
+    name: 'Golden Lotus Tea (Water Chestnut topping)',
+    price: '3.50',
+    img: highland3
+  }
+]
+
+// Resting
+export const RestingData = [
+  {
+    name: 'SASCO Sleep Zone',
+    tag: 'Terminal 2',
+    location: 'Terminal 2',
+    time: '24/7',
+    about:
+      'Situated within the International Terminal of Tan Son Nhat Airport, the Sleeping Zone offers travelers a tranquil and comfortable space to unwind before their flight. Designed to provide both privacy and relaxation, this dedicated area allows passengers to rest peacefully, recharge, and escape the hustle and bustle of the busy airport environment while waiting for their departure.',
+    img: resting1
+  },
+  {
+    name: 'SETTLE B',
+    tag: 'Terminal 2',
+    location: 'Terminal 2',
+    time: '24/7',
+    about:
+      'Located within the International Terminal, Settle B offers a serene and comfortable retreat for travelers seeking rest before their journey. Whether you need a quiet space to relax, recharge, or catch up on sleep, our lounge provides cozy seating, private resting pods, and a peaceful atmosphere away from the airport’s hustle and bustle. Experience comfort, convenience, and relaxation while waiting for your next flight',
+    img: resting2
   }
 ]
 
