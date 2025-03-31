@@ -6,7 +6,7 @@ import CustomDatePicker from '../components/fields/DateField'
 import InputField from '../components/fields/InputField'
 import SelectField from '../components/fields/SelectField'
 import Goback from '../components/Goback'
-import { GuestSelect, reservationGust, reservationTime, TimeSelect } from '../constants/data'
+import { reservationGust, reservationTime } from '../constants/data'
 import { LoginBody, LoginBodyType } from '../schema/auth.schema'
 import '../styles/menu.scss'
 
