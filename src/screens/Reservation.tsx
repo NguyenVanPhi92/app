@@ -6,13 +6,13 @@ import CustomDatePicker from '../components/fields/DateField'
 import InputField from '../components/fields/InputField'
 import SelectField from '../components/fields/SelectField'
 import Goback from '../components/Goback'
-import { GuestSelect, TimeSelect } from '../constants/data'
+import { GuestSelect, reservationGust, reservationTime, TimeSelect } from '../constants/data'
 import { LoginBody, LoginBodyType } from '../schema/auth.schema'
 import '../styles/menu.scss'
 
 const Reservation = () => {
-  const [time, setTime] = useState(TimeSelect[0])
-  const [guest, setGuest] = useState(GuestSelect[0])
+  const [time, setTime] = useState(reservationTime[0])
+  const [guest, setGuest] = useState(reservationGust[0])
   // useForm
   const {
     control
@@ -37,8 +37,13 @@ const Reservation = () => {
           <CustomDatePicker label='Date' placeholderText='Date' />
 
           <div className='grid grid-cols-2 gap-x-4'>
-            <SelectField label='Time' data={TimeSelect} onChange={(e: any) => setTime(e)} value={time} />
-            <SelectField label='Number of Guest' data={GuestSelect} onChange={(e: any) => setGuest(e)} value={guest} />
+            <SelectField label='Time' data={reservationTime} onChange={(e: any) => setTime(e)} value={time} />
+            <SelectField
+              label='Number of Guest'
+              data={reservationGust}
+              onChange={(e: any) => setGuest(e)}
+              value={guest}
+            />
           </div>
           <div className='mb-4'>
             <InputField
