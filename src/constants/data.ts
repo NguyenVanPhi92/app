@@ -1067,7 +1067,7 @@ export const FlightTrackingArrival = [
   },
   {
     flight_time: '4:15 PM',
-    estimated_time: '4:30 PM',
+    estimated_time: '',
     terminal: 1,
     gate: 8,
     from_code: 'HAN',
@@ -1080,7 +1080,7 @@ export const FlightTrackingArrival = [
   },
   {
     flight_time: '4:20 PM',
-    estimated_time: '4:30 PM',
+    estimated_time: '',
     terminal: 1,
     gate: 9,
     from_code: 'TBB',
@@ -1135,7 +1135,7 @@ export const FlightTrackingDeparture = [
   },
   {
     flight_time: '4:15 PM',
-    estimated_time: '4:30 PM',
+    estimated_time: '',
     terminal: 1,
     gate: 8,
     from_code: 'SGN',
@@ -1148,7 +1148,7 @@ export const FlightTrackingDeparture = [
   },
   {
     flight_time: '5:00 PM',
-    estimated_time: '4:30 PM',
+    estimated_time: '',
     terminal: 2,
     gate: 9,
     from_code: 'SGN',

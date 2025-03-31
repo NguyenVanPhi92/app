@@ -76,7 +76,16 @@ const FlightTracking = () => {
             FlightTrackingArrival.map((item, index) => (
               <div className='px-2 mb-8' key={index}>
                 <div className='flex items-center justify-between w-full gap-x-4'>
-                  <div className='text-2xl font-bold text-blue-900 min-w-28'>{item.flight_time}</div>
+                  <div className=''>
+                    {item.estimated_time.length !== 0 ? (
+                      <>
+                        <del className='ml-2 text-sm font-bold text-blue-900 min-w-28'>{item.flight_time}</del>
+                        <div className='text-xl font-bold text-blue-900 min-w-28'>{item.estimated_time}</div>
+                      </>
+                    ) : (
+                      <div className='text-xl font-bold text-blue-900 min-w-28'>{item.flight_time}</div>
+                    )}
+                  </div>
 
                   <div className='w-full'>
                     <div className='flex items-center justify-between gap-x-2'>
@@ -134,7 +143,16 @@ const FlightTracking = () => {
             FlightTrackingDeparture.map((item, index) => (
               <div className='px-2 mb-8' key={index}>
                 <div className='flex items-center justify-between w-full gap-x-4'>
-                  <div className='text-2xl font-bold text-blue-900 min-w-28'>{item.flight_time}</div>
+                  <div className=''>
+                    {item.estimated_time.length !== 0 ? (
+                      <>
+                        <del className='ml-2 text-sm font-bold text-blue-900 min-w-28'>{item.flight_time}</del>
+                        <div className='text-xl font-bold text-blue-900 min-w-28'>{item.estimated_time}</div>
+                      </>
+                    ) : (
+                      <div className='text-xl font-bold text-blue-900 min-w-28'>{item.flight_time}</div>
+                    )}
+                  </div>
 
                   <div className='w-full'>
                     <div className='flex items-center justify-between gap-x-2'>
